@@ -39,6 +39,7 @@ pip install -r requirements.txt
      ```
      ODDS_API_KEY=your_api_key_here
      ```
+   - **⚠️ IMPORTANT**: Never commit your `.env` file to git! It's already in `.gitignore` to protect your API key.
 
 ## Usage
 
@@ -193,6 +194,35 @@ Contributions are welcome! Feel free to open issues or submit pull requests.
 ## License
 
 MIT License
+
+## Security
+
+### Protecting Your API Key
+
+Your API key is sensitive and should never be shared publicly. This project follows security best practices:
+
+- The `.env` file (which contains your API key) is in `.gitignore` and will not be committed to git
+- The `.env.example` file is a template with placeholder values only
+- Never commit actual API keys to version control
+- If you accidentally expose your API key:
+  1. Immediately regenerate a new key at [The Odds API](https://the-odds-api.com/)
+  2. Update your `.env` file with the new key
+  3. Remove the exposed key from git history (see below)
+
+### If You Accidentally Committed Your API Key
+
+If you've already committed and pushed your API key to GitHub:
+
+1. **Generate a new API key** at The Odds API immediately
+2. **Update your `.env` file** with the new key
+3. **Remove the old key from git history**:
+   ```bash
+   # If it's in your most recent commit, you can amend it
+   git add .env.example  # Make sure it only has placeholder value
+   git commit --amend --no-edit
+   git push --force
+   ```
+4. **Invalidate the old key** on The Odds API website
 
 ## Disclaimer
 
