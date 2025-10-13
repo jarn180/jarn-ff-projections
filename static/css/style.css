@@ -600,29 +600,219 @@ footer {
 
 /* Responsive */
 @media (max-width: 768px) {
-    header h1 {
-        font-size: 1.8rem;
+    body {
+        font-size: 15px;
     }
 
+    .container {
+        padding: 12px;
+    }
+
+    /* Header */
+    header {
+        padding: 30px 16px;
+        margin-bottom: 20px;
+    }
+
+    header h1 {
+        font-size: 1.75rem;
+        line-height: 1.2;
+    }
+
+    .subtitle {
+        font-size: 0.95rem;
+    }
+
+    /* Controls */
     .controls {
         flex-direction: column;
+        padding: 16px;
+        gap: 16px;
     }
 
     .control-group {
         width: 100%;
+        min-width: unset;
+    }
+
+    select, input[type="text"] {
+        font-size: 16px; /* Prevents iOS zoom on focus */
+        padding: 12px 14px;
+    }
+
+    /* Stats Bar */
+    .stats-bar {
+        flex-direction: column;
+        gap: 12px;
+        padding: 12px 16px;
+    }
+
+    .stat-item {
+        justify-content: space-between;
+        width: 100%;
+    }
+
+    /* Position Tabs */
+    .position-tabs {
+        padding: 8px;
+        gap: 6px;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        scrollbar-width: none; /* Firefox */
+    }
+
+    .position-tabs::-webkit-scrollbar {
+        display: none; /* Chrome, Safari, Opera */
+    }
+
+    .position-tab {
+        padding: 10px 16px;
+        font-size: 14px;
+        white-space: nowrap;
+        flex-shrink: 0;
+    }
+
+    /* Table Container */
+    .projections-table {
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
     }
 
     .data-table {
-        font-size: 0.85rem;
+        font-size: 13px;
+        min-width: 700px; /* Ensures table doesn't collapse */
     }
 
     .data-table th,
     .data-table td {
-        padding: 10px 8px;
+        padding: 10px 6px;
+    }
+
+    .data-table th {
+        font-size: 11px;
+    }
+
+    .player-name {
+        min-width: 120px;
+        font-size: 14px;
+    }
+
+    .rank {
+        width: 40px;
+        font-size: 13px;
+    }
+
+    .position-badge {
+        font-size: 0.7rem;
+        padding: 3px 6px;
+        min-width: 30px;
+    }
+
+    .btn-small {
+        padding: 6px 10px;
+        font-size: 12px;
+    }
+
+    /* Modal */
+    .modal {
+        max-width: 100%;
+        margin: 10px;
+        max-height: 95vh;
+    }
+
+    .modal-header {
+        padding: 16px;
+    }
+
+    .modal-header h2 {
+        font-size: 1.25rem;
+    }
+
+    .modal-body {
+        padding: 16px;
+    }
+
+    .detail-section {
+        margin-bottom: 20px;
+    }
+
+    .total-points-large {
+        font-size: 1.5rem;
+    }
+
+    .breakdown {
+        grid-template-columns: 1fr;
+        gap: 10px;
+    }
+
+    .stats-grid {
+        grid-template-columns: 1fr;
+    }
+
+    /* Messages */
+    .loading-message,
+    .welcome-message,
+    .no-results {
+        padding: 40px 16px;
+    }
+
+    .error-message {
+        padding: 12px 16px;
+        font-size: 14px;
+    }
+
+    /* Footer */
+    footer {
+        padding: 30px 16px;
+        font-size: 12px;
+    }
+}
+
+/* Extra small devices (phones in portrait, less than 400px) */
+@media (max-width: 400px) {
+    header h1 {
+        font-size: 1.5rem;
+    }
+
+    .subtitle {
+        font-size: 0.875rem;
+    }
+
+    .data-table {
+        font-size: 12px;
+    }
+
+    .data-table th,
+    .data-table td {
+        padding: 8px 4px;
+    }
+
+    .btn-small {
+        padding: 5px 8px;
+        font-size: 11px;
+    }
+
+    .position-tab {
+        padding: 8px 12px;
+        font-size: 13px;
+    }
+}
+
+/* Landscape orientation on mobile */
+@media (max-width: 900px) and (orientation: landscape) {
+    .container {
+        padding: 12px;
+    }
+
+    header {
+        padding: 20px 16px;
+    }
+
+    header h1 {
+        font-size: 1.5rem;
     }
 
     .modal {
-        max-width: 100%;
-        margin: 20px;
+        max-height: 85vh;
     }
 }
