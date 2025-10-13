@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fantasy Football Projections | Vegas Props</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Fantasy Football Projections</h1>
+            <p class="subtitle">Vegas Props-Based Projections for NFL Players</p>
+        </header>
+
+        <div class="controls">
+            <div class="control-group">
+                <label for="formatSelect">Scoring Format:</label>
+                <select id="formatSelect">
+                    <option value="all">All Formats</option>
+                    <option value="PPR" selected>PPR</option>
+                    <option value="HALF_PPR">Half PPR</option>
+                    <option value="STANDARD">Standard</option>
+                </select>
+            </div>
+
+            <div class="control-group">
+                <label for="searchInput">Search Player:</label>
+                <input type="text" id="searchInput" placeholder="Enter player name...">
+            </div>
+        </div>
+
+        <div id="statsBar" class="stats-bar">
+            <div class="stat-item">
+                <span class="stat-label">Total Players:</span>
+                <span id="totalPlayers" class="stat-value">-</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-label">Last Updated:</span>
+                <span id="lastUpdated" class="stat-value">Loading...</span>
+            </div>
+        </div>
+
+        <div id="errorMessage" class="error-message" style="display: none;"></div>
+
+        <div id="loadingMessage" class="loading-message" style="display: none;">
+            <div class="spinner-large"></div>
+            <p>Fetching player props from The Odds API...</p>
+            <p class="loading-subtext">This may take a moment</p>
+        </div>
+
+        <div id="projectionsContainer"></div>
+
+        <div id="positionTabs" class="position-tabs" style="display: none;">
+            <button class="position-tab active" data-position="ALL">All Positions</button>
+            <button class="position-tab" data-position="QB">QB</button>
+            <button class="position-tab" data-position="RB">RB</button>
+            <button class="position-tab" data-position="WR">WR</button>
+            <button class="position-tab" data-position="TE">TE</button>
+        </div>
+
+        <div id="projectionsTable" class="projections-table"></div>
+    </div>
+
+    <footer>
+        <p>Data provided by The Odds API | For entertainment purposes only</p>
+    </footer>
+
+    <script src="{{ url_for('static', filename='js/app.js') }}"></script>
+</body>
+</html>

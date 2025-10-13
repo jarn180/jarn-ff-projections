@@ -1,0 +1,3039 @@
+{
+  "projections": [
+    {
+      "player": "Jayden Daniels",
+      "format": "PPR",
+      "total_points": 21.98,
+      "breakdown": {
+        "passing": 14.813333333333334,
+        "rushing": 7.166666666666666,
+        "receiving": 0.0,
+        "fumbles": 0.0
+      },
+      "stats": {
+        "player_pass_tds": 1.5,
+        "player_pass_yds": 220.33333333333334,
+        "player_rush_yds": 43.0,
+        "estimated_rush_tds": 0.4777777777777778
+      },
+      "position": "QB",
+      "matchup": "Chicago Bears @ Washington Commanders",
+      "week": "Week 6",
+      "game_time": "2025-10-14T00:16:00Z"
+    },
+    {
+      "player": "Jayden Daniels",
+      "format": "HALF_PPR",
+      "total_points": 21.98,
+      "breakdown": {
+        "passing": 14.813333333333334,
+        "rushing": 7.166666666666666,
+        "receiving": 0.0,
+        "fumbles": 0.0
+      },
+      "stats": {
+        "player_pass_tds": 1.5,
+        "player_pass_yds": 220.33333333333334,
+        "player_rush_yds": 43.0,
+        "estimated_rush_tds": 0.4777777777777778
+      },
+      "position": "QB",
+      "matchup": "Chicago Bears @ Washington Commanders",
+      "week": "Week 6",
+      "game_time": "2025-10-14T00:16:00Z"
+    },
+    {
+      "player": "Jayden Daniels",
+      "format": "STANDARD",
+      "total_points": 21.98,
+      "breakdown": {
+        "passing": 14.813333333333334,
+        "rushing": 7.166666666666666,
+        "receiving": 0.0,
+        "fumbles": 0.0
+      },
+      "stats": {
+        "player_pass_tds": 1.5,
+        "player_pass_yds": 220.33333333333334,
+        "player_rush_yds": 43.0,
+        "estimated_rush_tds": 0.4777777777777778
+      },
+      "position": "QB",
+      "matchup": "Chicago Bears @ Washington Commanders",
+      "week": "Week 6",
+      "game_time": "2025-10-14T00:16:00Z"
+    },
+    {
+      "player": "Bijan Robinson",
+      "format": "PPR",
+      "total_points": 21.49555555555556,
+      "breakdown": {
+        "passing": 0.0,
+        "rushing": 12.38888888888889,
+        "receiving": 9.15,
+        "fumbles": -0.04333333333333333
+      },
+      "stats": {
+        "player_reception_yds": 31.166666666666668,
+        "player_receptions": 4.333333333333333,
+        "player_rush_yds": 74.33333333333333,
+        "estimated_rush_tds": 0.8259259259259258,
+        "estimated_rec_tds": 0.2833333333333333,
+        "estimated_fumbles": 0.021666666666666664
+      },
+      "position": "RB",
+      "matchup": "Buffalo Bills @ Atlanta Falcons",
+      "week": "Week 6",
+      "game_time": "2025-10-13T23:15:00Z"
+    },
+    {
+      "player": "Patrick Mahomes",
+      "format": "PPR",
+      "total_points": 21.354444444444447,
+      "breakdown": {
+        "passing": 16.66,
+        "rushing": 4.694444444444445,
+        "receiving": 0.0,
+        "fumbles": 0.0
+      },
+      "stats": {
+        "player_pass_tds": 1.5,
+        "player_pass_yds": 266.5,
+        "player_rush_yds": 28.166666666666668,
+        "estimated_rush_tds": 0.312962962962963
+      },
+      "position": "QB",
+      "matchup": "Detroit Lions @ Kansas City Chiefs",
+      "week": "Week 6",
+      "game_time": "2025-10-13T00:20:00Z"
+    },
+    {
+      "player": "Patrick Mahomes",
+      "format": "HALF_PPR",
+      "total_points": 21.354444444444447,
+      "breakdown": {
+        "passing": 16.66,
+        "rushing": 4.694444444444445,
+        "receiving": 0.0,
+        "fumbles": 0.0
+      },
+      "stats": {
+        "player_pass_tds": 1.5,
+        "player_pass_yds": 266.5,
+        "player_rush_yds": 28.166666666666668,
+        "estimated_rush_tds": 0.312962962962963
+      },
+      "position": "QB",
+      "matchup": "Detroit Lions @ Kansas City Chiefs",
+      "week": "Week 6",
+      "game_time": "2025-10-13T00:20:00Z"
+    },
+    {
+      "player": "Patrick Mahomes",
+      "format": "STANDARD",
+      "total_points": 21.354444444444447,
+      "breakdown": {
+        "passing": 16.66,
+        "rushing": 4.694444444444445,
+        "receiving": 0.0,
+        "fumbles": 0.0
+      },
+      "stats": {
+        "player_pass_tds": 1.5,
+        "player_pass_yds": 266.5,
+        "player_rush_yds": 28.166666666666668,
+        "estimated_rush_tds": 0.312962962962963
+      },
+      "position": "QB",
+      "matchup": "Detroit Lions @ Kansas City Chiefs",
+      "week": "Week 6",
+      "game_time": "2025-10-13T00:20:00Z"
+    },
+    {
+      "player": "Josh Allen",
+      "format": "PPR",
+      "total_points": 20.736666666666668,
+      "breakdown": {
+        "passing": 15.153333333333334,
+        "rushing": 5.583333333333334,
+        "receiving": 0.0,
+        "fumbles": 0.0
+      },
+      "stats": {
+        "player_pass_tds": 1.5,
+        "player_pass_yds": 228.83333333333334,
+        "player_rush_yds": 33.5,
+        "estimated_rush_tds": 0.37222222222222223
+      },
+      "position": "QB",
+      "matchup": "Buffalo Bills @ Atlanta Falcons",
+      "week": "Week 6",
+      "game_time": "2025-10-13T23:15:00Z"
+    },
+    {
+      "player": "Josh Allen",
+      "format": "HALF_PPR",
+      "total_points": 20.736666666666668,
+      "breakdown": {
+        "passing": 15.153333333333334,
+        "rushing": 5.583333333333334,
+        "receiving": 0.0,
+        "fumbles": 0.0
+      },
+      "stats": {
+        "player_pass_tds": 1.5,
+        "player_pass_yds": 228.83333333333334,
+        "player_rush_yds": 33.5,
+        "estimated_rush_tds": 0.37222222222222223
+      },
+      "position": "QB",
+      "matchup": "Buffalo Bills @ Atlanta Falcons",
+      "week": "Week 6",
+      "game_time": "2025-10-13T23:15:00Z"
+    },
+    {
+      "player": "Josh Allen",
+      "format": "STANDARD",
+      "total_points": 20.736666666666668,
+      "breakdown": {
+        "passing": 15.153333333333334,
+        "rushing": 5.583333333333334,
+        "receiving": 0.0,
+        "fumbles": 0.0
+      },
+      "stats": {
+        "player_pass_tds": 1.5,
+        "player_pass_yds": 228.83333333333334,
+        "player_rush_yds": 33.5,
+        "estimated_rush_tds": 0.37222222222222223
+      },
+      "position": "QB",
+      "matchup": "Buffalo Bills @ Atlanta Falcons",
+      "week": "Week 6",
+      "game_time": "2025-10-13T23:15:00Z"
+    },
+    {
+      "player": "Caleb Williams",
+      "format": "PPR",
+      "total_points": 19.465555555555554,
+      "breakdown": {
+        "passing": 15.326666666666666,
+        "rushing": 4.138888888888889,
+        "receiving": 0.0,
+        "fumbles": 0.0
+      },
+      "stats": {
+        "player_pass_tds": 1.5,
+        "player_pass_yds": 233.16666666666666,
+        "player_rush_yds": 24.833333333333332,
+        "estimated_rush_tds": 0.2759259259259259
+      },
+      "position": "QB",
+      "matchup": "Chicago Bears @ Washington Commanders",
+      "week": "Week 6",
+      "game_time": "2025-10-14T00:16:00Z"
+    },
+    {
+      "player": "Caleb Williams",
+      "format": "HALF_PPR",
+      "total_points": 19.465555555555554,
+      "breakdown": {
+        "passing": 15.326666666666666,
+        "rushing": 4.138888888888889,
+        "receiving": 0.0,
+        "fumbles": 0.0
+      },
+      "stats": {
+        "player_pass_tds": 1.5,
+        "player_pass_yds": 233.16666666666666,
+        "player_rush_yds": 24.833333333333332,
+        "estimated_rush_tds": 0.2759259259259259
+      },
+      "position": "QB",
+      "matchup": "Chicago Bears @ Washington Commanders",
+      "week": "Week 6",
+      "game_time": "2025-10-14T00:16:00Z"
+    },
+    {
+      "player": "Caleb Williams",
+      "format": "STANDARD",
+      "total_points": 19.465555555555554,
+      "breakdown": {
+        "passing": 15.326666666666666,
+        "rushing": 4.138888888888889,
+        "receiving": 0.0,
+        "fumbles": 0.0
+      },
+      "stats": {
+        "player_pass_tds": 1.5,
+        "player_pass_yds": 233.16666666666666,
+        "player_rush_yds": 24.833333333333332,
+        "estimated_rush_tds": 0.2759259259259259
+      },
+      "position": "QB",
+      "matchup": "Chicago Bears @ Washington Commanders",
+      "week": "Week 6",
+      "game_time": "2025-10-14T00:16:00Z"
+    },
+    {
+      "player": "Bijan Robinson",
+      "format": "HALF_PPR",
+      "total_points": 19.32888888888889,
+      "breakdown": {
+        "passing": 0.0,
+        "rushing": 12.38888888888889,
+        "receiving": 6.983333333333333,
+        "fumbles": -0.04333333333333333
+      },
+      "stats": {
+        "player_reception_yds": 31.166666666666668,
+        "player_receptions": 4.333333333333333,
+        "player_rush_yds": 74.33333333333333,
+        "estimated_rush_tds": 0.8259259259259258,
+        "estimated_rec_tds": 0.2833333333333333,
+        "estimated_fumbles": 0.021666666666666664
+      },
+      "position": "RB",
+      "matchup": "Buffalo Bills @ Atlanta Falcons",
+      "week": "Week 6",
+      "game_time": "2025-10-13T23:15:00Z"
+    },
+    {
+      "player": "Jahmyr Gibbs",
+      "format": "PPR",
+      "total_points": 18.72863636363636,
+      "breakdown": {
+        "passing": 0.0,
+        "rushing": 10.833333333333332,
+        "receiving": 7.930303030303031,
+        "fumbles": -0.035
+      },
+      "stats": {
+        "player_reception_yds": 28.666666666666668,
+        "player_receptions": 3.5,
+        "player_rush_yds": 65.0,
+        "estimated_rush_tds": 0.7222222222222222,
+        "estimated_rec_tds": 0.2606060606060606,
+        "estimated_fumbles": 0.0175
+      },
+      "position": "RB",
+      "matchup": "Detroit Lions @ Kansas City Chiefs",
+      "week": "Week 6",
+      "game_time": "2025-10-13T00:20:00Z"
+    },
+    {
+      "player": "Amon-Ra St. Brown",
+      "format": "PPR",
+      "total_points": 18.13939393939394,
+      "breakdown": {
+        "passing": 0.0,
+        "rushing": 0.0,
+        "receiving": 18.206060606060607,
+        "fumbles": -0.06666666666666667
+      },
+      "stats": {
+        "player_reception_yds": 74.66666666666667,
+        "player_receptions": 6.666666666666667,
+        "estimated_rec_tds": 0.6787878787878788,
+        "estimated_fumbles": 0.03333333333333333
+      },
+      "position": "WR",
+      "matchup": "Detroit Lions @ Kansas City Chiefs",
+      "week": "Week 6",
+      "game_time": "2025-10-13T00:20:00Z"
+    },
+    {
+      "player": "Bijan Robinson",
+      "format": "STANDARD",
+      "total_points": 17.162222222222223,
+      "breakdown": {
+        "passing": 0.0,
+        "rushing": 12.38888888888889,
+        "receiving": 4.816666666666667,
+        "fumbles": -0.04333333333333333
+      },
+      "stats": {
+        "player_reception_yds": 31.166666666666668,
+        "player_receptions": 4.333333333333333,
+        "player_rush_yds": 74.33333333333333,
+        "estimated_rush_tds": 0.8259259259259258,
+        "estimated_rec_tds": 0.2833333333333333,
+        "estimated_fumbles": 0.021666666666666664
+      },
+      "position": "RB",
+      "matchup": "Buffalo Bills @ Atlanta Falcons",
+      "week": "Week 6",
+      "game_time": "2025-10-13T23:15:00Z"
+    },
+    {
+      "player": "Jahmyr Gibbs",
+      "format": "HALF_PPR",
+      "total_points": 16.97863636363636,
+      "breakdown": {
+        "passing": 0.0,
+        "rushing": 10.833333333333332,
+        "receiving": 6.180303030303031,
+        "fumbles": -0.035
+      },
+      "stats": {
+        "player_reception_yds": 28.666666666666668,
+        "player_receptions": 3.5,
+        "player_rush_yds": 65.0,
+        "estimated_rush_tds": 0.7222222222222222,
+        "estimated_rec_tds": 0.2606060606060606,
+        "estimated_fumbles": 0.0175
+      },
+      "position": "RB",
+      "matchup": "Detroit Lions @ Kansas City Chiefs",
+      "week": "Week 6",
+      "game_time": "2025-10-13T00:20:00Z"
+    },
+    {
+      "player": "Drake London",
+      "format": "PPR",
+      "total_points": 16.928030303030305,
+      "breakdown": {
+        "passing": 0.0,
+        "rushing": 0.0,
+        "receiving": 16.986363636363638,
+        "fumbles": -0.05833333333333333
+      },
+      "stats": {
+        "player_reception_yds": 72.16666666666667,
+        "player_receptions": 5.833333333333333,
+        "estimated_rec_tds": 0.6560606060606061,
+        "estimated_fumbles": 0.029166666666666664
+      },
+      "position": "WR",
+      "matchup": "Buffalo Bills @ Atlanta Falcons",
+      "week": "Week 6",
+      "game_time": "2025-10-13T23:15:00Z"
+    },
+    {
+      "player": "James Cook",
+      "format": "PPR",
+      "total_points": 16.370959595959597,
+      "breakdown": {
+        "passing": 0.0,
+        "rushing": 11.86111111111111,
+        "receiving": 4.534848484848484,
+        "fumbles": -0.025
+      },
+      "stats": {
+        "player_reception_yds": 13.166666666666666,
+        "player_receptions": 2.5,
+        "player_rush_yds": 71.16666666666667,
+        "estimated_rush_tds": 0.7907407407407407,
+        "estimated_rec_tds": 0.11969696969696969,
+        "estimated_fumbles": 0.0125
+      },
+      "position": "RB",
+      "matchup": "Buffalo Bills @ Atlanta Falcons",
+      "week": "Week 6",
+      "game_time": "2025-10-13T23:15:00Z"
+    },
+    {
+      "player": "Michael Penix Jr.",
+      "format": "PPR",
+      "total_points": 16.27111111111111,
+      "breakdown": {
+        "passing": 14.993333333333334,
+        "rushing": 1.2777777777777777,
+        "receiving": 0.0,
+        "fumbles": 0.0
+      },
+      "stats": {
+        "player_pass_tds": 1.5,
+        "player_pass_yds": 224.83333333333334,
+        "player_rush_yds": 7.666666666666667,
+        "estimated_rush_tds": 0.08518518518518518
+      },
+      "position": "QB",
+      "matchup": "Buffalo Bills @ Atlanta Falcons",
+      "week": "Week 6",
+      "game_time": "2025-10-13T23:15:00Z"
+    },
+    {
+      "player": "Michael Penix Jr.",
+      "format": "HALF_PPR",
+      "total_points": 16.27111111111111,
+      "breakdown": {
+        "passing": 14.993333333333334,
+        "rushing": 1.2777777777777777,
+        "receiving": 0.0,
+        "fumbles": 0.0
+      },
+      "stats": {
+        "player_pass_tds": 1.5,
+        "player_pass_yds": 224.83333333333334,
+        "player_rush_yds": 7.666666666666667,
+        "estimated_rush_tds": 0.08518518518518518
+      },
+      "position": "QB",
+      "matchup": "Buffalo Bills @ Atlanta Falcons",
+      "week": "Week 6",
+      "game_time": "2025-10-13T23:15:00Z"
+    },
+    {
+      "player": "Michael Penix Jr.",
+      "format": "STANDARD",
+      "total_points": 16.27111111111111,
+      "breakdown": {
+        "passing": 14.993333333333334,
+        "rushing": 1.2777777777777777,
+        "receiving": 0.0,
+        "fumbles": 0.0
+      },
+      "stats": {
+        "player_pass_tds": 1.5,
+        "player_pass_yds": 224.83333333333334,
+        "player_rush_yds": 7.666666666666667,
+        "estimated_rush_tds": 0.08518518518518518
+      },
+      "position": "QB",
+      "matchup": "Buffalo Bills @ Atlanta Falcons",
+      "week": "Week 6",
+      "game_time": "2025-10-13T23:15:00Z"
+    },
+    {
+      "player": "Xavier Worthy",
+      "format": "PPR",
+      "total_points": 16.082121212121212,
+      "breakdown": {
+        "passing": 0.0,
+        "rushing": 0.875,
+        "receiving": 15.262121212121212,
+        "fumbles": -0.055
+      },
+      "stats": {
+        "player_reception_yds": 63.166666666666664,
+        "player_receptions": 5.5,
+        "player_rush_yds": 5.25,
+        "estimated_rush_tds": 0.058333333333333334,
+        "estimated_rec_tds": 0.5742424242424242,
+        "estimated_fumbles": 0.0275
+      },
+      "position": "WR",
+      "matchup": "Detroit Lions @ Kansas City Chiefs",
+      "week": "Week 6",
+      "game_time": "2025-10-13T00:20:00Z"
+    },
+    {
+      "player": "Deebo Samuel Sr.",
+      "format": "PPR",
+      "total_points": 15.846515151515153,
+      "breakdown": {
+        "passing": 0.0,
+        "rushing": 1.2833333333333332,
+        "receiving": 14.618181818181819,
+        "fumbles": -0.055
+      },
+      "stats": {
+        "player_reception_yds": 59.0,
+        "player_receptions": 5.5,
+        "player_rush_yds": 7.7,
+        "estimated_rush_tds": 0.08555555555555555,
+        "estimated_rec_tds": 0.5363636363636364,
+        "estimated_fumbles": 0.0275
+      },
+      "position": "WR",
+      "matchup": "Chicago Bears @ Washington Commanders",
+      "week": "Week 6",
+      "game_time": "2025-10-14T00:16:00Z"
+    },
+    {
+      "player": "Jared Goff",
+      "format": "PPR",
+      "total_points": 15.776666666666667,
+      "breakdown": {
+        "passing": 15.693333333333333,
+        "rushing": 0.08333333333333334,
+        "receiving": 0.0,
+        "fumbles": 0.0
+      },
+      "stats": {
+        "player_pass_tds": 1.5,
+        "player_pass_yds": 242.33333333333334,
+        "player_rush_yds": 0.5,
+        "estimated_rush_tds": 0.005555555555555556
+      },
+      "position": "QB",
+      "matchup": "Detroit Lions @ Kansas City Chiefs",
+      "week": "Week 6",
+      "game_time": "2025-10-13T00:20:00Z"
+    },
+    {
+      "player": "Jared Goff",
+      "format": "HALF_PPR",
+      "total_points": 15.776666666666667,
+      "breakdown": {
+        "passing": 15.693333333333333,
+        "rushing": 0.08333333333333334,
+        "receiving": 0.0,
+        "fumbles": 0.0
+      },
+      "stats": {
+        "player_pass_tds": 1.5,
+        "player_pass_yds": 242.33333333333334,
+        "player_rush_yds": 0.5,
+        "estimated_rush_tds": 0.005555555555555556
+      },
+      "position": "QB",
+      "matchup": "Detroit Lions @ Kansas City Chiefs",
+      "week": "Week 6",
+      "game_time": "2025-10-13T00:20:00Z"
+    },
+    {
+      "player": "Jared Goff",
+      "format": "STANDARD",
+      "total_points": 15.776666666666667,
+      "breakdown": {
+        "passing": 15.693333333333333,
+        "rushing": 0.08333333333333334,
+        "receiving": 0.0,
+        "fumbles": 0.0
+      },
+      "stats": {
+        "player_pass_tds": 1.5,
+        "player_pass_yds": 242.33333333333334,
+        "player_rush_yds": 0.5,
+        "estimated_rush_tds": 0.005555555555555556
+      },
+      "position": "QB",
+      "matchup": "Detroit Lions @ Kansas City Chiefs",
+      "week": "Week 6",
+      "game_time": "2025-10-13T00:20:00Z"
+    },
+    {
+      "player": "Jahmyr Gibbs",
+      "format": "STANDARD",
+      "total_points": 15.228636363636362,
+      "breakdown": {
+        "passing": 0.0,
+        "rushing": 10.833333333333332,
+        "receiving": 4.430303030303031,
+        "fumbles": -0.035
+      },
+      "stats": {
+        "player_reception_yds": 28.666666666666668,
+        "player_receptions": 3.5,
+        "player_rush_yds": 65.0,
+        "estimated_rush_tds": 0.7222222222222222,
+        "estimated_rec_tds": 0.2606060606060606,
+        "estimated_fumbles": 0.0175
+      },
+      "position": "RB",
+      "matchup": "Detroit Lions @ Kansas City Chiefs",
+      "week": "Week 6",
+      "game_time": "2025-10-13T00:20:00Z"
+    },
+    {
+      "player": "James Cook",
+      "format": "HALF_PPR",
+      "total_points": 15.120959595959595,
+      "breakdown": {
+        "passing": 0.0,
+        "rushing": 11.86111111111111,
+        "receiving": 3.2848484848484847,
+        "fumbles": -0.025
+      },
+      "stats": {
+        "player_reception_yds": 13.166666666666666,
+        "player_receptions": 2.5,
+        "player_rush_yds": 71.16666666666667,
+        "estimated_rush_tds": 0.7907407407407407,
+        "estimated_rec_tds": 0.11969696969696969,
+        "estimated_fumbles": 0.0125
+      },
+      "position": "RB",
+      "matchup": "Buffalo Bills @ Atlanta Falcons",
+      "week": "Week 6",
+      "game_time": "2025-10-13T23:15:00Z"
+    },
+    {
+      "player": "Rome Odunze",
+      "format": "PPR",
+      "total_points": 14.886818181818182,
+      "breakdown": {
+        "passing": 0.0,
+        "rushing": 0.0,
+        "receiving": 14.931818181818182,
+        "fumbles": -0.045
+      },
+      "stats": {
+        "player_reception_yds": 67.5,
+        "player_receptions": 4.5,
+        "estimated_rec_tds": 0.6136363636363636,
+        "estimated_fumbles": 0.0225
+      },
+      "position": "WR",
+      "matchup": "Chicago Bears @ Washington Commanders",
+      "week": "Week 6",
+      "game_time": "2025-10-14T00:16:00Z"
+    },
+    {
+      "player": "Amon-Ra St. Brown",
+      "format": "HALF_PPR",
+      "total_points": 14.806060606060608,
+      "breakdown": {
+        "passing": 0.0,
+        "rushing": 0.0,
+        "receiving": 14.872727272727275,
+        "fumbles": -0.06666666666666667
+      },
+      "stats": {
+        "player_reception_yds": 74.66666666666667,
+        "player_receptions": 6.666666666666667,
+        "estimated_rec_tds": 0.6787878787878788,
+        "estimated_fumbles": 0.03333333333333333
+      },
+      "position": "WR",
+      "matchup": "Detroit Lions @ Kansas City Chiefs",
+      "week": "Week 6",
+      "game_time": "2025-10-13T00:20:00Z"
+    },
+    {
+      "player": "Jacory Croskey-Merritt",
+      "format": "PPR",
+      "total_points": 14.429444444444444,
+      "breakdown": {
+        "passing": 0.0,
+        "rushing": 11.527777777777779,
+        "receiving": 2.9166666666666665,
+        "fumbles": -0.015
+      },
+      "stats": {
+        "player_reception_yds": 9.166666666666666,
+        "player_receptions": 1.5,
+        "player_rush_yds": 69.16666666666667,
+        "estimated_rush_tds": 0.7685185185185186,
+        "estimated_rec_tds": 0.08333333333333333,
+        "estimated_fumbles": 0.0075
+      },
+      "position": "RB",
+      "matchup": "Chicago Bears @ Washington Commanders",
+      "week": "Week 6",
+      "game_time": "2025-10-14T00:16:00Z"
+    },
+    {
+      "player": "Drake London",
+      "format": "HALF_PPR",
+      "total_points": 14.011363636363637,
+      "breakdown": {
+        "passing": 0.0,
+        "rushing": 0.0,
+        "receiving": 14.06969696969697,
+        "fumbles": -0.05833333333333333
+      },
+      "stats": {
+        "player_reception_yds": 72.16666666666667,
+        "player_receptions": 5.833333333333333,
+        "estimated_rec_tds": 0.6560606060606061,
+        "estimated_fumbles": 0.029166666666666664
+      },
+      "position": "WR",
+      "matchup": "Buffalo Bills @ Atlanta Falcons",
+      "week": "Week 6",
+      "game_time": "2025-10-13T23:15:00Z"
+    },
+    {
+      "player": "James Cook",
+      "format": "STANDARD",
+      "total_points": 13.870959595959595,
+      "breakdown": {
+        "passing": 0.0,
+        "rushing": 11.86111111111111,
+        "receiving": 2.0348484848484847,
+        "fumbles": -0.025
+      },
+      "stats": {
+        "player_reception_yds": 13.166666666666666,
+        "player_receptions": 2.5,
+        "player_rush_yds": 71.16666666666667,
+        "estimated_rush_tds": 0.7907407407407407,
+        "estimated_rec_tds": 0.11969696969696969,
+        "estimated_fumbles": 0.0125
+      },
+      "position": "RB",
+      "matchup": "Buffalo Bills @ Atlanta Falcons",
+      "week": "Week 6",
+      "game_time": "2025-10-13T23:15:00Z"
+    },
+    {
+      "player": "Jacory Croskey-Merritt",
+      "format": "HALF_PPR",
+      "total_points": 13.679444444444444,
+      "breakdown": {
+        "passing": 0.0,
+        "rushing": 11.527777777777779,
+        "receiving": 2.1666666666666665,
+        "fumbles": -0.015
+      },
+      "stats": {
+        "player_reception_yds": 9.166666666666666,
+        "player_receptions": 1.5,
+        "player_rush_yds": 69.16666666666667,
+        "estimated_rush_tds": 0.7685185185185186,
+        "estimated_rec_tds": 0.08333333333333333,
+        "estimated_fumbles": 0.0075
+      },
+      "position": "RB",
+      "matchup": "Chicago Bears @ Washington Commanders",
+      "week": "Week 6",
+      "game_time": "2025-10-14T00:16:00Z"
+    },
+    {
+      "player": "Xavier Worthy",
+      "format": "HALF_PPR",
+      "total_points": 13.332121212121212,
+      "breakdown": {
+        "passing": 0.0,
+        "rushing": 0.875,
+        "receiving": 12.512121212121212,
+        "fumbles": -0.055
+      },
+      "stats": {
+        "player_reception_yds": 63.166666666666664,
+        "player_receptions": 5.5,
+        "player_rush_yds": 5.25,
+        "estimated_rush_tds": 0.058333333333333334,
+        "estimated_rec_tds": 0.5742424242424242,
+        "estimated_fumbles": 0.0275
+      },
+      "position": "WR",
+      "matchup": "Detroit Lions @ Kansas City Chiefs",
+      "week": "Week 6",
+      "game_time": "2025-10-13T00:20:00Z"
+    },
+    {
+      "player": "Deebo Samuel Sr.",
+      "format": "HALF_PPR",
+      "total_points": 13.096515151515153,
+      "breakdown": {
+        "passing": 0.0,
+        "rushing": 1.2833333333333332,
+        "receiving": 11.868181818181819,
+        "fumbles": -0.055
+      },
+      "stats": {
+        "player_reception_yds": 59.0,
+        "player_receptions": 5.5,
+        "player_rush_yds": 7.7,
+        "estimated_rush_tds": 0.08555555555555555,
+        "estimated_rec_tds": 0.5363636363636364,
+        "estimated_fumbles": 0.0275
+      },
+      "position": "WR",
+      "matchup": "Chicago Bears @ Washington Commanders",
+      "week": "Week 6",
+      "game_time": "2025-10-14T00:16:00Z"
+    },
+    {
+      "player": "D'Andre Swift",
+      "format": "PPR",
+      "total_points": 13.088131313131312,
+      "breakdown": {
+        "passing": 0.0,
+        "rushing": 7.805555555555555,
+        "receiving": 5.307575757575758,
+        "fumbles": -0.025
+      },
+      "stats": {
+        "player_reception_yds": 18.166666666666668,
+        "player_receptions": 2.5,
+        "player_rush_yds": 46.833333333333336,
+        "estimated_rush_tds": 0.5203703703703704,
+        "estimated_rec_tds": 0.16515151515151516,
+        "estimated_fumbles": 0.0125
+      },
+      "position": "RB",
+      "matchup": "Chicago Bears @ Washington Commanders",
+      "week": "Week 6",
+      "game_time": "2025-10-14T00:16:00Z"
+    },
+    {
+      "player": "Jacory Croskey-Merritt",
+      "format": "STANDARD",
+      "total_points": 12.929444444444444,
+      "breakdown": {
+        "passing": 0.0,
+        "rushing": 11.527777777777779,
+        "receiving": 1.4166666666666665,
+        "fumbles": -0.015
+      },
+      "stats": {
+        "player_reception_yds": 9.166666666666666,
+        "player_receptions": 1.5,
+        "player_rush_yds": 69.16666666666667,
+        "estimated_rush_tds": 0.7685185185185186,
+        "estimated_rec_tds": 0.08333333333333333,
+        "estimated_fumbles": 0.0075
+      },
+      "position": "RB",
+      "matchup": "Chicago Bears @ Washington Commanders",
+      "week": "Week 6",
+      "game_time": "2025-10-14T00:16:00Z"
+    },
+    {
+      "player": "Rome Odunze",
+      "format": "HALF_PPR",
+      "total_points": 12.636818181818182,
+      "breakdown": {
+        "passing": 0.0,
+        "rushing": 0.0,
+        "receiving": 12.681818181818182,
+        "fumbles": -0.045
+      },
+      "stats": {
+        "player_reception_yds": 67.5,
+        "player_receptions": 4.5,
+        "estimated_rec_tds": 0.6136363636363636,
+        "estimated_fumbles": 0.0225
+      },
+      "position": "WR",
+      "matchup": "Chicago Bears @ Washington Commanders",
+      "week": "Week 6",
+      "game_time": "2025-10-14T00:16:00Z"
+    },
+    {
+      "player": "Khalil Shakir",
+      "format": "PPR",
+      "total_points": 11.92469696969697,
+      "breakdown": {
+        "passing": 0.0,
+        "rushing": 0.0,
+        "receiving": 11.96969696969697,
+        "fumbles": -0.045
+      },
+      "stats": {
+        "player_reception_yds": 48.333333333333336,
+        "player_receptions": 4.5,
+        "estimated_rec_tds": 0.4393939393939394,
+        "estimated_fumbles": 0.0225
+      },
+      "position": "WR",
+      "matchup": "Buffalo Bills @ Atlanta Falcons",
+      "week": "Week 6",
+      "game_time": "2025-10-13T23:15:00Z"
+    },
+    {
+      "player": "D'Andre Swift",
+      "format": "HALF_PPR",
+      "total_points": 11.838131313131312,
+      "breakdown": {
+        "passing": 0.0,
+        "rushing": 7.805555555555555,
+        "receiving": 4.057575757575758,
+        "fumbles": -0.025
+      },
+      "stats": {
+        "player_reception_yds": 18.166666666666668,
+        "player_receptions": 2.5,
+        "player_rush_yds": 46.833333333333336,
+        "estimated_rush_tds": 0.5203703703703704,
+        "estimated_rec_tds": 0.16515151515151516,
+        "estimated_fumbles": 0.0125
+      },
+      "position": "RB",
+      "matchup": "Chicago Bears @ Washington Commanders",
+      "week": "Week 6",
+      "game_time": "2025-10-14T00:16:00Z"
+    },
+    {
+      "player": "Amon-Ra St. Brown",
+      "format": "STANDARD",
+      "total_points": 11.472727272727274,
+      "breakdown": {
+        "passing": 0.0,
+        "rushing": 0.0,
+        "receiving": 11.53939393939394,
+        "fumbles": -0.06666666666666667
+      },
+      "stats": {
+        "player_reception_yds": 74.66666666666667,
+        "player_receptions": 6.666666666666667,
+        "estimated_rec_tds": 0.6787878787878788,
+        "estimated_fumbles": 0.03333333333333333
+      },
+      "position": "WR",
+      "matchup": "Detroit Lions @ Kansas City Chiefs",
+      "week": "Week 6",
+      "game_time": "2025-10-13T00:20:00Z"
+    },
+    {
+      "player": "Sam LaPorta",
+      "format": "PPR",
+      "total_points": 11.255,
+      "breakdown": {
+        "passing": 0.0,
+        "rushing": 0.0,
+        "receiving": 11.3,
+        "fumbles": -0.045
+      },
+      "stats": {
+        "player_reception_yds": 44.0,
+        "player_receptions": 4.5,
+        "estimated_rec_tds": 0.4,
+        "estimated_fumbles": 0.0225
+      },
+      "position": "TE",
+      "matchup": "Detroit Lions @ Kansas City Chiefs",
+      "week": "Week 6",
+      "game_time": "2025-10-13T00:20:00Z"
+    },
+    {
+      "player": "Travis Kelce",
+      "format": "PPR",
+      "total_points": 11.126212121212122,
+      "breakdown": {
+        "passing": 0.0,
+        "rushing": 0.0,
+        "receiving": 11.171212121212122,
+        "fumbles": -0.045
+      },
+      "stats": {
+        "player_reception_yds": 43.166666666666664,
+        "player_receptions": 4.5,
+        "estimated_rec_tds": 0.3924242424242424,
+        "estimated_fumbles": 0.0225
+      },
+      "position": "TE",
+      "matchup": "Detroit Lions @ Kansas City Chiefs",
+      "week": "Week 6",
+      "game_time": "2025-10-13T00:20:00Z"
+    },
+    {
+      "player": "Drake London",
+      "format": "STANDARD",
+      "total_points": 11.09469696969697,
+      "breakdown": {
+        "passing": 0.0,
+        "rushing": 0.0,
+        "receiving": 11.153030303030304,
+        "fumbles": -0.05833333333333333
+      },
+      "stats": {
+        "player_reception_yds": 72.16666666666667,
+        "player_receptions": 5.833333333333333,
+        "estimated_rec_tds": 0.6560606060606061,
+        "estimated_fumbles": 0.029166666666666664
+      },
+      "position": "WR",
+      "matchup": "Buffalo Bills @ Atlanta Falcons",
+      "week": "Week 6",
+      "game_time": "2025-10-13T23:15:00Z"
+    },
+    {
+      "player": "DJ Moore",
+      "format": "PPR",
+      "total_points": 10.593787878787879,
+      "breakdown": {
+        "passing": 0.0,
+        "rushing": 1.0499999999999998,
+        "receiving": 9.578787878787878,
+        "fumbles": -0.035
+      },
+      "stats": {
+        "player_reception_yds": 39.333333333333336,
+        "player_receptions": 3.5,
+        "player_rush_yds": 6.3,
+        "estimated_rush_tds": 0.06999999999999999,
+        "estimated_rec_tds": 0.3575757575757576,
+        "estimated_fumbles": 0.0175
+      },
+      "position": "WR",
+      "matchup": "Chicago Bears @ Washington Commanders",
+      "week": "Week 6",
+      "game_time": "2025-10-14T00:16:00Z"
+    },
+    {
+      "player": "D'Andre Swift",
+      "format": "STANDARD",
+      "total_points": 10.588131313131312,
+      "breakdown": {
+        "passing": 0.0,
+        "rushing": 7.805555555555555,
+        "receiving": 2.8075757575757576,
+        "fumbles": -0.025
+      },
+      "stats": {
+        "player_reception_yds": 18.166666666666668,
+        "player_receptions": 2.5,
+        "player_rush_yds": 46.833333333333336,
+        "estimated_rush_tds": 0.5203703703703704,
+        "estimated_rec_tds": 0.16515151515151516,
+        "estimated_fumbles": 0.0125
+      },
+      "position": "RB",
+      "matchup": "Chicago Bears @ Washington Commanders",
+      "week": "Week 6",
+      "game_time": "2025-10-14T00:16:00Z"
+    },
+    {
+      "player": "Xavier Worthy",
+      "format": "STANDARD",
+      "total_points": 10.582121212121212,
+      "breakdown": {
+        "passing": 0.0,
+        "rushing": 0.875,
+        "receiving": 9.762121212121212,
+        "fumbles": -0.055
+      },
+      "stats": {
+        "player_reception_yds": 63.166666666666664,
+        "player_receptions": 5.5,
+        "player_rush_yds": 5.25,
+        "estimated_rush_tds": 0.058333333333333334,
+        "estimated_rec_tds": 0.5742424242424242,
+        "estimated_fumbles": 0.0275
+      },
+      "position": "WR",
+      "matchup": "Detroit Lions @ Kansas City Chiefs",
+      "week": "Week 6",
+      "game_time": "2025-10-13T00:20:00Z"
+    },
+    {
+      "player": "Rome Odunze",
+      "format": "STANDARD",
+      "total_points": 10.386818181818182,
+      "breakdown": {
+        "passing": 0.0,
+        "rushing": 0.0,
+        "receiving": 10.431818181818182,
+        "fumbles": -0.045
+      },
+      "stats": {
+        "player_reception_yds": 67.5,
+        "player_receptions": 4.5,
+        "estimated_rec_tds": 0.6136363636363636,
+        "estimated_fumbles": 0.0225
+      },
+      "position": "WR",
+      "matchup": "Chicago Bears @ Washington Commanders",
+      "week": "Week 6",
+      "game_time": "2025-10-14T00:16:00Z"
+    },
+    {
+      "player": "Deebo Samuel Sr.",
+      "format": "STANDARD",
+      "total_points": 10.346515151515153,
+      "breakdown": {
+        "passing": 0.0,
+        "rushing": 1.2833333333333332,
+        "receiving": 9.118181818181819,
+        "fumbles": -0.055
+      },
+      "stats": {
+        "player_reception_yds": 59.0,
+        "player_receptions": 5.5,
+        "player_rush_yds": 7.7,
+        "estimated_rush_tds": 0.08555555555555555,
+        "estimated_rec_tds": 0.5363636363636364,
+        "estimated_fumbles": 0.0275
+      },
+      "position": "WR",
+      "matchup": "Chicago Bears @ Washington Commanders",
+      "week": "Week 6",
+      "game_time": "2025-10-14T00:16:00Z"
+    },
+    {
+      "player": "Jameson Williams",
+      "format": "PPR",
+      "total_points": 9.733434343434343,
+      "breakdown": {
+        "passing": 0.0,
+        "rushing": 0.1388888888888889,
+        "receiving": 9.621212121212121,
+        "fumbles": -0.026666666666666665
+      },
+      "stats": {
+        "player_reception_yds": 45.0,
+        "player_receptions": 2.6666666666666665,
+        "player_rush_yds": 0.8333333333333334,
+        "estimated_rush_tds": 0.00925925925925926,
+        "estimated_rec_tds": 0.4090909090909091,
+        "estimated_fumbles": 0.013333333333333332
+      },
+      "position": "WR",
+      "matchup": "Detroit Lions @ Kansas City Chiefs",
+      "week": "Week 6",
+      "game_time": "2025-10-13T00:20:00Z"
+    },
+    {
+      "player": "Kyle Pitts",
+      "format": "PPR",
+      "total_points": 9.724090909090908,
+      "breakdown": {
+        "passing": 0.0,
+        "rushing": 0.0,
+        "receiving": 9.759090909090908,
+        "fumbles": -0.035
+      },
+      "stats": {
+        "player_reception_yds": 40.5,
+        "player_receptions": 3.5,
+        "estimated_rec_tds": 0.36818181818181817,
+        "estimated_fumbles": 0.0175
+      },
+      "position": "TE",
+      "matchup": "Buffalo Bills @ Atlanta Falcons",
+      "week": "Week 6",
+      "game_time": "2025-10-13T23:15:00Z"
+    },
+    {
+      "player": "Khalil Shakir",
+      "format": "HALF_PPR",
+      "total_points": 9.67469696969697,
+      "breakdown": {
+        "passing": 0.0,
+        "rushing": 0.0,
+        "receiving": 9.71969696969697,
+        "fumbles": -0.045
+      },
+      "stats": {
+        "player_reception_yds": 48.333333333333336,
+        "player_receptions": 4.5,
+        "estimated_rec_tds": 0.4393939393939394,
+        "estimated_fumbles": 0.0225
+      },
+      "position": "WR",
+      "matchup": "Buffalo Bills @ Atlanta Falcons",
+      "week": "Week 6",
+      "game_time": "2025-10-13T23:15:00Z"
+    },
+    {
+      "player": "Marquise Brown",
+      "format": "PPR",
+      "total_points": 9.569545454545455,
+      "breakdown": {
+        "passing": 0.0,
+        "rushing": 0.0,
+        "receiving": 9.604545454545455,
+        "fumbles": -0.035
+      },
+      "stats": {
+        "player_reception_yds": 39.5,
+        "player_receptions": 3.5,
+        "estimated_rec_tds": 0.35909090909090907,
+        "estimated_fumbles": 0.0175
+      },
+      "position": "WR",
+      "matchup": "Detroit Lions @ Kansas City Chiefs",
+      "week": "Week 6",
+      "game_time": "2025-10-13T00:20:00Z"
+    },
+    {
+      "player": "Keon Coleman",
+      "format": "PPR",
+      "total_points": 9.518030303030303,
+      "breakdown": {
+        "passing": 0.0,
+        "rushing": 0.0,
+        "receiving": 9.553030303030303,
+        "fumbles": -0.035
+      },
+      "stats": {
+        "player_reception_yds": 39.166666666666664,
+        "player_receptions": 3.5,
+        "estimated_rec_tds": 0.356060606060606,
+        "estimated_fumbles": 0.0175
+      },
+      "position": "WR",
+      "matchup": "Buffalo Bills @ Atlanta Falcons",
+      "week": "Week 6",
+      "game_time": "2025-10-13T23:15:00Z"
+    },
+    {
+      "player": "David Montgomery",
+      "format": "PPR",
+      "total_points": 9.368333333333332,
+      "breakdown": {
+        "passing": 0.0,
+        "rushing": 6.75,
+        "receiving": 2.6333333333333333,
+        "fumbles": -0.015
+      },
+      "stats": {
+        "player_reception_yds": 7.333333333333333,
+        "player_receptions": 1.5,
+        "player_rush_yds": 40.5,
+        "estimated_rush_tds": 0.45,
+        "estimated_rec_tds": 0.06666666666666667,
+        "estimated_fumbles": 0.0075
+      },
+      "position": "RB",
+      "matchup": "Detroit Lions @ Kansas City Chiefs",
+      "week": "Week 6",
+      "game_time": "2025-10-13T00:20:00Z"
+    },
+    {
+      "player": "Dalton Kincaid",
+      "format": "PPR",
+      "total_points": 9.260454545454545,
+      "breakdown": {
+        "passing": 0.0,
+        "rushing": 0.0,
+        "receiving": 9.295454545454545,
+        "fumbles": -0.035
+      },
+      "stats": {
+        "player_reception_yds": 37.5,
+        "player_receptions": 3.5,
+        "estimated_rec_tds": 0.3409090909090909,
+        "estimated_fumbles": 0.0175
+      },
+      "position": "TE",
+      "matchup": "Buffalo Bills @ Atlanta Falcons",
+      "week": "Week 6",
+      "game_time": "2025-10-13T23:15:00Z"
+    },
+    {
+      "player": "Sam LaPorta",
+      "format": "HALF_PPR",
+      "total_points": 9.005,
+      "breakdown": {
+        "passing": 0.0,
+        "rushing": 0.0,
+        "receiving": 9.05,
+        "fumbles": -0.045
+      },
+      "stats": {
+        "player_reception_yds": 44.0,
+        "player_receptions": 4.5,
+        "estimated_rec_tds": 0.4,
+        "estimated_fumbles": 0.0225
+      },
+      "position": "TE",
+      "matchup": "Detroit Lions @ Kansas City Chiefs",
+      "week": "Week 6",
+      "game_time": "2025-10-13T00:20:00Z"
+    },
+    {
+      "player": "Travis Kelce",
+      "format": "HALF_PPR",
+      "total_points": 8.876212121212122,
+      "breakdown": {
+        "passing": 0.0,
+        "rushing": 0.0,
+        "receiving": 8.921212121212122,
+        "fumbles": -0.045
+      },
+      "stats": {
+        "player_reception_yds": 43.166666666666664,
+        "player_receptions": 4.5,
+        "estimated_rec_tds": 0.3924242424242424,
+        "estimated_fumbles": 0.0225
+      },
+      "position": "TE",
+      "matchup": "Detroit Lions @ Kansas City Chiefs",
+      "week": "Week 6",
+      "game_time": "2025-10-13T00:20:00Z"
+    },
+    {
+      "player": "DJ Moore",
+      "format": "HALF_PPR",
+      "total_points": 8.843787878787879,
+      "breakdown": {
+        "passing": 0.0,
+        "rushing": 1.0499999999999998,
+        "receiving": 7.828787878787879,
+        "fumbles": -0.035
+      },
+      "stats": {
+        "player_reception_yds": 39.333333333333336,
+        "player_receptions": 3.5,
+        "player_rush_yds": 6.3,
+        "estimated_rush_tds": 0.06999999999999999,
+        "estimated_rec_tds": 0.3575757575757576,
+        "estimated_fumbles": 0.0175
+      },
+      "position": "WR",
+      "matchup": "Chicago Bears @ Washington Commanders",
+      "week": "Week 6",
+      "game_time": "2025-10-14T00:16:00Z"
+    },
+    {
+      "player": "David Montgomery",
+      "format": "HALF_PPR",
+      "total_points": 8.618333333333332,
+      "breakdown": {
+        "passing": 0.0,
+        "rushing": 6.75,
+        "receiving": 1.8833333333333333,
+        "fumbles": -0.015
+      },
+      "stats": {
+        "player_reception_yds": 7.333333333333333,
+        "player_receptions": 1.5,
+        "player_rush_yds": 40.5,
+        "estimated_rush_tds": 0.45,
+        "estimated_rec_tds": 0.06666666666666667,
+        "estimated_fumbles": 0.0075
+      },
+      "position": "RB",
+      "matchup": "Detroit Lions @ Kansas City Chiefs",
+      "week": "Week 6",
+      "game_time": "2025-10-13T00:20:00Z"
+    },
+    {
+      "player": "Jameson Williams",
+      "format": "HALF_PPR",
+      "total_points": 8.40010101010101,
+      "breakdown": {
+        "passing": 0.0,
+        "rushing": 0.1388888888888889,
+        "receiving": 8.287878787878787,
+        "fumbles": -0.026666666666666665
+      },
+      "stats": {
+        "player_reception_yds": 45.0,
+        "player_receptions": 2.6666666666666665,
+        "player_rush_yds": 0.8333333333333334,
+        "estimated_rush_tds": 0.00925925925925926,
+        "estimated_rec_tds": 0.4090909090909091,
+        "estimated_fumbles": 0.013333333333333332
+      },
+      "position": "WR",
+      "matchup": "Detroit Lions @ Kansas City Chiefs",
+      "week": "Week 6",
+      "game_time": "2025-10-13T00:20:00Z"
+    },
+    {
+      "player": "Kyle Pitts",
+      "format": "HALF_PPR",
+      "total_points": 7.974090909090908,
+      "breakdown": {
+        "passing": 0.0,
+        "rushing": 0.0,
+        "receiving": 8.009090909090908,
+        "fumbles": -0.035
+      },
+      "stats": {
+        "player_reception_yds": 40.5,
+        "player_receptions": 3.5,
+        "estimated_rec_tds": 0.36818181818181817,
+        "estimated_fumbles": 0.0175
+      },
+      "position": "TE",
+      "matchup": "Buffalo Bills @ Atlanta Falcons",
+      "week": "Week 6",
+      "game_time": "2025-10-13T23:15:00Z"
+    },
+    {
+      "player": "Zach Ertz",
+      "format": "PPR",
+      "total_points": 7.972575757575758,
+      "breakdown": {
+        "passing": 0.0,
+        "rushing": 0.0,
+        "receiving": 8.007575757575758,
+        "fumbles": -0.035
+      },
+      "stats": {
+        "player_reception_yds": 29.166666666666668,
+        "player_receptions": 3.5,
+        "estimated_rec_tds": 0.26515151515151514,
+        "estimated_fumbles": 0.0175
+      },
+      "position": "TE",
+      "matchup": "Chicago Bears @ Washington Commanders",
+      "week": "Week 6",
+      "game_time": "2025-10-14T00:16:00Z"
+    },
+    {
+      "player": "David Montgomery",
+      "format": "STANDARD",
+      "total_points": 7.868333333333333,
+      "breakdown": {
+        "passing": 0.0,
+        "rushing": 6.75,
+        "receiving": 1.1333333333333333,
+        "fumbles": -0.015
+      },
+      "stats": {
+        "player_reception_yds": 7.333333333333333,
+        "player_receptions": 1.5,
+        "player_rush_yds": 40.5,
+        "estimated_rush_tds": 0.45,
+        "estimated_rec_tds": 0.06666666666666667,
+        "estimated_fumbles": 0.0075
+      },
+      "position": "RB",
+      "matchup": "Detroit Lions @ Kansas City Chiefs",
+      "week": "Week 6",
+      "game_time": "2025-10-13T00:20:00Z"
+    },
+    {
+      "player": "Marquise Brown",
+      "format": "HALF_PPR",
+      "total_points": 7.819545454545454,
+      "breakdown": {
+        "passing": 0.0,
+        "rushing": 0.0,
+        "receiving": 7.8545454545454545,
+        "fumbles": -0.035
+      },
+      "stats": {
+        "player_reception_yds": 39.5,
+        "player_receptions": 3.5,
+        "estimated_rec_tds": 0.35909090909090907,
+        "estimated_fumbles": 0.0175
+      },
+      "position": "WR",
+      "matchup": "Detroit Lions @ Kansas City Chiefs",
+      "week": "Week 6",
+      "game_time": "2025-10-13T00:20:00Z"
+    },
+    {
+      "player": "Keon Coleman",
+      "format": "HALF_PPR",
+      "total_points": 7.768030303030303,
+      "breakdown": {
+        "passing": 0.0,
+        "rushing": 0.0,
+        "receiving": 7.803030303030303,
+        "fumbles": -0.035
+      },
+      "stats": {
+        "player_reception_yds": 39.166666666666664,
+        "player_receptions": 3.5,
+        "estimated_rec_tds": 0.356060606060606,
+        "estimated_fumbles": 0.0175
+      },
+      "position": "WR",
+      "matchup": "Buffalo Bills @ Atlanta Falcons",
+      "week": "Week 6",
+      "game_time": "2025-10-13T23:15:00Z"
+    },
+    {
+      "player": "Isiah Pacheco",
+      "format": "PPR",
+      "total_points": 7.7607575757575775,
+      "breakdown": {
+        "passing": 0.0,
+        "rushing": 4.833333333333334,
+        "receiving": 2.942424242424243,
+        "fumbles": -0.015
+      },
+      "stats": {
+        "player_reception_yds": 9.333333333333334,
+        "player_rush_yds": 29.0,
+        "player_receptions": 1.5,
+        "estimated_rush_tds": 0.32222222222222224,
+        "estimated_rec_tds": 0.08484848484848485,
+        "estimated_fumbles": 0.0075
+      },
+      "position": "RB",
+      "matchup": "Detroit Lions @ Kansas City Chiefs",
+      "week": "Week 6",
+      "game_time": "2025-10-13T00:20:00Z"
+    },
+    {
+      "player": "Dalton Kincaid",
+      "format": "HALF_PPR",
+      "total_points": 7.510454545454545,
+      "breakdown": {
+        "passing": 0.0,
+        "rushing": 0.0,
+        "receiving": 7.545454545454545,
+        "fumbles": -0.035
+      },
+      "stats": {
+        "player_reception_yds": 37.5,
+        "player_receptions": 3.5,
+        "estimated_rec_tds": 0.3409090909090909,
+        "estimated_fumbles": 0.0175
+      },
+      "position": "TE",
+      "matchup": "Buffalo Bills @ Atlanta Falcons",
+      "week": "Week 6",
+      "game_time": "2025-10-13T23:15:00Z"
+    },
+    {
+      "player": "Khalil Shakir",
+      "format": "STANDARD",
+      "total_points": 7.424696969696971,
+      "breakdown": {
+        "passing": 0.0,
+        "rushing": 0.0,
+        "receiving": 7.469696969696971,
+        "fumbles": -0.045
+      },
+      "stats": {
+        "player_reception_yds": 48.333333333333336,
+        "player_receptions": 4.5,
+        "estimated_rec_tds": 0.4393939393939394,
+        "estimated_fumbles": 0.0225
+      },
+      "position": "WR",
+      "matchup": "Buffalo Bills @ Atlanta Falcons",
+      "week": "Week 6",
+      "game_time": "2025-10-13T23:15:00Z"
+    },
+    {
+      "player": "Kareem Hunt",
+      "format": "PPR",
+      "total_points": 7.251666666666667,
+      "breakdown": {
+        "passing": 0.0,
+        "rushing": 4.916666666666667,
+        "receiving": 2.3499999999999996,
+        "fumbles": -0.015
+      },
+      "stats": {
+        "player_rush_yds": 29.5,
+        "player_reception_yds": 5.5,
+        "player_receptions": 1.5,
+        "estimated_rush_tds": 0.3277777777777778,
+        "estimated_rec_tds": 0.05,
+        "estimated_fumbles": 0.0075
+      },
+      "position": "RB",
+      "matchup": "Detroit Lions @ Kansas City Chiefs",
+      "week": "Week 6",
+      "game_time": "2025-10-13T00:20:00Z"
+    },
+    {
+      "player": "DJ Moore",
+      "format": "STANDARD",
+      "total_points": 7.093787878787879,
+      "breakdown": {
+        "passing": 0.0,
+        "rushing": 1.0499999999999998,
+        "receiving": 6.078787878787879,
+        "fumbles": -0.035
+      },
+      "stats": {
+        "player_reception_yds": 39.333333333333336,
+        "player_receptions": 3.5,
+        "player_rush_yds": 6.3,
+        "estimated_rush_tds": 0.06999999999999999,
+        "estimated_rec_tds": 0.3575757575757576,
+        "estimated_fumbles": 0.0175
+      },
+      "position": "WR",
+      "matchup": "Chicago Bears @ Washington Commanders",
+      "week": "Week 6",
+      "game_time": "2025-10-14T00:16:00Z"
+    },
+    {
+      "player": "Jameson Williams",
+      "format": "STANDARD",
+      "total_points": 7.066767676767678,
+      "breakdown": {
+        "passing": 0.0,
+        "rushing": 0.1388888888888889,
+        "receiving": 6.954545454545455,
+        "fumbles": -0.026666666666666665
+      },
+      "stats": {
+        "player_reception_yds": 45.0,
+        "player_receptions": 2.6666666666666665,
+        "player_rush_yds": 0.8333333333333334,
+        "estimated_rush_tds": 0.00925925925925926,
+        "estimated_rec_tds": 0.4090909090909091,
+        "estimated_fumbles": 0.013333333333333332
+      },
+      "position": "WR",
+      "matchup": "Detroit Lions @ Kansas City Chiefs",
+      "week": "Week 6",
+      "game_time": "2025-10-13T00:20:00Z"
+    },
+    {
+      "player": "Isiah Pacheco",
+      "format": "HALF_PPR",
+      "total_points": 7.0107575757575775,
+      "breakdown": {
+        "passing": 0.0,
+        "rushing": 4.833333333333334,
+        "receiving": 2.192424242424243,
+        "fumbles": -0.015
+      },
+      "stats": {
+        "player_reception_yds": 9.333333333333334,
+        "player_rush_yds": 29.0,
+        "player_receptions": 1.5,
+        "estimated_rush_tds": 0.32222222222222224,
+        "estimated_rec_tds": 0.08484848484848485,
+        "estimated_fumbles": 0.0075
+      },
+      "position": "RB",
+      "matchup": "Detroit Lions @ Kansas City Chiefs",
+      "week": "Week 6",
+      "game_time": "2025-10-13T00:20:00Z"
+    },
+    {
+      "player": "Sam LaPorta",
+      "format": "STANDARD",
+      "total_points": 6.755000000000001,
+      "breakdown": {
+        "passing": 0.0,
+        "rushing": 0.0,
+        "receiving": 6.800000000000001,
+        "fumbles": -0.045
+      },
+      "stats": {
+        "player_reception_yds": 44.0,
+        "player_receptions": 4.5,
+        "estimated_rec_tds": 0.4,
+        "estimated_fumbles": 0.0225
+      },
+      "position": "TE",
+      "matchup": "Detroit Lions @ Kansas City Chiefs",
+      "week": "Week 6",
+      "game_time": "2025-10-13T00:20:00Z"
+    },
+    {
+      "player": "Olamide Zaccheaus",
+      "format": "PPR",
+      "total_points": 6.6477272727272725,
+      "breakdown": {
+        "passing": 0.0,
+        "rushing": 0.0,
+        "receiving": 6.672727272727273,
+        "fumbles": -0.025
+      },
+      "stats": {
+        "player_reception_yds": 27.0,
+        "player_receptions": 2.5,
+        "estimated_rec_tds": 0.24545454545454545,
+        "estimated_fumbles": 0.0125
+      },
+      "position": "WR",
+      "matchup": "Chicago Bears @ Washington Commanders",
+      "week": "Week 6",
+      "game_time": "2025-10-14T00:16:00Z"
+    },
+    {
+      "player": "Travis Kelce",
+      "format": "STANDARD",
+      "total_points": 6.626212121212121,
+      "breakdown": {
+        "passing": 0.0,
+        "rushing": 0.0,
+        "receiving": 6.671212121212121,
+        "fumbles": -0.045
+      },
+      "stats": {
+        "player_reception_yds": 43.166666666666664,
+        "player_receptions": 4.5,
+        "estimated_rec_tds": 0.3924242424242424,
+        "estimated_fumbles": 0.0225
+      },
+      "position": "TE",
+      "matchup": "Detroit Lions @ Kansas City Chiefs",
+      "week": "Week 6",
+      "game_time": "2025-10-13T00:20:00Z"
+    },
+    {
+      "player": "Kareem Hunt",
+      "format": "HALF_PPR",
+      "total_points": 6.501666666666668,
+      "breakdown": {
+        "passing": 0.0,
+        "rushing": 4.916666666666667,
+        "receiving": 1.6,
+        "fumbles": -0.015
+      },
+      "stats": {
+        "player_rush_yds": 29.5,
+        "player_reception_yds": 5.5,
+        "player_receptions": 1.5,
+        "estimated_rush_tds": 0.3277777777777778,
+        "estimated_rec_tds": 0.05,
+        "estimated_fumbles": 0.0075
+      },
+      "position": "RB",
+      "matchup": "Detroit Lions @ Kansas City Chiefs",
+      "week": "Week 6",
+      "game_time": "2025-10-13T00:20:00Z"
+    },
+    {
+      "player": "Luke McCaffrey",
+      "format": "PPR",
+      "total_points": 6.322954545454546,
+      "breakdown": {
+        "passing": 0.0,
+        "rushing": 0.0,
+        "receiving": 6.345454545454546,
+        "fumbles": -0.0225
+      },
+      "stats": {
+        "player_reception_yds": 26.5,
+        "player_receptions": 2.25,
+        "estimated_rec_tds": 0.2409090909090909,
+        "estimated_fumbles": 0.01125
+      },
+      "position": "WR",
+      "matchup": "Chicago Bears @ Washington Commanders",
+      "week": "Week 6",
+      "game_time": "2025-10-14T00:16:00Z"
+    },
+    {
+      "player": "Isiah Pacheco",
+      "format": "STANDARD",
+      "total_points": 6.260757575757577,
+      "breakdown": {
+        "passing": 0.0,
+        "rushing": 4.833333333333334,
+        "receiving": 1.4424242424242426,
+        "fumbles": -0.015
+      },
+      "stats": {
+        "player_reception_yds": 9.333333333333334,
+        "player_rush_yds": 29.0,
+        "player_receptions": 1.5,
+        "estimated_rush_tds": 0.32222222222222224,
+        "estimated_rec_tds": 0.08484848484848485,
+        "estimated_fumbles": 0.0075
+      },
+      "position": "RB",
+      "matchup": "Detroit Lions @ Kansas City Chiefs",
+      "week": "Week 6",
+      "game_time": "2025-10-13T00:20:00Z"
+    },
+    {
+      "player": "Kyle Pitts",
+      "format": "STANDARD",
+      "total_points": 6.224090909090909,
+      "breakdown": {
+        "passing": 0.0,
+        "rushing": 0.0,
+        "receiving": 6.259090909090909,
+        "fumbles": -0.035
+      },
+      "stats": {
+        "player_reception_yds": 40.5,
+        "player_receptions": 3.5,
+        "estimated_rec_tds": 0.36818181818181817,
+        "estimated_fumbles": 0.0175
+      },
+      "position": "TE",
+      "matchup": "Buffalo Bills @ Atlanta Falcons",
+      "week": "Week 6",
+      "game_time": "2025-10-13T23:15:00Z"
+    },
+    {
+      "player": "Zach Ertz",
+      "format": "HALF_PPR",
+      "total_points": 6.222575757575758,
+      "breakdown": {
+        "passing": 0.0,
+        "rushing": 0.0,
+        "receiving": 6.257575757575758,
+        "fumbles": -0.035
+      },
+      "stats": {
+        "player_reception_yds": 29.166666666666668,
+        "player_receptions": 3.5,
+        "estimated_rec_tds": 0.26515151515151514,
+        "estimated_fumbles": 0.0175
+      },
+      "position": "TE",
+      "matchup": "Chicago Bears @ Washington Commanders",
+      "week": "Week 6",
+      "game_time": "2025-10-14T00:16:00Z"
+    },
+    {
+      "player": "JuJu Smith-Schuster",
+      "format": "PPR",
+      "total_points": 6.132575757575758,
+      "breakdown": {
+        "passing": 0.0,
+        "rushing": 0.0,
+        "receiving": 6.157575757575758,
+        "fumbles": -0.025
+      },
+      "stats": {
+        "player_reception_yds": 23.666666666666668,
+        "player_receptions": 2.5,
+        "estimated_rec_tds": 0.21515151515151515,
+        "estimated_fumbles": 0.0125
+      },
+      "position": "WR",
+      "matchup": "Detroit Lions @ Kansas City Chiefs",
+      "week": "Week 6",
+      "game_time": "2025-10-13T00:20:00Z"
+    },
+    {
+      "player": "Casey Washington",
+      "format": "PPR",
+      "total_points": 6.106818181818181,
+      "breakdown": {
+        "passing": 0.0,
+        "rushing": 0.0,
+        "receiving": 6.131818181818181,
+        "fumbles": -0.025
+      },
+      "stats": {
+        "player_reception_yds": 23.5,
+        "player_receptions": 2.5,
+        "estimated_rec_tds": 0.21363636363636362,
+        "estimated_fumbles": 0.0125
+      },
+      "position": "WR",
+      "matchup": "Buffalo Bills @ Atlanta Falcons",
+      "week": "Week 6",
+      "game_time": "2025-10-13T23:15:00Z"
+    },
+    {
+      "player": "Marquise Brown",
+      "format": "STANDARD",
+      "total_points": 6.069545454545454,
+      "breakdown": {
+        "passing": 0.0,
+        "rushing": 0.0,
+        "receiving": 6.1045454545454545,
+        "fumbles": -0.035
+      },
+      "stats": {
+        "player_reception_yds": 39.5,
+        "player_receptions": 3.5,
+        "estimated_rec_tds": 0.35909090909090907,
+        "estimated_fumbles": 0.0175
+      },
+      "position": "WR",
+      "matchup": "Detroit Lions @ Kansas City Chiefs",
+      "week": "Week 6",
+      "game_time": "2025-10-13T00:20:00Z"
+    },
+    {
+      "player": "Keon Coleman",
+      "format": "STANDARD",
+      "total_points": 6.018030303030303,
+      "breakdown": {
+        "passing": 0.0,
+        "rushing": 0.0,
+        "receiving": 6.053030303030303,
+        "fumbles": -0.035
+      },
+      "stats": {
+        "player_reception_yds": 39.166666666666664,
+        "player_receptions": 3.5,
+        "estimated_rec_tds": 0.356060606060606,
+        "estimated_fumbles": 0.0175
+      },
+      "position": "WR",
+      "matchup": "Buffalo Bills @ Atlanta Falcons",
+      "week": "Week 6",
+      "game_time": "2025-10-13T23:15:00Z"
+    },
+    {
+      "player": "Tyquan Thornton",
+      "format": "PPR",
+      "total_points": 5.765909090909091,
+      "breakdown": {
+        "passing": 0.0,
+        "rushing": 0.0,
+        "receiving": 5.78090909090909,
+        "fumbles": -0.015
+      },
+      "stats": {
+        "player_reception_yds": 27.7,
+        "player_receptions": 1.5,
+        "estimated_rec_tds": 0.25181818181818183,
+        "estimated_fumbles": 0.0075
+      },
+      "position": "WR",
+      "matchup": "Detroit Lions @ Kansas City Chiefs",
+      "week": "Week 6",
+      "game_time": "2025-10-13T00:20:00Z"
+    },
+    {
+      "player": "Dalton Kincaid",
+      "format": "STANDARD",
+      "total_points": 5.760454545454545,
+      "breakdown": {
+        "passing": 0.0,
+        "rushing": 0.0,
+        "receiving": 5.795454545454545,
+        "fumbles": -0.035
+      },
+      "stats": {
+        "player_reception_yds": 37.5,
+        "player_receptions": 3.5,
+        "estimated_rec_tds": 0.3409090909090909,
+        "estimated_fumbles": 0.0175
+      },
+      "position": "TE",
+      "matchup": "Buffalo Bills @ Atlanta Falcons",
+      "week": "Week 6",
+      "game_time": "2025-10-13T23:15:00Z"
+    },
+    {
+      "player": "Kareem Hunt",
+      "format": "STANDARD",
+      "total_points": 5.751666666666668,
+      "breakdown": {
+        "passing": 0.0,
+        "rushing": 4.916666666666667,
+        "receiving": 0.8500000000000001,
+        "fumbles": -0.015
+      },
+      "stats": {
+        "player_rush_yds": 29.5,
+        "player_reception_yds": 5.5,
+        "player_receptions": 1.5,
+        "estimated_rush_tds": 0.3277777777777778,
+        "estimated_rec_tds": 0.05,
+        "estimated_fumbles": 0.0075
+      },
+      "position": "RB",
+      "matchup": "Detroit Lions @ Kansas City Chiefs",
+      "week": "Week 6",
+      "game_time": "2025-10-13T00:20:00Z"
+    },
+    {
+      "player": "Ray-Ray McCloud III",
+      "format": "PPR",
+      "total_points": 5.488636363636363,
+      "breakdown": {
+        "passing": 0.0,
+        "rushing": 0.0,
+        "receiving": 5.513636363636364,
+        "fumbles": -0.025
+      },
+      "stats": {
+        "player_reception_yds": 19.5,
+        "player_receptions": 2.5,
+        "estimated_rec_tds": 0.17727272727272728,
+        "estimated_fumbles": 0.0125
+      },
+      "position": "WR",
+      "matchup": "Buffalo Bills @ Atlanta Falcons",
+      "week": "Week 6",
+      "game_time": "2025-10-13T23:15:00Z"
+    },
+    {
+      "player": "Olamide Zaccheaus",
+      "format": "HALF_PPR",
+      "total_points": 5.3977272727272725,
+      "breakdown": {
+        "passing": 0.0,
+        "rushing": 0.0,
+        "receiving": 5.422727272727273,
+        "fumbles": -0.025
+      },
+      "stats": {
+        "player_reception_yds": 27.0,
+        "player_receptions": 2.5,
+        "estimated_rec_tds": 0.24545454545454545,
+        "estimated_fumbles": 0.0125
+      },
+      "position": "WR",
+      "matchup": "Chicago Bears @ Washington Commanders",
+      "week": "Week 6",
+      "game_time": "2025-10-14T00:16:00Z"
+    },
+    {
+      "player": "Luke McCaffrey",
+      "format": "HALF_PPR",
+      "total_points": 5.197954545454546,
+      "breakdown": {
+        "passing": 0.0,
+        "rushing": 0.0,
+        "receiving": 5.220454545454546,
+        "fumbles": -0.0225
+      },
+      "stats": {
+        "player_reception_yds": 26.5,
+        "player_receptions": 2.25,
+        "estimated_rec_tds": 0.2409090909090909,
+        "estimated_fumbles": 0.01125
+      },
+      "position": "WR",
+      "matchup": "Chicago Bears @ Washington Commanders",
+      "week": "Week 6",
+      "game_time": "2025-10-14T00:16:00Z"
+    },
+    {
+      "player": "Tyler Allgeier",
+      "format": "PPR",
+      "total_points": 5.027777777777779,
+      "breakdown": {
+        "passing": 0.0,
+        "rushing": 5.027777777777779,
+        "receiving": 0.0,
+        "fumbles": 0.0
+      },
+      "stats": {
+        "player_rush_yds": 30.166666666666668,
+        "estimated_rush_tds": 0.3351851851851852
+      },
+      "position": "RB",
+      "matchup": "Buffalo Bills @ Atlanta Falcons",
+      "week": "Week 6",
+      "game_time": "2025-10-13T23:15:00Z"
+    },
+    {
+      "player": "Tyler Allgeier",
+      "format": "HALF_PPR",
+      "total_points": 5.027777777777779,
+      "breakdown": {
+        "passing": 0.0,
+        "rushing": 5.027777777777779,
+        "receiving": 0.0,
+        "fumbles": 0.0
+      },
+      "stats": {
+        "player_rush_yds": 30.166666666666668,
+        "estimated_rush_tds": 0.3351851851851852
+      },
+      "position": "RB",
+      "matchup": "Buffalo Bills @ Atlanta Falcons",
+      "week": "Week 6",
+      "game_time": "2025-10-13T23:15:00Z"
+    },
+    {
+      "player": "Tyler Allgeier",
+      "format": "STANDARD",
+      "total_points": 5.027777777777779,
+      "breakdown": {
+        "passing": 0.0,
+        "rushing": 5.027777777777779,
+        "receiving": 0.0,
+        "fumbles": 0.0
+      },
+      "stats": {
+        "player_rush_yds": 30.166666666666668,
+        "estimated_rush_tds": 0.3351851851851852
+      },
+      "position": "RB",
+      "matchup": "Buffalo Bills @ Atlanta Falcons",
+      "week": "Week 6",
+      "game_time": "2025-10-13T23:15:00Z"
+    },
+    {
+      "player": "Tyquan Thornton",
+      "format": "HALF_PPR",
+      "total_points": 5.0159090909090915,
+      "breakdown": {
+        "passing": 0.0,
+        "rushing": 0.0,
+        "receiving": 5.030909090909091,
+        "fumbles": -0.015
+      },
+      "stats": {
+        "player_reception_yds": 27.7,
+        "player_receptions": 1.5,
+        "estimated_rec_tds": 0.25181818181818183,
+        "estimated_fumbles": 0.0075
+      },
+      "position": "WR",
+      "matchup": "Detroit Lions @ Kansas City Chiefs",
+      "week": "Week 6",
+      "game_time": "2025-10-13T00:20:00Z"
+    },
+    {
+      "player": "JuJu Smith-Schuster",
+      "format": "HALF_PPR",
+      "total_points": 4.882575757575758,
+      "breakdown": {
+        "passing": 0.0,
+        "rushing": 0.0,
+        "receiving": 4.907575757575758,
+        "fumbles": -0.025
+      },
+      "stats": {
+        "player_reception_yds": 23.666666666666668,
+        "player_receptions": 2.5,
+        "estimated_rec_tds": 0.21515151515151515,
+        "estimated_fumbles": 0.0125
+      },
+      "position": "WR",
+      "matchup": "Detroit Lions @ Kansas City Chiefs",
+      "week": "Week 6",
+      "game_time": "2025-10-13T00:20:00Z"
+    },
+    {
+      "player": "Casey Washington",
+      "format": "HALF_PPR",
+      "total_points": 4.8568181818181815,
+      "breakdown": {
+        "passing": 0.0,
+        "rushing": 0.0,
+        "receiving": 4.881818181818182,
+        "fumbles": -0.025
+      },
+      "stats": {
+        "player_reception_yds": 23.5,
+        "player_receptions": 2.5,
+        "estimated_rec_tds": 0.21363636363636362,
+        "estimated_fumbles": 0.0125
+      },
+      "position": "WR",
+      "matchup": "Buffalo Bills @ Atlanta Falcons",
+      "week": "Week 6",
+      "game_time": "2025-10-13T23:15:00Z"
+    },
+    {
+      "player": "Chris Moore",
+      "format": "PPR",
+      "total_points": 4.807727272727273,
+      "breakdown": {
+        "passing": 0.0,
+        "rushing": 0.0,
+        "receiving": 4.822727272727272,
+        "fumbles": -0.015
+      },
+      "stats": {
+        "player_reception_yds": 21.5,
+        "player_receptions": 1.5,
+        "estimated_rec_tds": 0.19545454545454546,
+        "estimated_fumbles": 0.0075
+      },
+      "position": "WR",
+      "matchup": "Chicago Bears @ Washington Commanders",
+      "week": "Week 6",
+      "game_time": "2025-10-14T00:16:00Z"
+    },
+    {
+      "player": "Zach Ertz",
+      "format": "STANDARD",
+      "total_points": 4.472575757575758,
+      "breakdown": {
+        "passing": 0.0,
+        "rushing": 0.0,
+        "receiving": 4.507575757575758,
+        "fumbles": -0.035
+      },
+      "stats": {
+        "player_reception_yds": 29.166666666666668,
+        "player_receptions": 3.5,
+        "estimated_rec_tds": 0.26515151515151514,
+        "estimated_fumbles": 0.0175
+      },
+      "position": "TE",
+      "matchup": "Chicago Bears @ Washington Commanders",
+      "week": "Week 6",
+      "game_time": "2025-10-14T00:16:00Z"
+    },
+    {
+      "player": "Joshua Palmer",
+      "format": "PPR",
+      "total_points": 4.447121212121213,
+      "breakdown": {
+        "passing": 0.0,
+        "rushing": 0.0,
+        "receiving": 4.462121212121213,
+        "fumbles": -0.015
+      },
+      "stats": {
+        "player_reception_yds": 19.166666666666668,
+        "player_receptions": 1.5,
+        "estimated_rec_tds": 0.17424242424242425,
+        "estimated_fumbles": 0.0075
+      },
+      "position": "WR",
+      "matchup": "Buffalo Bills @ Atlanta Falcons",
+      "week": "Week 6",
+      "game_time": "2025-10-13T23:15:00Z"
+    },
+    {
+      "player": "Jaylin Lane",
+      "format": "PPR",
+      "total_points": 4.34409090909091,
+      "breakdown": {
+        "passing": 0.0,
+        "rushing": 0.0,
+        "receiving": 4.359090909090909,
+        "fumbles": -0.015
+      },
+      "stats": {
+        "player_reception_yds": 18.5,
+        "player_receptions": 1.5,
+        "estimated_rec_tds": 0.16818181818181818,
+        "estimated_fumbles": 0.0075
+      },
+      "position": "WR",
+      "matchup": "Chicago Bears @ Washington Commanders",
+      "week": "Week 6",
+      "game_time": "2025-10-14T00:16:00Z"
+    },
+    {
+      "player": "Cole Kmet",
+      "format": "PPR",
+      "total_points": 4.34409090909091,
+      "breakdown": {
+        "passing": 0.0,
+        "rushing": 0.0,
+        "receiving": 4.359090909090909,
+        "fumbles": -0.015
+      },
+      "stats": {
+        "player_reception_yds": 18.5,
+        "player_receptions": 1.5,
+        "estimated_rec_tds": 0.16818181818181818,
+        "estimated_fumbles": 0.0075
+      },
+      "position": "TE",
+      "matchup": "Chicago Bears @ Washington Commanders",
+      "week": "Week 6",
+      "game_time": "2025-10-14T00:16:00Z"
+    },
+    {
+      "player": "Luther Burden III",
+      "format": "PPR",
+      "total_points": 4.3131818181818184,
+      "breakdown": {
+        "passing": 0.0,
+        "rushing": 0.0,
+        "receiving": 4.328181818181818,
+        "fumbles": -0.015
+      },
+      "stats": {
+        "player_reception_yds": 18.3,
+        "player_receptions": 1.5,
+        "estimated_rec_tds": 0.16636363636363638,
+        "estimated_fumbles": 0.0075
+      },
+      "position": "WR",
+      "matchup": "Chicago Bears @ Washington Commanders",
+      "week": "Week 6",
+      "game_time": "2025-10-14T00:16:00Z"
+    },
+    {
+      "player": "Tyquan Thornton",
+      "format": "STANDARD",
+      "total_points": 4.2659090909090915,
+      "breakdown": {
+        "passing": 0.0,
+        "rushing": 0.0,
+        "receiving": 4.280909090909091,
+        "fumbles": -0.015
+      },
+      "stats": {
+        "player_reception_yds": 27.7,
+        "player_receptions": 1.5,
+        "estimated_rec_tds": 0.25181818181818183,
+        "estimated_fumbles": 0.0075
+      },
+      "position": "WR",
+      "matchup": "Detroit Lions @ Kansas City Chiefs",
+      "week": "Week 6",
+      "game_time": "2025-10-13T00:20:00Z"
+    },
+    {
+      "player": "Ray-Ray McCloud III",
+      "format": "HALF_PPR",
+      "total_points": 4.238636363636363,
+      "breakdown": {
+        "passing": 0.0,
+        "rushing": 0.0,
+        "receiving": 4.263636363636364,
+        "fumbles": -0.025
+      },
+      "stats": {
+        "player_reception_yds": 19.5,
+        "player_receptions": 2.5,
+        "estimated_rec_tds": 0.17727272727272728,
+        "estimated_fumbles": 0.0125
+      },
+      "position": "WR",
+      "matchup": "Buffalo Bills @ Atlanta Falcons",
+      "week": "Week 6",
+      "game_time": "2025-10-13T23:15:00Z"
+    },
+    {
+      "player": "Olamide Zaccheaus",
+      "format": "STANDARD",
+      "total_points": 4.1477272727272725,
+      "breakdown": {
+        "passing": 0.0,
+        "rushing": 0.0,
+        "receiving": 4.172727272727273,
+        "fumbles": -0.025
+      },
+      "stats": {
+        "player_reception_yds": 27.0,
+        "player_receptions": 2.5,
+        "estimated_rec_tds": 0.24545454545454545,
+        "estimated_fumbles": 0.0125
+      },
+      "position": "WR",
+      "matchup": "Chicago Bears @ Washington Commanders",
+      "week": "Week 6",
+      "game_time": "2025-10-14T00:16:00Z"
+    },
+    {
+      "player": "Luke McCaffrey",
+      "format": "STANDARD",
+      "total_points": 4.072954545454546,
+      "breakdown": {
+        "passing": 0.0,
+        "rushing": 0.0,
+        "receiving": 4.095454545454546,
+        "fumbles": -0.0225
+      },
+      "stats": {
+        "player_reception_yds": 26.5,
+        "player_receptions": 2.25,
+        "estimated_rec_tds": 0.2409090909090909,
+        "estimated_fumbles": 0.01125
+      },
+      "position": "WR",
+      "matchup": "Chicago Bears @ Washington Commanders",
+      "week": "Week 6",
+      "game_time": "2025-10-14T00:16:00Z"
+    },
+    {
+      "player": "Chris Moore",
+      "format": "HALF_PPR",
+      "total_points": 4.057727272727273,
+      "breakdown": {
+        "passing": 0.0,
+        "rushing": 0.0,
+        "receiving": 4.072727272727272,
+        "fumbles": -0.015
+      },
+      "stats": {
+        "player_reception_yds": 21.5,
+        "player_receptions": 1.5,
+        "estimated_rec_tds": 0.19545454545454546,
+        "estimated_fumbles": 0.0075
+      },
+      "position": "WR",
+      "matchup": "Chicago Bears @ Washington Commanders",
+      "week": "Week 6",
+      "game_time": "2025-10-14T00:16:00Z"
+    },
+    {
+      "player": "Joshua Palmer",
+      "format": "HALF_PPR",
+      "total_points": 3.6971212121212123,
+      "breakdown": {
+        "passing": 0.0,
+        "rushing": 0.0,
+        "receiving": 3.7121212121212124,
+        "fumbles": -0.015
+      },
+      "stats": {
+        "player_reception_yds": 19.166666666666668,
+        "player_receptions": 1.5,
+        "estimated_rec_tds": 0.17424242424242425,
+        "estimated_fumbles": 0.0075
+      },
+      "position": "WR",
+      "matchup": "Buffalo Bills @ Atlanta Falcons",
+      "week": "Week 6",
+      "game_time": "2025-10-13T23:15:00Z"
+    },
+    {
+      "player": "JuJu Smith-Schuster",
+      "format": "STANDARD",
+      "total_points": 3.632575757575758,
+      "breakdown": {
+        "passing": 0.0,
+        "rushing": 0.0,
+        "receiving": 3.6575757575757577,
+        "fumbles": -0.025
+      },
+      "stats": {
+        "player_reception_yds": 23.666666666666668,
+        "player_receptions": 2.5,
+        "estimated_rec_tds": 0.21515151515151515,
+        "estimated_fumbles": 0.0125
+      },
+      "position": "WR",
+      "matchup": "Detroit Lions @ Kansas City Chiefs",
+      "week": "Week 6",
+      "game_time": "2025-10-13T00:20:00Z"
+    },
+    {
+      "player": "Casey Washington",
+      "format": "STANDARD",
+      "total_points": 3.606818181818182,
+      "breakdown": {
+        "passing": 0.0,
+        "rushing": 0.0,
+        "receiving": 3.631818181818182,
+        "fumbles": -0.025
+      },
+      "stats": {
+        "player_reception_yds": 23.5,
+        "player_receptions": 2.5,
+        "estimated_rec_tds": 0.21363636363636362,
+        "estimated_fumbles": 0.0125
+      },
+      "position": "WR",
+      "matchup": "Buffalo Bills @ Atlanta Falcons",
+      "week": "Week 6",
+      "game_time": "2025-10-13T23:15:00Z"
+    },
+    {
+      "player": "Jaylin Lane",
+      "format": "HALF_PPR",
+      "total_points": 3.5940909090909092,
+      "breakdown": {
+        "passing": 0.0,
+        "rushing": 0.0,
+        "receiving": 3.6090909090909093,
+        "fumbles": -0.015
+      },
+      "stats": {
+        "player_reception_yds": 18.5,
+        "player_receptions": 1.5,
+        "estimated_rec_tds": 0.16818181818181818,
+        "estimated_fumbles": 0.0075
+      },
+      "position": "WR",
+      "matchup": "Chicago Bears @ Washington Commanders",
+      "week": "Week 6",
+      "game_time": "2025-10-14T00:16:00Z"
+    },
+    {
+      "player": "Cole Kmet",
+      "format": "HALF_PPR",
+      "total_points": 3.5940909090909092,
+      "breakdown": {
+        "passing": 0.0,
+        "rushing": 0.0,
+        "receiving": 3.6090909090909093,
+        "fumbles": -0.015
+      },
+      "stats": {
+        "player_reception_yds": 18.5,
+        "player_receptions": 1.5,
+        "estimated_rec_tds": 0.16818181818181818,
+        "estimated_fumbles": 0.0075
+      },
+      "position": "TE",
+      "matchup": "Chicago Bears @ Washington Commanders",
+      "week": "Week 6",
+      "game_time": "2025-10-14T00:16:00Z"
+    },
+    {
+      "player": "Luther Burden III",
+      "format": "HALF_PPR",
+      "total_points": 3.563181818181818,
+      "breakdown": {
+        "passing": 0.0,
+        "rushing": 0.0,
+        "receiving": 3.578181818181818,
+        "fumbles": -0.015
+      },
+      "stats": {
+        "player_reception_yds": 18.3,
+        "player_receptions": 1.5,
+        "estimated_rec_tds": 0.16636363636363638,
+        "estimated_fumbles": 0.0075
+      },
+      "position": "WR",
+      "matchup": "Chicago Bears @ Washington Commanders",
+      "week": "Week 6",
+      "game_time": "2025-10-14T00:16:00Z"
+    },
+    {
+      "player": "Brashard Smith",
+      "format": "PPR",
+      "total_points": 3.5095454545454543,
+      "breakdown": {
+        "passing": 0.0,
+        "rushing": 0.0,
+        "receiving": 3.5245454545454544,
+        "fumbles": -0.015
+      },
+      "stats": {
+        "player_reception_yds": 13.1,
+        "player_receptions": 1.5,
+        "estimated_rec_tds": 0.1190909090909091,
+        "estimated_fumbles": 0.0075
+      },
+      "position": "WR",
+      "matchup": "Detroit Lions @ Kansas City Chiefs",
+      "week": "Week 6",
+      "game_time": "2025-10-13T00:20:00Z"
+    },
+    {
+      "player": "Chris Moore",
+      "format": "STANDARD",
+      "total_points": 3.3077272727272726,
+      "breakdown": {
+        "passing": 0.0,
+        "rushing": 0.0,
+        "receiving": 3.3227272727272728,
+        "fumbles": -0.015
+      },
+      "stats": {
+        "player_reception_yds": 21.5,
+        "player_receptions": 1.5,
+        "estimated_rec_tds": 0.19545454545454546,
+        "estimated_fumbles": 0.0075
+      },
+      "position": "WR",
+      "matchup": "Chicago Bears @ Washington Commanders",
+      "week": "Week 6",
+      "game_time": "2025-10-14T00:16:00Z"
+    },
+    {
+      "player": "Isaac TeSlaa",
+      "format": "PPR",
+      "total_points": 3.262272727272727,
+      "breakdown": {
+        "passing": 0.0,
+        "rushing": 0.0,
+        "receiving": 3.2772727272727273,
+        "fumbles": -0.015
+      },
+      "stats": {
+        "player_reception_yds": 11.5,
+        "player_receptions": 1.5,
+        "estimated_rec_tds": 0.10454545454545454,
+        "estimated_fumbles": 0.0075
+      },
+      "position": "WR",
+      "matchup": "Detroit Lions @ Kansas City Chiefs",
+      "week": "Week 6",
+      "game_time": "2025-10-13T00:20:00Z"
+    },
+    {
+      "player": "Noah Gray",
+      "format": "PPR",
+      "total_points": 3.1334848484848483,
+      "breakdown": {
+        "passing": 0.0,
+        "rushing": 0.0,
+        "receiving": 3.1484848484848484,
+        "fumbles": -0.015
+      },
+      "stats": {
+        "player_reception_yds": 10.666666666666666,
+        "player_receptions": 1.5,
+        "estimated_rec_tds": 0.09696969696969697,
+        "estimated_fumbles": 0.0075
+      },
+      "position": "TE",
+      "matchup": "Detroit Lions @ Kansas City Chiefs",
+      "week": "Week 6",
+      "game_time": "2025-10-13T00:20:00Z"
+    },
+    {
+      "player": "Ray-Ray McCloud III",
+      "format": "STANDARD",
+      "total_points": 2.9886363636363638,
+      "breakdown": {
+        "passing": 0.0,
+        "rushing": 0.0,
+        "receiving": 3.0136363636363637,
+        "fumbles": -0.025
+      },
+      "stats": {
+        "player_reception_yds": 19.5,
+        "player_receptions": 2.5,
+        "estimated_rec_tds": 0.17727272727272728,
+        "estimated_fumbles": 0.0125
+      },
+      "position": "WR",
+      "matchup": "Buffalo Bills @ Atlanta Falcons",
+      "week": "Week 6",
+      "game_time": "2025-10-13T23:15:00Z"
+    },
+    {
+      "player": "Joshua Palmer",
+      "format": "STANDARD",
+      "total_points": 2.9471212121212123,
+      "breakdown": {
+        "passing": 0.0,
+        "rushing": 0.0,
+        "receiving": 2.9621212121212124,
+        "fumbles": -0.015
+      },
+      "stats": {
+        "player_reception_yds": 19.166666666666668,
+        "player_receptions": 1.5,
+        "estimated_rec_tds": 0.17424242424242425,
+        "estimated_fumbles": 0.0075
+      },
+      "position": "WR",
+      "matchup": "Buffalo Bills @ Atlanta Falcons",
+      "week": "Week 6",
+      "game_time": "2025-10-13T23:15:00Z"
+    },
+    {
+      "player": "Jaylin Lane",
+      "format": "STANDARD",
+      "total_points": 2.8440909090909092,
+      "breakdown": {
+        "passing": 0.0,
+        "rushing": 0.0,
+        "receiving": 2.8590909090909093,
+        "fumbles": -0.015
+      },
+      "stats": {
+        "player_reception_yds": 18.5,
+        "player_receptions": 1.5,
+        "estimated_rec_tds": 0.16818181818181818,
+        "estimated_fumbles": 0.0075
+      },
+      "position": "WR",
+      "matchup": "Chicago Bears @ Washington Commanders",
+      "week": "Week 6",
+      "game_time": "2025-10-14T00:16:00Z"
+    },
+    {
+      "player": "Cole Kmet",
+      "format": "STANDARD",
+      "total_points": 2.8440909090909092,
+      "breakdown": {
+        "passing": 0.0,
+        "rushing": 0.0,
+        "receiving": 2.8590909090909093,
+        "fumbles": -0.015
+      },
+      "stats": {
+        "player_reception_yds": 18.5,
+        "player_receptions": 1.5,
+        "estimated_rec_tds": 0.16818181818181818,
+        "estimated_fumbles": 0.0075
+      },
+      "position": "TE",
+      "matchup": "Chicago Bears @ Washington Commanders",
+      "week": "Week 6",
+      "game_time": "2025-10-14T00:16:00Z"
+    },
+    {
+      "player": "Luther Burden III",
+      "format": "STANDARD",
+      "total_points": 2.813181818181818,
+      "breakdown": {
+        "passing": 0.0,
+        "rushing": 0.0,
+        "receiving": 2.828181818181818,
+        "fumbles": -0.015
+      },
+      "stats": {
+        "player_reception_yds": 18.3,
+        "player_receptions": 1.5,
+        "estimated_rec_tds": 0.16636363636363638,
+        "estimated_fumbles": 0.0075
+      },
+      "position": "WR",
+      "matchup": "Chicago Bears @ Washington Commanders",
+      "week": "Week 6",
+      "game_time": "2025-10-14T00:16:00Z"
+    },
+    {
+      "player": "Brashard Smith",
+      "format": "HALF_PPR",
+      "total_points": 2.7595454545454543,
+      "breakdown": {
+        "passing": 0.0,
+        "rushing": 0.0,
+        "receiving": 2.7745454545454544,
+        "fumbles": -0.015
+      },
+      "stats": {
+        "player_reception_yds": 13.1,
+        "player_receptions": 1.5,
+        "estimated_rec_tds": 0.1190909090909091,
+        "estimated_fumbles": 0.0075
+      },
+      "position": "WR",
+      "matchup": "Detroit Lions @ Kansas City Chiefs",
+      "week": "Week 6",
+      "game_time": "2025-10-13T00:20:00Z"
+    },
+    {
+      "player": "Kalif Raymond",
+      "format": "PPR",
+      "total_points": 2.6956060606060603,
+      "breakdown": {
+        "passing": 0.0,
+        "rushing": 0.0,
+        "receiving": 2.7106060606060605,
+        "fumbles": -0.015
+      },
+      "stats": {
+        "player_reception_yds": 7.833333333333333,
+        "player_receptions": 1.5,
+        "estimated_rec_tds": 0.07121212121212121,
+        "estimated_fumbles": 0.0075
+      },
+      "position": "WR",
+      "matchup": "Detroit Lions @ Kansas City Chiefs",
+      "week": "Week 6",
+      "game_time": "2025-10-13T00:20:00Z"
+    },
+    {
+      "player": "Isaac TeSlaa",
+      "format": "HALF_PPR",
+      "total_points": 2.512272727272727,
+      "breakdown": {
+        "passing": 0.0,
+        "rushing": 0.0,
+        "receiving": 2.5272727272727273,
+        "fumbles": -0.015
+      },
+      "stats": {
+        "player_reception_yds": 11.5,
+        "player_receptions": 1.5,
+        "estimated_rec_tds": 0.10454545454545454,
+        "estimated_fumbles": 0.0075
+      },
+      "position": "WR",
+      "matchup": "Detroit Lions @ Kansas City Chiefs",
+      "week": "Week 6",
+      "game_time": "2025-10-13T00:20:00Z"
+    },
+    {
+      "player": "Noah Gray",
+      "format": "HALF_PPR",
+      "total_points": 2.3834848484848483,
+      "breakdown": {
+        "passing": 0.0,
+        "rushing": 0.0,
+        "receiving": 2.3984848484848484,
+        "fumbles": -0.015
+      },
+      "stats": {
+        "player_reception_yds": 10.666666666666666,
+        "player_receptions": 1.5,
+        "estimated_rec_tds": 0.09696969696969697,
+        "estimated_fumbles": 0.0075
+      },
+      "position": "TE",
+      "matchup": "Detroit Lions @ Kansas City Chiefs",
+      "week": "Week 6",
+      "game_time": "2025-10-13T00:20:00Z"
+    },
+    {
+      "player": "Brashard Smith",
+      "format": "STANDARD",
+      "total_points": 2.0095454545454543,
+      "breakdown": {
+        "passing": 0.0,
+        "rushing": 0.0,
+        "receiving": 2.0245454545454544,
+        "fumbles": -0.015
+      },
+      "stats": {
+        "player_reception_yds": 13.1,
+        "player_receptions": 1.5,
+        "estimated_rec_tds": 0.1190909090909091,
+        "estimated_fumbles": 0.0075
+      },
+      "position": "WR",
+      "matchup": "Detroit Lions @ Kansas City Chiefs",
+      "week": "Week 6",
+      "game_time": "2025-10-13T00:20:00Z"
+    },
+    {
+      "player": "Kalif Raymond",
+      "format": "HALF_PPR",
+      "total_points": 1.9456060606060606,
+      "breakdown": {
+        "passing": 0.0,
+        "rushing": 0.0,
+        "receiving": 1.9606060606060605,
+        "fumbles": -0.015
+      },
+      "stats": {
+        "player_reception_yds": 7.833333333333333,
+        "player_receptions": 1.5,
+        "estimated_rec_tds": 0.07121212121212121,
+        "estimated_fumbles": 0.0075
+      },
+      "position": "WR",
+      "matchup": "Detroit Lions @ Kansas City Chiefs",
+      "week": "Week 6",
+      "game_time": "2025-10-13T00:20:00Z"
+    },
+    {
+      "player": "Isaac TeSlaa",
+      "format": "STANDARD",
+      "total_points": 1.7622727272727274,
+      "breakdown": {
+        "passing": 0.0,
+        "rushing": 0.0,
+        "receiving": 1.7772727272727273,
+        "fumbles": -0.015
+      },
+      "stats": {
+        "player_reception_yds": 11.5,
+        "player_receptions": 1.5,
+        "estimated_rec_tds": 0.10454545454545454,
+        "estimated_fumbles": 0.0075
+      },
+      "position": "WR",
+      "matchup": "Detroit Lions @ Kansas City Chiefs",
+      "week": "Week 6",
+      "game_time": "2025-10-13T00:20:00Z"
+    },
+    {
+      "player": "Noah Gray",
+      "format": "STANDARD",
+      "total_points": 1.6334848484848485,
+      "breakdown": {
+        "passing": 0.0,
+        "rushing": 0.0,
+        "receiving": 1.6484848484848484,
+        "fumbles": -0.015
+      },
+      "stats": {
+        "player_reception_yds": 10.666666666666666,
+        "player_receptions": 1.5,
+        "estimated_rec_tds": 0.09696969696969697,
+        "estimated_fumbles": 0.0075
+      },
+      "position": "TE",
+      "matchup": "Detroit Lions @ Kansas City Chiefs",
+      "week": "Week 6",
+      "game_time": "2025-10-13T00:20:00Z"
+    },
+    {
+      "player": "Kalif Raymond",
+      "format": "STANDARD",
+      "total_points": 1.1956060606060606,
+      "breakdown": {
+        "passing": 0.0,
+        "rushing": 0.0,
+        "receiving": 1.2106060606060605,
+        "fumbles": -0.015
+      },
+      "stats": {
+        "player_reception_yds": 7.833333333333333,
+        "player_receptions": 1.5,
+        "estimated_rec_tds": 0.07121212121212121,
+        "estimated_fumbles": 0.0075
+      },
+      "position": "WR",
+      "matchup": "Detroit Lions @ Kansas City Chiefs",
+      "week": "Week 6",
+      "game_time": "2025-10-13T00:20:00Z"
+    },
+    {
+      "player": "John Bates",
+      "format": "PPR",
+      "total_points": 1.0359090909090911,
+      "breakdown": {
+        "passing": 0.0,
+        "rushing": 0.0,
+        "receiving": 1.040909090909091,
+        "fumbles": -0.005
+      },
+      "stats": {
+        "player_reception_yds": 3.5,
+        "player_receptions": 0.5,
+        "estimated_rec_tds": 0.031818181818181815,
+        "estimated_fumbles": 0.0025
+      },
+      "position": "TE",
+      "matchup": "Chicago Bears @ Washington Commanders",
+      "week": "Week 6",
+      "game_time": "2025-10-14T00:16:00Z"
+    },
+    {
+      "player": "John Bates",
+      "format": "HALF_PPR",
+      "total_points": 0.785909090909091,
+      "breakdown": {
+        "passing": 0.0,
+        "rushing": 0.0,
+        "receiving": 0.790909090909091,
+        "fumbles": -0.005
+      },
+      "stats": {
+        "player_reception_yds": 3.5,
+        "player_receptions": 0.5,
+        "estimated_rec_tds": 0.031818181818181815,
+        "estimated_fumbles": 0.0025
+      },
+      "position": "TE",
+      "matchup": "Chicago Bears @ Washington Commanders",
+      "week": "Week 6",
+      "game_time": "2025-10-14T00:16:00Z"
+    },
+    {
+      "player": "Brock Wright",
+      "format": "PPR",
+      "total_points": 0.5722727272727273,
+      "breakdown": {
+        "passing": 0.0,
+        "rushing": 0.0,
+        "receiving": 0.5772727272727273,
+        "fumbles": -0.005
+      },
+      "stats": {
+        "player_reception_yds": 0.5,
+        "player_receptions": 0.5,
+        "estimated_rec_tds": 0.004545454545454545,
+        "estimated_fumbles": 0.0025
+      },
+      "position": "WR",
+      "matchup": "Detroit Lions @ Kansas City Chiefs",
+      "week": "Week 6",
+      "game_time": "2025-10-13T00:20:00Z"
+    },
+    {
+      "player": "John Bates",
+      "format": "STANDARD",
+      "total_points": 0.5359090909090909,
+      "breakdown": {
+        "passing": 0.0,
+        "rushing": 0.0,
+        "receiving": 0.5409090909090909,
+        "fumbles": -0.005
+      },
+      "stats": {
+        "player_reception_yds": 3.5,
+        "player_receptions": 0.5,
+        "estimated_rec_tds": 0.031818181818181815,
+        "estimated_fumbles": 0.0025
+      },
+      "position": "TE",
+      "matchup": "Chicago Bears @ Washington Commanders",
+      "week": "Week 6",
+      "game_time": "2025-10-14T00:16:00Z"
+    },
+    {
+      "player": "Brock Wright",
+      "format": "HALF_PPR",
+      "total_points": 0.32227272727272727,
+      "breakdown": {
+        "passing": 0.0,
+        "rushing": 0.0,
+        "receiving": 0.32727272727272727,
+        "fumbles": -0.005
+      },
+      "stats": {
+        "player_reception_yds": 0.5,
+        "player_receptions": 0.5,
+        "estimated_rec_tds": 0.004545454545454545,
+        "estimated_fumbles": 0.0025
+      },
+      "position": "WR",
+      "matchup": "Detroit Lions @ Kansas City Chiefs",
+      "week": "Week 6",
+      "game_time": "2025-10-13T00:20:00Z"
+    },
+    {
+      "player": "Brock Wright",
+      "format": "STANDARD",
+      "total_points": 0.07227272727272727,
+      "breakdown": {
+        "passing": 0.0,
+        "rushing": 0.0,
+        "receiving": 0.07727272727272727,
+        "fumbles": -0.005
+      },
+      "stats": {
+        "player_reception_yds": 0.5,
+        "player_receptions": 0.5,
+        "estimated_rec_tds": 0.004545454545454545,
+        "estimated_fumbles": 0.0025
+      },
+      "position": "WR",
+      "matchup": "Detroit Lions @ Kansas City Chiefs",
+      "week": "Week 6",
+      "game_time": "2025-10-13T00:20:00Z"
+    }
+  ],
+  "total_players": 47,
+  "formats": [
+    "PPR",
+    "HALF_PPR",
+    "STANDARD"
+  ],
+  "last_updated": "2025-10-12T19:12:23.075931",
+  "last_updated_display": "October 12, 2025 at 07:12 PM"
+}
