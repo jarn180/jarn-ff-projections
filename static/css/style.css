@@ -259,6 +259,14 @@ select:focus, input[type="text"]:focus {
     transform: translateY(-2px);
 }
 
+/* Dropdown options styling */
+select option {
+    background: var(--surface-elevated);
+    color: var(--text-primary);
+    padding: 10px;
+    font-size: 15px;
+}
+
 /* 3D Glassmorphic Buttons */
 .btn-primary, .btn-secondary, .btn-small {
     padding: 12px 24px;
