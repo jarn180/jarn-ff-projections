@@ -194,6 +194,10 @@ function displayOptimization(optimization) {
                     <span class="stat-value" style="font-size: 1.5rem;">${optimization.total_projection}</span>
                 </div>
                 <div class="stat-item">
+                    <span class="stat-label">Week:</span>
+                    <span class="stat-value">${optimization.current_week || 'TBD'}</span>
+                </div>
+                <div class="stat-item">
                     <span class="stat-label">Format:</span>
                     <span class="stat-value">${optimization.scoring_format}</span>
                 </div>
@@ -254,7 +258,10 @@ function displayOptimization(optimization) {
                                             <span class="player-name">${player.name}</span>
                                             ${player.injury_status ? `<span class="injury-badge">${player.injury_status}</span>` : ''}
                                         </div>
-                                        <span class="player-projection">${player.projection.toFixed(1)} pts</span>
+                                        ${player.no_lines ?
+                                            `<span class="player-projection" style="color: var(--text-secondary); font-style: italic;">No lines yet</span>` :
+                                            `<span class="player-projection">${player.projection.toFixed(1)} pts</span>`
+                                        }
                                     </div>
                                 `).join('')}
                             </div>
@@ -275,7 +282,10 @@ function displayOptimization(optimization) {
                                     <span class="player-name">${player.name}</span>
                                     ${player.injury_status ? `<span class="injury-badge">${player.injury_status}</span>` : ''}
                                 </div>
-                                <span class="player-projection">${player.projection.toFixed(1)} pts</span>
+                                ${player.no_lines ?
+                                    `<span class="player-projection" style="color: var(--text-secondary); font-style: italic;">No lines yet</span>` :
+                                    `<span class="player-projection">${player.projection.toFixed(1)} pts</span>`
+                                }
                             </div>
                         `).join('')}
                     </div>

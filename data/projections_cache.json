@@ -3,17 +3,17 @@
     {
       "player": "Ja'Marr Chase",
       "format": "PPR",
-      "total_points": 17.25318181818182,
+      "total_points": 17.330454545454543,
       "breakdown": {
         "passing": 0.0,
         "rushing": 0.0,
-        "receiving": 17.31818181818182,
+        "receiving": 17.395454545454545,
         "fumbles": -0.065
       },
       "stats": {
-        "player_reception_yds": 70.0,
+        "player_reception_yds": 70.5,
         "player_receptions": 6.5,
-        "estimated_rec_tds": 0.6363636363636364,
+        "estimated_rec_tds": 0.6409090909090909,
         "estimated_fumbles": 0.0325
       },
       "position": "WR",
@@ -22,18 +22,75 @@
       "game_time": "2025-10-17T00:16:00Z"
     },
     {
-      "player": "Joe Flacco",
+      "player": "Matthew Stafford",
       "format": "PPR",
-      "total_points": 15.36,
+      "total_points": 16.02,
       "breakdown": {
-        "passing": 15.36,
+        "passing": 16.02,
         "rushing": 0.0,
         "receiving": 0.0,
         "fumbles": 0.0
       },
       "stats": {
         "player_pass_tds": 1.5,
-        "player_pass_yds": 234.0
+        "player_pass_yds": 250.5
+      },
+      "position": "QB",
+      "matchup": "Los Angeles Rams @ Jacksonville Jaguars",
+      "week": "Week 7",
+      "game_time": "2025-10-19T13:31:00Z"
+    },
+    {
+      "player": "Matthew Stafford",
+      "format": "HALF_PPR",
+      "total_points": 16.02,
+      "breakdown": {
+        "passing": 16.02,
+        "rushing": 0.0,
+        "receiving": 0.0,
+        "fumbles": 0.0
+      },
+      "stats": {
+        "player_pass_tds": 1.5,
+        "player_pass_yds": 250.5
+      },
+      "position": "QB",
+      "matchup": "Los Angeles Rams @ Jacksonville Jaguars",
+      "week": "Week 7",
+      "game_time": "2025-10-19T13:31:00Z"
+    },
+    {
+      "player": "Matthew Stafford",
+      "format": "STANDARD",
+      "total_points": 16.02,
+      "breakdown": {
+        "passing": 16.02,
+        "rushing": 0.0,
+        "receiving": 0.0,
+        "fumbles": 0.0
+      },
+      "stats": {
+        "player_pass_tds": 1.5,
+        "player_pass_yds": 250.5
+      },
+      "position": "QB",
+      "matchup": "Los Angeles Rams @ Jacksonville Jaguars",
+      "week": "Week 7",
+      "game_time": "2025-10-19T13:31:00Z"
+    },
+    {
+      "player": "Joe Flacco",
+      "format": "PPR",
+      "total_points": 15.404,
+      "breakdown": {
+        "passing": 15.404,
+        "rushing": 0.0,
+        "receiving": 0.0,
+        "fumbles": 0.0
+      },
+      "stats": {
+        "player_pass_tds": 1.5,
+        "player_pass_yds": 235.1
       },
       "position": "QB",
       "matchup": "Pittsburgh Steelers @ Cincinnati Bengals",
@@ -43,16 +100,16 @@
     {
       "player": "Joe Flacco",
       "format": "HALF_PPR",
-      "total_points": 15.36,
+      "total_points": 15.404,
       "breakdown": {
-        "passing": 15.36,
+        "passing": 15.404,
         "rushing": 0.0,
         "receiving": 0.0,
         "fumbles": 0.0
       },
       "stats": {
         "player_pass_tds": 1.5,
-        "player_pass_yds": 234.0
+        "player_pass_yds": 235.1
       },
       "position": "QB",
       "matchup": "Pittsburgh Steelers @ Cincinnati Bengals",
@@ -62,16 +119,16 @@
     {
       "player": "Joe Flacco",
       "format": "STANDARD",
-      "total_points": 15.36,
+      "total_points": 15.404,
       "breakdown": {
-        "passing": 15.36,
+        "passing": 15.404,
         "rushing": 0.0,
         "receiving": 0.0,
         "fumbles": 0.0
       },
       "stats": {
         "player_pass_tds": 1.5,
-        "player_pass_yds": 234.0
+        "player_pass_yds": 235.1
       },
       "position": "QB",
       "matchup": "Pittsburgh Steelers @ Cincinnati Bengals",
@@ -79,18 +136,75 @@
       "game_time": "2025-10-17T00:16:00Z"
     },
     {
-      "player": "Aaron Rodgers",
+      "player": "Trevor Lawrence",
       "format": "PPR",
-      "total_points": 14.64,
+      "total_points": 14.82,
       "breakdown": {
-        "passing": 14.64,
+        "passing": 14.82,
         "rushing": 0.0,
         "receiving": 0.0,
         "fumbles": 0.0
       },
       "stats": {
         "player_pass_tds": 1.5,
-        "player_pass_yds": 216.0
+        "player_pass_yds": 220.5
+      },
+      "position": "QB",
+      "matchup": "Los Angeles Rams @ Jacksonville Jaguars",
+      "week": "Week 7",
+      "game_time": "2025-10-19T13:31:00Z"
+    },
+    {
+      "player": "Trevor Lawrence",
+      "format": "HALF_PPR",
+      "total_points": 14.82,
+      "breakdown": {
+        "passing": 14.82,
+        "rushing": 0.0,
+        "receiving": 0.0,
+        "fumbles": 0.0
+      },
+      "stats": {
+        "player_pass_tds": 1.5,
+        "player_pass_yds": 220.5
+      },
+      "position": "QB",
+      "matchup": "Los Angeles Rams @ Jacksonville Jaguars",
+      "week": "Week 7",
+      "game_time": "2025-10-19T13:31:00Z"
+    },
+    {
+      "player": "Trevor Lawrence",
+      "format": "STANDARD",
+      "total_points": 14.82,
+      "breakdown": {
+        "passing": 14.82,
+        "rushing": 0.0,
+        "receiving": 0.0,
+        "fumbles": 0.0
+      },
+      "stats": {
+        "player_pass_tds": 1.5,
+        "player_pass_yds": 220.5
+      },
+      "position": "QB",
+      "matchup": "Los Angeles Rams @ Jacksonville Jaguars",
+      "week": "Week 7",
+      "game_time": "2025-10-19T13:31:00Z"
+    },
+    {
+      "player": "Aaron Rodgers",
+      "format": "PPR",
+      "total_points": 14.684,
+      "breakdown": {
+        "passing": 14.684,
+        "rushing": 0.0,
+        "receiving": 0.0,
+        "fumbles": 0.0
+      },
+      "stats": {
+        "player_pass_tds": 1.5,
+        "player_pass_yds": 217.1
       },
       "position": "QB",
       "matchup": "Pittsburgh Steelers @ Cincinnati Bengals",
@@ -100,16 +214,16 @@
     {
       "player": "Aaron Rodgers",
       "format": "HALF_PPR",
-      "total_points": 14.64,
+      "total_points": 14.684,
       "breakdown": {
-        "passing": 14.64,
+        "passing": 14.684,
         "rushing": 0.0,
         "receiving": 0.0,
         "fumbles": 0.0
       },
       "stats": {
         "player_pass_tds": 1.5,
-        "player_pass_yds": 216.0
+        "player_pass_yds": 217.1
       },
       "position": "QB",
       "matchup": "Pittsburgh Steelers @ Cincinnati Bengals",
@@ -119,18 +233,41 @@
     {
       "player": "Aaron Rodgers",
       "format": "STANDARD",
-      "total_points": 14.64,
+      "total_points": 14.684,
       "breakdown": {
-        "passing": 14.64,
+        "passing": 14.684,
         "rushing": 0.0,
         "receiving": 0.0,
         "fumbles": 0.0
       },
       "stats": {
         "player_pass_tds": 1.5,
-        "player_pass_yds": 216.0
+        "player_pass_yds": 217.1
       },
       "position": "QB",
+      "matchup": "Pittsburgh Steelers @ Cincinnati Bengals",
+      "week": "Week 7",
+      "game_time": "2025-10-17T00:16:00Z"
+    },
+    {
+      "player": "Jaylen Warren",
+      "format": "PPR",
+      "total_points": 14.51090909090909,
+      "breakdown": {
+        "passing": 0.0,
+        "rushing": 8.45,
+        "receiving": 6.090909090909091,
+        "fumbles": -0.03
+      },
+      "stats": {
+        "player_reception_yds": 20.0,
+        "player_receptions": 3.0,
+        "player_rush_yds": 50.7,
+        "estimated_rush_tds": 0.5633333333333334,
+        "estimated_rec_tds": 0.18181818181818182,
+        "estimated_fumbles": 0.015
+      },
+      "position": "RB",
       "matchup": "Pittsburgh Steelers @ Cincinnati Bengals",
       "week": "Week 7",
       "game_time": "2025-10-17T00:16:00Z"
@@ -138,17 +275,17 @@
     {
       "player": "Ja'Marr Chase",
       "format": "HALF_PPR",
-      "total_points": 14.003181818181819,
+      "total_points": 14.080454545454547,
       "breakdown": {
         "passing": 0.0,
         "rushing": 0.0,
-        "receiving": 14.068181818181818,
+        "receiving": 14.145454545454546,
         "fumbles": -0.065
       },
       "stats": {
-        "player_reception_yds": 70.0,
+        "player_reception_yds": 70.5,
         "player_receptions": 6.5,
-        "estimated_rec_tds": 0.6363636363636364,
+        "estimated_rec_tds": 0.6409090909090909,
         "estimated_fumbles": 0.0325
       },
       "position": "WR",
@@ -157,22 +294,156 @@
       "game_time": "2025-10-17T00:16:00Z"
     },
     {
-      "player": "Tee Higgins",
+      "player": "DK Metcalf",
       "format": "PPR",
-      "total_points": 11.56409090909091,
+      "total_points": 13.457272727272727,
       "breakdown": {
         "passing": 0.0,
         "rushing": 0.0,
-        "receiving": 11.60909090909091,
+        "receiving": 13.502272727272727,
         "fumbles": -0.045
       },
       "stats": {
-        "player_reception_yds": 46.0,
+        "player_reception_yds": 58.25,
         "player_receptions": 4.5,
-        "estimated_rec_tds": 0.41818181818181815,
+        "estimated_rec_tds": 0.5295454545454545,
         "estimated_fumbles": 0.0225
       },
       "position": "WR",
+      "matchup": "Pittsburgh Steelers @ Cincinnati Bengals",
+      "week": "Week 7",
+      "game_time": "2025-10-17T00:16:00Z"
+    },
+    {
+      "player": "Jaylen Warren",
+      "format": "HALF_PPR",
+      "total_points": 13.01090909090909,
+      "breakdown": {
+        "passing": 0.0,
+        "rushing": 8.45,
+        "receiving": 4.590909090909091,
+        "fumbles": -0.03
+      },
+      "stats": {
+        "player_reception_yds": 20.0,
+        "player_receptions": 3.0,
+        "player_rush_yds": 50.7,
+        "estimated_rush_tds": 0.5633333333333334,
+        "estimated_rec_tds": 0.18181818181818182,
+        "estimated_fumbles": 0.015
+      },
+      "position": "RB",
+      "matchup": "Pittsburgh Steelers @ Cincinnati Bengals",
+      "week": "Week 7",
+      "game_time": "2025-10-17T00:16:00Z"
+    },
+    {
+      "player": "Chase Brown",
+      "format": "PPR",
+      "total_points": 12.534818181818183,
+      "breakdown": {
+        "passing": 0.0,
+        "rushing": 7.25,
+        "receiving": 5.311818181818182,
+        "fumbles": -0.027000000000000003
+      },
+      "stats": {
+        "player_reception_yds": 16.9,
+        "player_receptions": 2.7,
+        "player_rush_yds": 43.5,
+        "estimated_rush_tds": 0.48333333333333334,
+        "estimated_rec_tds": 0.15363636363636363,
+        "estimated_fumbles": 0.013500000000000002
+      },
+      "position": "RB",
+      "matchup": "Pittsburgh Steelers @ Cincinnati Bengals",
+      "week": "Week 7",
+      "game_time": "2025-10-17T00:16:00Z"
+    },
+    {
+      "player": "Tee Higgins",
+      "format": "PPR",
+      "total_points": 11.734090909090911,
+      "breakdown": {
+        "passing": 0.0,
+        "rushing": 0.0,
+        "receiving": 11.779090909090911,
+        "fumbles": -0.045
+      },
+      "stats": {
+        "player_reception_yds": 47.1,
+        "player_receptions": 4.5,
+        "estimated_rec_tds": 0.4281818181818182,
+        "estimated_fumbles": 0.0225
+      },
+      "position": "WR",
+      "matchup": "Pittsburgh Steelers @ Cincinnati Bengals",
+      "week": "Week 7",
+      "game_time": "2025-10-17T00:16:00Z"
+    },
+    {
+      "player": "Jaylen Warren",
+      "format": "STANDARD",
+      "total_points": 11.51090909090909,
+      "breakdown": {
+        "passing": 0.0,
+        "rushing": 8.45,
+        "receiving": 3.090909090909091,
+        "fumbles": -0.03
+      },
+      "stats": {
+        "player_reception_yds": 20.0,
+        "player_receptions": 3.0,
+        "player_rush_yds": 50.7,
+        "estimated_rush_tds": 0.5633333333333334,
+        "estimated_rec_tds": 0.18181818181818182,
+        "estimated_fumbles": 0.015
+      },
+      "position": "RB",
+      "matchup": "Pittsburgh Steelers @ Cincinnati Bengals",
+      "week": "Week 7",
+      "game_time": "2025-10-17T00:16:00Z"
+    },
+    {
+      "player": "DK Metcalf",
+      "format": "HALF_PPR",
+      "total_points": 11.207272727272727,
+      "breakdown": {
+        "passing": 0.0,
+        "rushing": 0.0,
+        "receiving": 11.252272727272727,
+        "fumbles": -0.045
+      },
+      "stats": {
+        "player_reception_yds": 58.25,
+        "player_receptions": 4.5,
+        "estimated_rec_tds": 0.5295454545454545,
+        "estimated_fumbles": 0.0225
+      },
+      "position": "WR",
+      "matchup": "Pittsburgh Steelers @ Cincinnati Bengals",
+      "week": "Week 7",
+      "game_time": "2025-10-17T00:16:00Z"
+    },
+    {
+      "player": "Chase Brown",
+      "format": "HALF_PPR",
+      "total_points": 11.184818181818182,
+      "breakdown": {
+        "passing": 0.0,
+        "rushing": 7.25,
+        "receiving": 3.961818181818182,
+        "fumbles": -0.027000000000000003
+      },
+      "stats": {
+        "player_reception_yds": 16.9,
+        "player_receptions": 2.7,
+        "player_rush_yds": 43.5,
+        "estimated_rush_tds": 0.48333333333333334,
+        "estimated_rec_tds": 0.15363636363636363,
+        "estimated_fumbles": 0.013500000000000002
+      },
+      "position": "RB",
       "matchup": "Pittsburgh Steelers @ Cincinnati Bengals",
       "week": "Week 7",
       "game_time": "2025-10-17T00:16:00Z"
@@ -180,17 +451,17 @@
     {
       "player": "Ja'Marr Chase",
       "format": "STANDARD",
-      "total_points": 10.753181818181819,
+      "total_points": 10.830454545454547,
       "breakdown": {
         "passing": 0.0,
         "rushing": 0.0,
-        "receiving": 10.818181818181818,
+        "receiving": 10.895454545454546,
         "fumbles": -0.065
       },
       "stats": {
-        "player_reception_yds": 70.0,
+        "player_reception_yds": 70.5,
         "player_receptions": 6.5,
-        "estimated_rec_tds": 0.6363636363636364,
+        "estimated_rec_tds": 0.6409090909090909,
         "estimated_fumbles": 0.0325
       },
       "position": "WR",
@@ -199,155 +470,136 @@
       "game_time": "2025-10-17T00:16:00Z"
     },
     {
-      "player": "Tee Higgins",
-      "format": "HALF_PPR",
-      "total_points": 9.31409090909091,
-      "breakdown": {
-        "passing": 0.0,
-        "rushing": 0.0,
-        "receiving": 9.35909090909091,
-        "fumbles": -0.045
-      },
-      "stats": {
-        "player_reception_yds": 46.0,
-        "player_receptions": 4.5,
-        "estimated_rec_tds": 0.41818181818181815,
-        "estimated_fumbles": 0.0225
-      },
-      "position": "WR",
-      "matchup": "Pittsburgh Steelers @ Cincinnati Bengals",
-      "week": "Week 7",
-      "game_time": "2025-10-17T00:16:00Z"
-    },
-    {
-      "player": "Noah Fant",
+      "player": "Kyren Williams",
       "format": "PPR",
-      "total_points": 9.014090909090909,
+      "total_points": 10.75,
       "breakdown": {
         "passing": 0.0,
-        "rushing": 0.0,
-        "receiving": 9.059090909090909,
-        "fumbles": -0.045
-      },
-      "stats": {
-        "player_reception_yds": 29.5,
-        "player_receptions": 4.5,
-        "estimated_rec_tds": 0.2681818181818182,
-        "estimated_fumbles": 0.0225
-      },
-      "position": "TE",
-      "matchup": "Pittsburgh Steelers @ Cincinnati Bengals",
-      "week": "Week 7",
-      "game_time": "2025-10-17T00:16:00Z"
-    },
-    {
-      "player": "Jaylen Warren",
-      "format": "PPR",
-      "total_points": 8.583333333333334,
-      "breakdown": {
-        "passing": 0.0,
-        "rushing": 8.583333333333334,
+        "rushing": 10.75,
         "receiving": 0.0,
         "fumbles": 0.0
       },
       "stats": {
-        "player_rush_yds": 51.5,
-        "estimated_rush_tds": 0.5722222222222222
+        "player_rush_yds": 64.5,
+        "estimated_rush_tds": 0.7166666666666667
       },
       "position": "RB",
-      "matchup": "Pittsburgh Steelers @ Cincinnati Bengals",
+      "matchup": "Los Angeles Rams @ Jacksonville Jaguars",
       "week": "Week 7",
-      "game_time": "2025-10-17T00:16:00Z"
+      "game_time": "2025-10-19T13:31:00Z"
     },
     {
-      "player": "Jaylen Warren",
+      "player": "Kyren Williams",
       "format": "HALF_PPR",
-      "total_points": 8.583333333333334,
+      "total_points": 10.75,
       "breakdown": {
         "passing": 0.0,
-        "rushing": 8.583333333333334,
+        "rushing": 10.75,
         "receiving": 0.0,
         "fumbles": 0.0
       },
       "stats": {
-        "player_rush_yds": 51.5,
-        "estimated_rush_tds": 0.5722222222222222
+        "player_rush_yds": 64.5,
+        "estimated_rush_tds": 0.7166666666666667
       },
       "position": "RB",
-      "matchup": "Pittsburgh Steelers @ Cincinnati Bengals",
+      "matchup": "Los Angeles Rams @ Jacksonville Jaguars",
       "week": "Week 7",
-      "game_time": "2025-10-17T00:16:00Z"
+      "game_time": "2025-10-19T13:31:00Z"
     },
     {
-      "player": "Jaylen Warren",
+      "player": "Kyren Williams",
       "format": "STANDARD",
-      "total_points": 8.583333333333334,
+      "total_points": 10.75,
       "breakdown": {
         "passing": 0.0,
-        "rushing": 8.583333333333334,
+        "rushing": 10.75,
         "receiving": 0.0,
         "fumbles": 0.0
       },
       "stats": {
-        "player_rush_yds": 51.5,
-        "estimated_rush_tds": 0.5722222222222222
+        "player_rush_yds": 64.5,
+        "estimated_rush_tds": 0.7166666666666667
       },
       "position": "RB",
-      "matchup": "Pittsburgh Steelers @ Cincinnati Bengals",
+      "matchup": "Los Angeles Rams @ Jacksonville Jaguars",
       "week": "Week 7",
-      "game_time": "2025-10-17T00:16:00Z"
+      "game_time": "2025-10-19T13:31:00Z"
     },
     {
-      "player": "Chase Brown",
+      "player": "Travis Etienne Jr.",
       "format": "PPR",
-      "total_points": 7.416666666666667,
+      "total_points": 10.083333333333334,
       "breakdown": {
         "passing": 0.0,
-        "rushing": 7.416666666666667,
+        "rushing": 10.083333333333334,
         "receiving": 0.0,
         "fumbles": 0.0
       },
       "stats": {
-        "player_rush_yds": 44.5,
-        "estimated_rush_tds": 0.49444444444444446
+        "player_rush_yds": 60.5,
+        "estimated_rush_tds": 0.6722222222222223
       },
       "position": "RB",
-      "matchup": "Pittsburgh Steelers @ Cincinnati Bengals",
+      "matchup": "Los Angeles Rams @ Jacksonville Jaguars",
       "week": "Week 7",
-      "game_time": "2025-10-17T00:16:00Z"
+      "game_time": "2025-10-19T13:31:00Z"
     },
     {
-      "player": "Chase Brown",
+      "player": "Travis Etienne Jr.",
       "format": "HALF_PPR",
-      "total_points": 7.416666666666667,
+      "total_points": 10.083333333333334,
       "breakdown": {
         "passing": 0.0,
-        "rushing": 7.416666666666667,
+        "rushing": 10.083333333333334,
         "receiving": 0.0,
         "fumbles": 0.0
       },
       "stats": {
-        "player_rush_yds": 44.5,
-        "estimated_rush_tds": 0.49444444444444446
+        "player_rush_yds": 60.5,
+        "estimated_rush_tds": 0.6722222222222223
       },
       "position": "RB",
-      "matchup": "Pittsburgh Steelers @ Cincinnati Bengals",
+      "matchup": "Los Angeles Rams @ Jacksonville Jaguars",
       "week": "Week 7",
-      "game_time": "2025-10-17T00:16:00Z"
+      "game_time": "2025-10-19T13:31:00Z"
+    },
+    {
+      "player": "Travis Etienne Jr.",
+      "format": "STANDARD",
+      "total_points": 10.083333333333334,
+      "breakdown": {
+        "passing": 0.0,
+        "rushing": 10.083333333333334,
+        "receiving": 0.0,
+        "fumbles": 0.0
+      },
+      "stats": {
+        "player_rush_yds": 60.5,
+        "estimated_rush_tds": 0.6722222222222223
+      },
+      "position": "RB",
+      "matchup": "Los Angeles Rams @ Jacksonville Jaguars",
+      "week": "Week 7",
+      "game_time": "2025-10-19T13:31:00Z"
     },
     {
       "player": "Chase Brown",
       "format": "STANDARD",
-      "total_points": 7.416666666666667,
+      "total_points": 9.834818181818182,
       "breakdown": {
         "passing": 0.0,
-        "rushing": 7.416666666666667,
-        "receiving": 0.0,
-        "fumbles": 0.0
+        "rushing": 7.25,
+        "receiving": 2.611818181818182,
+        "fumbles": -0.027000000000000003
       },
       "stats": {
-        "player_rush_yds": 44.5,
-        "estimated_rush_tds": 0.49444444444444446
+        "player_reception_yds": 16.9,
+        "player_receptions": 2.7,
+        "player_rush_yds": 43.5,
+        "estimated_rush_tds": 0.48333333333333334,
+        "estimated_rec_tds": 0.15363636363636363,
+        "estimated_fumbles": 0.013500000000000002
       },
       "position": "RB",
       "matchup": "Pittsburgh Steelers @ Cincinnati Bengals",
@@ -356,18 +608,18 @@
     },
     {
       "player": "Tee Higgins",
-      "format": "STANDARD",
-      "total_points": 7.064090909090909,
+      "format": "HALF_PPR",
+      "total_points": 9.48409090909091,
       "breakdown": {
         "passing": 0.0,
         "rushing": 0.0,
-        "receiving": 7.109090909090909,
+        "receiving": 9.52909090909091,
         "fumbles": -0.045
       },
       "stats": {
-        "player_reception_yds": 46.0,
+        "player_reception_yds": 47.1,
         "player_receptions": 4.5,
-        "estimated_rec_tds": 0.41818181818181815,
+        "estimated_rec_tds": 0.4281818181818182,
         "estimated_fumbles": 0.0225
       },
       "position": "WR",
@@ -376,62 +628,45 @@
       "game_time": "2025-10-17T00:16:00Z"
     },
     {
-      "player": "Noah Fant",
-      "format": "HALF_PPR",
-      "total_points": 6.76409090909091,
-      "breakdown": {
-        "passing": 0.0,
-        "rushing": 0.0,
-        "receiving": 6.8090909090909095,
-        "fumbles": -0.045
-      },
-      "stats": {
-        "player_reception_yds": 29.5,
-        "player_receptions": 4.5,
-        "estimated_rec_tds": 0.2681818181818182,
-        "estimated_fumbles": 0.0225
-      },
-      "position": "TE",
-      "matchup": "Pittsburgh Steelers @ Cincinnati Bengals",
-      "week": "Week 7",
-      "game_time": "2025-10-17T00:16:00Z"
-    },
-    {
-      "player": "Noah Fant",
-      "format": "STANDARD",
-      "total_points": 4.51409090909091,
-      "breakdown": {
-        "passing": 0.0,
-        "rushing": 0.0,
-        "receiving": 4.5590909090909095,
-        "fumbles": -0.045
-      },
-      "stats": {
-        "player_reception_yds": 29.5,
-        "player_receptions": 4.5,
-        "estimated_rec_tds": 0.2681818181818182,
-        "estimated_fumbles": 0.0225
-      },
-      "position": "TE",
-      "matchup": "Pittsburgh Steelers @ Cincinnati Bengals",
-      "week": "Week 7",
-      "game_time": "2025-10-17T00:16:00Z"
-    },
-    {
       "player": "Kenneth Gainwell",
       "format": "PPR",
-      "total_points": 3.916666666666667,
+      "total_points": 9.317424242424241,
       "breakdown": {
         "passing": 0.0,
-        "rushing": 3.916666666666667,
-        "receiving": 0.0,
-        "fumbles": 0.0
+        "rushing": 3.9833333333333334,
+        "receiving": 5.3590909090909085,
+        "fumbles": -0.025
       },
       "stats": {
-        "player_rush_yds": 23.5,
-        "estimated_rush_tds": 0.2611111111111111
+        "player_rush_yds": 23.9,
+        "player_reception_yds": 18.5,
+        "player_receptions": 2.5,
+        "estimated_rush_tds": 0.26555555555555554,
+        "estimated_rec_tds": 0.16818181818181818,
+        "estimated_fumbles": 0.0125
       },
       "position": "RB",
+      "matchup": "Pittsburgh Steelers @ Cincinnati Bengals",
+      "week": "Week 7",
+      "game_time": "2025-10-17T00:16:00Z"
+    },
+    {
+      "player": "DK Metcalf",
+      "format": "STANDARD",
+      "total_points": 8.957272727272727,
+      "breakdown": {
+        "passing": 0.0,
+        "rushing": 0.0,
+        "receiving": 9.002272727272727,
+        "fumbles": -0.045
+      },
+      "stats": {
+        "player_reception_yds": 58.25,
+        "player_receptions": 4.5,
+        "estimated_rec_tds": 0.5295454545454545,
+        "estimated_fumbles": 0.0225
+      },
+      "position": "WR",
       "matchup": "Pittsburgh Steelers @ Cincinnati Bengals",
       "week": "Week 7",
       "game_time": "2025-10-17T00:16:00Z"
@@ -439,16 +674,20 @@
     {
       "player": "Kenneth Gainwell",
       "format": "HALF_PPR",
-      "total_points": 3.916666666666667,
+      "total_points": 8.067424242424243,
       "breakdown": {
         "passing": 0.0,
-        "rushing": 3.916666666666667,
-        "receiving": 0.0,
-        "fumbles": 0.0
+        "rushing": 3.9833333333333334,
+        "receiving": 4.109090909090909,
+        "fumbles": -0.025
       },
       "stats": {
-        "player_rush_yds": 23.5,
-        "estimated_rush_tds": 0.2611111111111111
+        "player_rush_yds": 23.9,
+        "player_reception_yds": 18.5,
+        "player_receptions": 2.5,
+        "estimated_rush_tds": 0.26555555555555554,
+        "estimated_rec_tds": 0.16818181818181818,
+        "estimated_fumbles": 0.0125
       },
       "position": "RB",
       "matchup": "Pittsburgh Steelers @ Cincinnati Bengals",
@@ -456,20 +695,192 @@
       "game_time": "2025-10-17T00:16:00Z"
     },
     {
-      "player": "Kenneth Gainwell",
-      "format": "STANDARD",
-      "total_points": 3.916666666666667,
+      "player": "Noah Fant",
+      "format": "PPR",
+      "total_points": 7.529545454545455,
       "breakdown": {
         "passing": 0.0,
-        "rushing": 3.916666666666667,
-        "receiving": 0.0,
-        "fumbles": 0.0
+        "rushing": 0.0,
+        "receiving": 7.564545454545455,
+        "fumbles": -0.035
       },
       "stats": {
-        "player_rush_yds": 23.5,
-        "estimated_rush_tds": 0.2611111111111111
+        "player_reception_yds": 26.3,
+        "player_receptions": 3.5,
+        "estimated_rec_tds": 0.2390909090909091,
+        "estimated_fumbles": 0.0175
+      },
+      "position": "WR",
+      "matchup": "Pittsburgh Steelers @ Cincinnati Bengals",
+      "week": "Week 7",
+      "game_time": "2025-10-17T00:16:00Z"
+    },
+    {
+      "player": "Jonnu Smith",
+      "format": "PPR",
+      "total_points": 7.251363636363637,
+      "breakdown": {
+        "passing": 0.0,
+        "rushing": 0.0,
+        "receiving": 7.286363636363637,
+        "fumbles": -0.035
+      },
+      "stats": {
+        "player_reception_yds": 24.5,
+        "player_receptions": 3.5,
+        "estimated_rec_tds": 0.22272727272727272,
+        "estimated_fumbles": 0.0175
+      },
+      "position": "TE",
+      "matchup": "Pittsburgh Steelers @ Cincinnati Bengals",
+      "week": "Week 7",
+      "game_time": "2025-10-17T00:16:00Z"
+    },
+    {
+      "player": "Tee Higgins",
+      "format": "STANDARD",
+      "total_points": 7.234090909090909,
+      "breakdown": {
+        "passing": 0.0,
+        "rushing": 0.0,
+        "receiving": 7.279090909090909,
+        "fumbles": -0.045
+      },
+      "stats": {
+        "player_reception_yds": 47.1,
+        "player_receptions": 4.5,
+        "estimated_rec_tds": 0.4281818181818182,
+        "estimated_fumbles": 0.0225
+      },
+      "position": "WR",
+      "matchup": "Pittsburgh Steelers @ Cincinnati Bengals",
+      "week": "Week 7",
+      "game_time": "2025-10-17T00:16:00Z"
+    },
+    {
+      "player": "Kenneth Gainwell",
+      "format": "STANDARD",
+      "total_points": 6.817424242424242,
+      "breakdown": {
+        "passing": 0.0,
+        "rushing": 3.9833333333333334,
+        "receiving": 2.8590909090909093,
+        "fumbles": -0.025
+      },
+      "stats": {
+        "player_rush_yds": 23.9,
+        "player_reception_yds": 18.5,
+        "player_receptions": 2.5,
+        "estimated_rush_tds": 0.26555555555555554,
+        "estimated_rec_tds": 0.16818181818181818,
+        "estimated_fumbles": 0.0125
       },
       "position": "RB",
+      "matchup": "Pittsburgh Steelers @ Cincinnati Bengals",
+      "week": "Week 7",
+      "game_time": "2025-10-17T00:16:00Z"
+    },
+    {
+      "player": "Noah Fant",
+      "format": "HALF_PPR",
+      "total_points": 5.779545454545455,
+      "breakdown": {
+        "passing": 0.0,
+        "rushing": 0.0,
+        "receiving": 5.814545454545455,
+        "fumbles": -0.035
+      },
+      "stats": {
+        "player_reception_yds": 26.3,
+        "player_receptions": 3.5,
+        "estimated_rec_tds": 0.2390909090909091,
+        "estimated_fumbles": 0.0175
+      },
+      "position": "WR",
+      "matchup": "Pittsburgh Steelers @ Cincinnati Bengals",
+      "week": "Week 7",
+      "game_time": "2025-10-17T00:16:00Z"
+    },
+    {
+      "player": "Jonnu Smith",
+      "format": "HALF_PPR",
+      "total_points": 5.501363636363637,
+      "breakdown": {
+        "passing": 0.0,
+        "rushing": 0.0,
+        "receiving": 5.536363636363637,
+        "fumbles": -0.035
+      },
+      "stats": {
+        "player_reception_yds": 24.5,
+        "player_receptions": 3.5,
+        "estimated_rec_tds": 0.22272727272727272,
+        "estimated_fumbles": 0.0175
+      },
+      "position": "TE",
+      "matchup": "Pittsburgh Steelers @ Cincinnati Bengals",
+      "week": "Week 7",
+      "game_time": "2025-10-17T00:16:00Z"
+    },
+    {
+      "player": "Darnell Washington",
+      "format": "PPR",
+      "total_points": 5.488636363636363,
+      "breakdown": {
+        "passing": 0.0,
+        "rushing": 0.0,
+        "receiving": 5.513636363636364,
+        "fumbles": -0.025
+      },
+      "stats": {
+        "player_reception_yds": 19.5,
+        "player_receptions": 2.5,
+        "estimated_rec_tds": 0.17727272727272728,
+        "estimated_fumbles": 0.0125
+      },
+      "position": "WR",
+      "matchup": "Pittsburgh Steelers @ Cincinnati Bengals",
+      "week": "Week 7",
+      "game_time": "2025-10-17T00:16:00Z"
+    },
+    {
+      "player": "Darnell Washington",
+      "format": "HALF_PPR",
+      "total_points": 4.238636363636363,
+      "breakdown": {
+        "passing": 0.0,
+        "rushing": 0.0,
+        "receiving": 4.263636363636364,
+        "fumbles": -0.025
+      },
+      "stats": {
+        "player_reception_yds": 19.5,
+        "player_receptions": 2.5,
+        "estimated_rec_tds": 0.17727272727272728,
+        "estimated_fumbles": 0.0125
+      },
+      "position": "WR",
+      "matchup": "Pittsburgh Steelers @ Cincinnati Bengals",
+      "week": "Week 7",
+      "game_time": "2025-10-17T00:16:00Z"
+    },
+    {
+      "player": "Noah Fant",
+      "format": "STANDARD",
+      "total_points": 4.029545454545454,
+      "breakdown": {
+        "passing": 0.0,
+        "rushing": 0.0,
+        "receiving": 4.0645454545454545,
+        "fumbles": -0.035
+      },
+      "stats": {
+        "player_reception_yds": 26.3,
+        "player_receptions": 3.5,
+        "estimated_rec_tds": 0.2390909090909091,
+        "estimated_fumbles": 0.0175
+      },
+      "position": "WR",
       "matchup": "Pittsburgh Steelers @ Cincinnati Bengals",
       "week": "Week 7",
       "game_time": "2025-10-17T00:16:00Z"
@@ -477,17 +888,17 @@
     {
       "player": "Andrei Iosivas",
       "format": "PPR",
-      "total_points": 3.8804545454545454,
+      "total_points": 3.9113636363636366,
       "breakdown": {
         "passing": 0.0,
         "rushing": 0.0,
-        "receiving": 3.8954545454545455,
+        "receiving": 3.9263636363636367,
         "fumbles": -0.015
       },
       "stats": {
-        "player_reception_yds": 15.5,
+        "player_reception_yds": 15.7,
         "player_receptions": 1.5,
-        "estimated_rec_tds": 0.1409090909090909,
+        "estimated_rec_tds": 0.14272727272727273,
         "estimated_fumbles": 0.0075
       },
       "position": "WR",
@@ -496,20 +907,62 @@
       "game_time": "2025-10-17T00:16:00Z"
     },
     {
-      "player": "Andrei Iosivas",
-      "format": "HALF_PPR",
-      "total_points": 3.1304545454545454,
+      "player": "Jonnu Smith",
+      "format": "STANDARD",
+      "total_points": 3.7513636363636365,
       "breakdown": {
         "passing": 0.0,
         "rushing": 0.0,
-        "receiving": 3.1454545454545455,
+        "receiving": 3.7863636363636366,
+        "fumbles": -0.035
+      },
+      "stats": {
+        "player_reception_yds": 24.5,
+        "player_receptions": 3.5,
+        "estimated_rec_tds": 0.22272727272727272,
+        "estimated_fumbles": 0.0175
+      },
+      "position": "TE",
+      "matchup": "Pittsburgh Steelers @ Cincinnati Bengals",
+      "week": "Week 7",
+      "game_time": "2025-10-17T00:16:00Z"
+    },
+    {
+      "player": "Andrei Iosivas",
+      "format": "HALF_PPR",
+      "total_points": 3.1613636363636366,
+      "breakdown": {
+        "passing": 0.0,
+        "rushing": 0.0,
+        "receiving": 3.1763636363636367,
         "fumbles": -0.015
       },
       "stats": {
-        "player_reception_yds": 15.5,
+        "player_reception_yds": 15.7,
         "player_receptions": 1.5,
-        "estimated_rec_tds": 0.1409090909090909,
+        "estimated_rec_tds": 0.14272727272727273,
         "estimated_fumbles": 0.0075
+      },
+      "position": "WR",
+      "matchup": "Pittsburgh Steelers @ Cincinnati Bengals",
+      "week": "Week 7",
+      "game_time": "2025-10-17T00:16:00Z"
+    },
+    {
+      "player": "Darnell Washington",
+      "format": "STANDARD",
+      "total_points": 2.9886363636363638,
+      "breakdown": {
+        "passing": 0.0,
+        "rushing": 0.0,
+        "receiving": 3.0136363636363637,
+        "fumbles": -0.025
+      },
+      "stats": {
+        "player_reception_yds": 19.5,
+        "player_receptions": 2.5,
+        "estimated_rec_tds": 0.17727272727272728,
+        "estimated_fumbles": 0.0125
       },
       "position": "WR",
       "matchup": "Pittsburgh Steelers @ Cincinnati Bengals",
@@ -519,17 +972,17 @@
     {
       "player": "Andrei Iosivas",
       "format": "STANDARD",
-      "total_points": 2.3804545454545454,
+      "total_points": 2.4113636363636366,
       "breakdown": {
         "passing": 0.0,
         "rushing": 0.0,
-        "receiving": 2.3954545454545455,
+        "receiving": 2.4263636363636367,
         "fumbles": -0.015
       },
       "stats": {
-        "player_reception_yds": 15.5,
+        "player_reception_yds": 15.7,
         "player_receptions": 1.5,
-        "estimated_rec_tds": 0.1409090909090909,
+        "estimated_rec_tds": 0.14272727272727273,
         "estimated_fumbles": 0.0075
       },
       "position": "WR",
@@ -538,8 +991,12 @@
       "game_time": "2025-10-17T00:16:00Z"
     }
   ],
-  "total_players": 9,
-  "formats": ["PPR", "HALF_PPR", "STANDARD"],
-  "last_updated": "2025-10-13T23:39:14.637144",
-  "last_updated_display": "October 13, 2025 at 11:39 PM"
+  "total_players": 16,
+  "formats": [
+    "PPR",
+    "HALF_PPR",
+    "STANDARD"
+  ],
+  "last_updated": "2025-10-14T14:29:38.839913",
+  "last_updated_display": "October 14, 2025 at 02:29 PM"
 }

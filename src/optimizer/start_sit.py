@@ -3,6 +3,7 @@
 from typing import Dict, List, Any, Tuple, Optional
 import json
 import os
+from datetime import datetime, timezone
 
 
 class StartSitOptimizer:
@@ -25,6 +26,8 @@ class StartSitOptimizer:
     def __init__(self):
         """Initialize optimizer."""
         self.projections_cache = self._load_projections()
+        self.current_week = self._get_current_week()
+        self.next_week = self._get_next_week()
         self.sleeper_players = {}
 
     def _load_projections(self) -> Dict[str, Any]:
@@ -38,6 +41,63 @@ class StartSitOptimizer:
             with open(cache_file, 'r') as f:
                 return json.load(f)
         return {'projections': [], 'total_players': 0}
+
+    def _get_current_week(self) -> str:
+        """Get current NFL week based on today's date.
+
+        Returns:
+            Current week string (e.g., "Week 7")
+        """
+        now = datetime.now(timezone.utc)
+
+        # 2025 NFL Season Schedule (Thursday start dates for each week)
+        week_start_dates_2025 = [
+            datetime(2025, 9, 4, tzinfo=timezone.utc),   # Week 1
+            datetime(2025, 9, 11, tzinfo=timezone.utc),  # Week 2
+            datetime(2025, 9, 18, tzinfo=timezone.utc),  # Week 3
+            datetime(2025, 9, 25, tzinfo=timezone.utc),  # Week 4
+            datetime(2025, 10, 2, tzinfo=timezone.utc),  # Week 5
+            datetime(2025, 10, 9, tzinfo=timezone.utc),  # Week 6
+            datetime(2025, 10, 16, tzinfo=timezone.utc), # Week 7
+            datetime(2025, 10, 23, tzinfo=timezone.utc), # Week 8
+            datetime(2025, 10, 30, tzinfo=timezone.utc), # Week 9
+            datetime(2025, 11, 6, tzinfo=timezone.utc),  # Week 10
+            datetime(2025, 11, 13, tzinfo=timezone.utc), # Week 11
+            datetime(2025, 11, 20, tzinfo=timezone.utc), # Week 12
+            datetime(2025, 11, 27, tzinfo=timezone.utc), # Week 13
+            datetime(2025, 12, 4, tzinfo=timezone.utc),  # Week 14
+            datetime(2025, 12, 11, tzinfo=timezone.utc), # Week 15
+            datetime(2025, 12, 18, tzinfo=timezone.utc), # Week 16
+            datetime(2025, 12, 25, tzinfo=timezone.utc), # Week 17
+            datetime(2026, 1, 1, tzinfo=timezone.utc),   # Week 18
+        ]
+
+        # Find which week we're currently in
+        for i, week_start in enumerate(week_start_dates_2025):
+            if i < len(week_start_dates_2025) - 1:
+                next_week_start = week_start_dates_2025[i + 1]
+                if week_start <= now < next_week_start:
+                    return f"Week {i + 1}"
+            else:
+                # Last week (Week 18)
+                if now >= week_start:
+                    return f"Week {i + 1}"
+
+        # If before Week 1, return Week 1
+        if now < week_start_dates_2025[0]:
+            return "Week 1"
+
+        return "Week 1"
+
+    def _get_next_week(self) -> str:
+        """Get next NFL week based on current week.
+
+        Returns:
+            Next week string (e.g., "Week 8")
+        """
+        current_week_num = int(self.current_week.split()[-1])
+        next_week_num = min(current_week_num + 1, 18)
+        return f"Week {next_week_num}"
 
     def map_sleeper_to_projections(self, sleeper_player_id: str, sleeper_player: Dict[str, Any]) -> Optional[Dict[str, Any]]:
         """Map Sleeper player to our projection data.
@@ -68,8 +128,8 @@ class StartSitOptimizer:
 
         return None
 
-    def get_player_projection(self, player_name: str, position: str, scoring_format: str = 'PPR') -> float:
-        """Get projected points for a player.
+    def get_player_projection(self, player_name: str, position: str, scoring_format: str = 'PPR') -> tuple[float, bool, str]:
+        """Get projected points for a player for the upcoming week.
 
         Args:
             player_name: Player's full name
@@ -77,21 +137,39 @@ class StartSitOptimizer:
             scoring_format: Scoring format (PPR, HALF_PPR, STANDARD)
 
         Returns:
-            Projected points (0 if not found)
+            Tuple of (projected points, has_projection, week)
+            - projected points is 0 if not found
+            - has_projection is False if player has no lines available
+            - week is the week of the projection found
         """
         player_name_lower = player_name.lower()
 
-        for proj in self.projections_cache.get('projections', []):
-            proj_name = proj.get('player_name', '').lower()
-            proj_position = proj.get('position', '')
+        # Try next week first (most common case - looking ahead to upcoming games)
+        # Then fall back to current week (for Thursday games during the week)
+        weeks_to_check = [self.next_week, self.current_week]
 
-            if proj_position == position:
-                if proj_name == player_name_lower or player_name_lower in proj_name or proj_name in player_name_lower:
-                    # Get scoring for format
-                    scoring = proj.get('scoring', {})
-                    return scoring.get(scoring_format, 0)
+        for week_to_check in weeks_to_check:
+            for proj in self.projections_cache.get('projections', []):
+                proj_name = proj.get('player', '').lower()  # Field is 'player', not 'player_name'
+                proj_position = proj.get('position', '')
+                proj_format = proj.get('format', '')
+                proj_week = proj.get('week', '')
 
-        return 0
+                # Must match position, format, week, and name
+                if (proj_position == position and
+                    proj_format == scoring_format and
+                    proj_week == week_to_check):
+
+                    # Check name matching
+                    if (proj_name == player_name_lower or
+                        player_name_lower in proj_name or
+                        proj_name in player_name_lower):
+
+                        total_points = proj.get('total_points', 0)
+                        return (total_points, True, proj_week)
+
+        # No projection found for this player in upcoming weeks
+        return (0, False, '')
 
     def optimize_lineup(
         self,
@@ -132,18 +210,24 @@ class StartSitOptimizer:
                     'name': full_name,
                     'position': position,
                     'projection': 0,
-                    'injury_status': injury_status
+                    'injury_status': injury_status,
+                    'has_projection': False,
+                    'no_lines': True,
+                    'week': ''
                 })
                 continue
 
-            projection = self.get_player_projection(full_name, position, scoring_format)
+            projection, has_projection, week = self.get_player_projection(full_name, position, scoring_format)
 
             player_projections.append({
                 'player_id': player_id,
                 'name': full_name,
                 'position': position,
                 'projection': projection,
-                'injury_status': injury_status
+                'injury_status': injury_status,
+                'has_projection': has_projection,
+                'no_lines': not has_projection,
+                'week': week
             })
 
         # Sort by projection (highest first)
@@ -193,12 +277,26 @@ class StartSitOptimizer:
         # Find start/sit recommendations
         recommendations = self._generate_recommendations(starters, bench)
 
+        # Determine which week we're showing (prefer next week)
+        projection_week = self.next_week
+        # Check if any projections are from current week
+        all_players = []
+        for pos_players in starters.values():
+            all_players.extend(pos_players)
+        all_players.extend(bench)
+
+        if all_players:
+            weeks_found = [p.get('week') for p in all_players if p.get('week')]
+            if weeks_found and self.current_week in weeks_found:
+                projection_week = self.current_week
+
         return {
             'starters': starters,
             'bench': bench,
             'total_projection': round(total_projection, 2),
             'scoring_format': scoring_format,
-            'recommendations': recommendations
+            'recommendations': recommendations,
+            'current_week': projection_week  # The week these projections are for
         }
 
     def _generate_recommendations(self, starters: Dict[str, List], bench: List[Dict]) -> List[Dict[str, Any]]:

@@ -76,7 +76,15 @@ function renderProjections() {
     let filteredProjections = currentProjections.filter(proj => {
         const matchesSearch = proj.player.toLowerCase().includes(searchTerm);
         const matchesFormat = !format || proj.format === format;
-        const matchesPosition = currentPosition === 'ALL' || proj.position === currentPosition;
+
+        // Handle FLEX position (RB, WR, TE combined)
+        let matchesPosition;
+        if (currentPosition === 'FLEX') {
+            matchesPosition = ['RB', 'WR', 'TE'].includes(proj.position);
+        } else {
+            matchesPosition = currentPosition === 'ALL' || proj.position === currentPosition;
+        }
+
         return matchesSearch && matchesFormat && matchesPosition;
     });
 

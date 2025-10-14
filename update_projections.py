@@ -12,17 +12,53 @@ from config.scoring_formats import get_available_formats
 
 
 def calculate_nfl_week(commence_time_str: str) -> str:
-    """Calculate NFL week from game start time."""
+    """Calculate NFL week from game start time using 2025 NFL schedule."""
     if not commence_time_str:
         return "TBD"
 
     try:
         game_time = datetime.fromisoformat(commence_time_str.replace('Z', '+00:00'))
-        year = game_time.year
-        season_start = datetime(2024, 9, 5, tzinfo=game_time.tzinfo) if year == 2024 else datetime(year, 9, 7, tzinfo=game_time.tzinfo)
-        days_since_start = (game_time - season_start).days
-        week_num = max(1, min(18, (days_since_start // 7) + 1))
-        return f"Week {week_num}"
+
+        # 2025 NFL Season Schedule (Thursday start dates for each week)
+        # Week 1 starts Thursday, September 4, 2025
+        week_start_dates_2025 = [
+            datetime(2025, 9, 4, tzinfo=game_time.tzinfo),   # Week 1
+            datetime(2025, 9, 11, tzinfo=game_time.tzinfo),  # Week 2
+            datetime(2025, 9, 18, tzinfo=game_time.tzinfo),  # Week 3
+            datetime(2025, 9, 25, tzinfo=game_time.tzinfo),  # Week 4
+            datetime(2025, 10, 2, tzinfo=game_time.tzinfo),  # Week 5
+            datetime(2025, 10, 9, tzinfo=game_time.tzinfo),  # Week 6
+            datetime(2025, 10, 16, tzinfo=game_time.tzinfo), # Week 7
+            datetime(2025, 10, 23, tzinfo=game_time.tzinfo), # Week 8
+            datetime(2025, 10, 30, tzinfo=game_time.tzinfo), # Week 9
+            datetime(2025, 11, 6, tzinfo=game_time.tzinfo),  # Week 10
+            datetime(2025, 11, 13, tzinfo=game_time.tzinfo), # Week 11
+            datetime(2025, 11, 20, tzinfo=game_time.tzinfo), # Week 12
+            datetime(2025, 11, 27, tzinfo=game_time.tzinfo), # Week 13
+            datetime(2025, 12, 4, tzinfo=game_time.tzinfo),  # Week 14
+            datetime(2025, 12, 11, tzinfo=game_time.tzinfo), # Week 15
+            datetime(2025, 12, 18, tzinfo=game_time.tzinfo), # Week 16
+            datetime(2025, 12, 25, tzinfo=game_time.tzinfo), # Week 17
+            datetime(2026, 1, 1, tzinfo=game_time.tzinfo),   # Week 18
+        ]
+
+        # Find which week the game falls into
+        for i, week_start in enumerate(week_start_dates_2025):
+            # Check if game is before the next week starts
+            if i < len(week_start_dates_2025) - 1:
+                next_week_start = week_start_dates_2025[i + 1]
+                if week_start <= game_time < next_week_start:
+                    return f"Week {i + 1}"
+            else:
+                # Last week (Week 18)
+                if game_time >= week_start:
+                    return f"Week {i + 1}"
+
+        # If before Week 1, return Week 1
+        if game_time < week_start_dates_2025[0]:
+            return "Week 1"
+
+        return "TBD"
     except Exception:
         return "TBD"
 
