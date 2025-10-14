@@ -36,8 +36,7 @@ html {
 header,
 .controls,
 .stats-bar,
-.position-tabs,
-.projections-table {
+.position-tabs {
     transform: translateZ(0);
 }
 
@@ -611,7 +610,8 @@ select:focus, input[type="text"]:focus {
     background: linear-gradient(135deg, rgba(28, 28, 30, 0.97) 0%, rgba(44, 44, 46, 0.97) 100%);
     border-radius: 20px;
     box-shadow: var(--shadow-lg), inset 0 1px 0 rgba(255, 255, 255, 0.08);
-    overflow: hidden;
+    overflow-x: auto;
+    overflow-y: visible;
     border: 1px solid var(--glass-border);
     transition: all 0.2s cubic-bezier(0.23, 1, 0.32, 1);
     animation: floatIn 0.3s cubic-bezier(0.23, 1, 0.32, 1);

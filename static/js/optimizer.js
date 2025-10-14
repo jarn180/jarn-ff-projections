@@ -46,17 +46,24 @@ async function loadLeagues(userId) {
     leagueSection.style.display = 'block';
 
     try {
-        const response = await fetch(`/api/sleeper/user/${userId}/leagues?season=2024`);
-        const data = await response.json();
+        // Try 2024 season first
+        let response = await fetch(`/api/sleeper/user/${userId}/leagues?season=2024`);
+        let data = await response.json();
+
+        // If no leagues found, try 2023
+        if (data.success && data.leagues.length === 0) {
+            response = await fetch(`/api/sleeper/user/${userId}/leagues?season=2023`);
+            data = await response.json();
+        }
 
         if (data.success && data.leagues.length > 0) {
             currentUserId = userId;
             displayLeagues(data.leagues);
         } else {
-            leaguesList.innerHTML = '<div class="no-results">No leagues found for 2024 season</div>';
+            leaguesList.innerHTML = '<div class="no-results">No leagues found. Please check your username or try a different season.</div>';
         }
     } catch (error) {
-        leaguesList.innerHTML = '<div class="error-message">Failed to load leagues</div>';
+        leaguesList.innerHTML = '<div class="error-message">Failed to load leagues. Please try again.</div>';
     }
 }
 
