@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Start/Sit Optimizer | Fantasy Football</title>
+    <link rel="icon" type="image/svg+xml" href="{{ url_for('static', filename='images/favicon.svg') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div class="floating-shapes">
+        <div class="shape shape-1"></div>
+        <div class="shape shape-2"></div>
+        <div class="shape shape-3"></div>
+    </div>
+
+    <div class="container">
+        <header>
+            <h1>Start/Sit Optimizer</h1>
+            <p class="subtitle">Connect your Sleeper league and optimize your lineup</p>
+            <div style="margin-top: 20px;">
+                <a href="/" class="btn-secondary" style="text-decoration: none;">← Back to Projections</a>
+            </div>
+        </header>
+
+        <!-- Step 1: Connect Sleeper Account -->
+        <div id="connectSection" class="optimizer-section">
+            <h2 class="section-title">Step 1: Connect Your Sleeper Account</h2>
+            <div class="controls">
+                <div class="control-group" style="flex: 1;">
+                    <label for="sleeperUsername">Sleeper Username:</label>
+                    <input type="text" id="sleeperUsername" placeholder="Enter your Sleeper username">
+                </div>
+                <button id="connectBtn" class="btn-primary">Connect Account</button>
+            </div>
+            <div id="connectionMessage"></div>
+        </div>
+
+        <!-- Step 2: Select League -->
+        <div id="leagueSection" class="optimizer-section" style="display: none;">
+            <h2 class="section-title">Step 2: Select Your League</h2>
+            <div id="leaguesList"></div>
+        </div>
+
+        <!-- Step 3: Optimize Lineup -->
+        <div id="optimizerSection" class="optimizer-section" style="display: none;">
+            <h2 class="section-title">Step 3: Optimize Your Lineup</h2>
+
+            <div class="stats-bar" id="leagueInfo" style="display: none;">
+                <div class="stat-item">
+                    <span class="stat-label">League:</span>
+                    <span id="leagueName" class="stat-value">-</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-label">Scoring:</span>
+                    <span id="leagueScoring" class="stat-value">-</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-label">Record:</span>
+                    <span id="userRecord" class="stat-value">-</span>
+                </div>
+            </div>
+
+            <div class="controls">
+                <div class="control-group">
+                    <label for="scoringFormatOptimizer">Scoring Format:</label>
+                    <select id="scoringFormatOptimizer">
+                        <option value="PPR">PPR</option>
+                        <option value="HALF_PPR">Half PPR</option>
+                        <option value="STANDARD">Standard</option>
+                    </select>
+                </div>
+                <button id="optimizeBtn" class="btn-primary">
+                    <span>🔍 Optimize Lineup</span>
+                </button>
+            </div>
+
+            <div id="optimizationResults"></div>
+        </div>
+    </div>
+
+    <footer>
+        <p>Data provided by The Odds API & Sleeper | For entertainment purposes only</p>
+    </footer>
+
+    <script src="{{ url_for('static', filename='js/optimizer.js') }}"></script>
+</body>
+</html>

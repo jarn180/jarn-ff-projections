@@ -6,12 +6,16 @@ Flask application for viewing Vegas-based projections
 
 from flask import Flask, render_template, jsonify, request
 from src.api.odds_api import OddsAPIClient, parse_player_props, detect_position
+from src.api.sleeper_api import SleeperAPIClient
 from src.projections.calculator import ProjectionCalculator
+from src.optimizer.start_sit import StartSitOptimizer
 from config.scoring_formats import get_available_formats
 from datetime import datetime
 import traceback
 
 app = Flask(__name__)
+sleeper_client = SleeperAPIClient()
+optimizer = StartSitOptimizer()
 
 
 def calculate_nfl_week(commence_time_str: str) -> str:
@@ -50,6 +54,12 @@ def calculate_nfl_week(commence_time_str: str) -> str:
 def index():
     """Main page."""
     return render_template('index.html')
+
+
+@app.route('/optimizer')
+def optimizer_page():
+    """Optimizer page."""
+    return render_template('optimizer.html')
 
 
 @app.route('/api/projections', methods=['GET'])
@@ -110,6 +120,169 @@ def get_markets():
         'success': True,
         'markets': markets
     })
+
+
+# Sleeper Integration Routes
+
+@app.route('/api/sleeper/user/<username>', methods=['GET'])
+def get_sleeper_user(username):
+    """Get Sleeper user by username."""
+    try:
+        user = sleeper_client.get_user(username)
+        if not user:
+            return jsonify({
+                'success': False,
+                'error': 'User not found'
+            }), 404
+
+        return jsonify({
+            'success': True,
+            'user': user
+        })
+    except Exception as e:
+        return jsonify({
+            'success': False,
+            'error': str(e)
+        }), 500
+
+
+@app.route('/api/sleeper/user/<user_id>/leagues', methods=['GET'])
+def get_sleeper_leagues(user_id):
+    """Get user's leagues."""
+    try:
+        season = request.args.get('season', '2024')
+        leagues = sleeper_client.get_user_leagues(user_id, season)
+
+        return jsonify({
+            'success': True,
+            'leagues': leagues,
+            'count': len(leagues)
+        })
+    except Exception as e:
+        return jsonify({
+            'success': False,
+            'error': str(e)
+        }), 500
+
+
+@app.route('/api/sleeper/league/<league_id>', methods=['GET'])
+def get_sleeper_league(league_id):
+    """Get league details."""
+    try:
+        league = sleeper_client.get_league(league_id)
+        if not league:
+            return jsonify({
+                'success': False,
+                'error': 'League not found'
+            }), 404
+
+        return jsonify({
+            'success': True,
+            'league': league
+        })
+    except Exception as e:
+        return jsonify({
+            'success': False,
+            'error': str(e)
+        }), 500
+
+
+@app.route('/api/sleeper/league/<league_id>/roster/<user_id>', methods=['GET'])
+def get_sleeper_roster(league_id, user_id):
+    """Get user's roster in a league."""
+    try:
+        roster = sleeper_client.get_user_roster(league_id, user_id)
+        if not roster:
+            return jsonify({
+                'success': False,
+                'error': 'Roster not found'
+            }), 404
+
+        # Get player data
+        players_db = sleeper_client.get_all_players()
+
+        # Enrich roster with player names
+        enriched_players = []
+        for player_id in roster.get('players', []):
+            player_data = players_db.get(player_id, {})
+            enriched_players.append({
+                'player_id': player_id,
+                'name': player_data.get('full_name', 'Unknown'),
+                'position': player_data.get('position', ''),
+                'team': player_data.get('team', ''),
+                'injury_status': player_data.get('injury_status', '')
+            })
+
+        return jsonify({
+            'success': True,
+            'roster': {
+                **roster,
+                'enriched_players': enriched_players
+            }
+        })
+    except Exception as e:
+        return jsonify({
+            'success': False,
+            'error': str(e)
+        }), 500
+
+
+@app.route('/api/sleeper/optimize', methods=['POST'])
+def optimize_lineup():
+    """Optimize lineup for maximum projected points."""
+    try:
+        data = request.get_json()
+        league_id = data.get('league_id')
+        user_id = data.get('user_id')
+        scoring_format = data.get('scoring_format', 'PPR')
+
+        if not league_id or not user_id:
+            return jsonify({
+                'success': False,
+                'error': 'league_id and user_id are required'
+            }), 400
+
+        # Get roster
+        roster = sleeper_client.get_user_roster(league_id, user_id)
+        if not roster:
+            return jsonify({
+                'success': False,
+                'error': 'Roster not found'
+            }), 404
+
+        # Get all players database
+        players_db = sleeper_client.get_all_players()
+
+        # Get league settings for roster configuration
+        league = sleeper_client.get_league(league_id)
+        roster_positions = league.get('roster_positions', []) if league else None
+
+        # Convert roster_positions list to dict if available
+        roster_config = None
+        if roster_positions:
+            roster_config = {}
+            for pos in roster_positions:
+                roster_config[pos] = roster_config.get(pos, 0) + 1
+
+        # Optimize lineup
+        result = optimizer.optimize_lineup(
+            roster.get('players', []),
+            players_db,
+            scoring_format,
+            roster_config
+        )
+
+        return jsonify({
+            'success': True,
+            'optimization': result
+        })
+
+    except Exception as e:
+        traceback.print_exc()
+        return jsonify({
+            'success': False,
+            'error': str(e)
+        }), 500
 
 
 if __name__ == '__main__':
