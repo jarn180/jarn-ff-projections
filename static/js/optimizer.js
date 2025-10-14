@@ -46,13 +46,13 @@ async function loadLeagues(userId) {
     leagueSection.style.display = 'block';
 
     try {
-        // Try 2024 season first
-        let response = await fetch(`/api/sleeper/user/${userId}/leagues?season=2024`);
+        // Try 2025 season first (2025-2026 NFL season)
+        let response = await fetch(`/api/sleeper/user/${userId}/leagues?season=2025`);
         let data = await response.json();
 
-        // If no leagues found, try 2023
+        // If no leagues found, try 2024
         if (data.success && data.leagues.length === 0) {
-            response = await fetch(`/api/sleeper/user/${userId}/leagues?season=2023`);
+            response = await fetch(`/api/sleeper/user/${userId}/leagues?season=2024`);
             data = await response.json();
         }
 
@@ -60,7 +60,7 @@ async function loadLeagues(userId) {
             currentUserId = userId;
             displayLeagues(data.leagues);
         } else {
-            leaguesList.innerHTML = '<div class="no-results">No leagues found. Please check your username or try a different season.</div>';
+            leaguesList.innerHTML = '<div class="no-results">No leagues found for 2024-2025 season. Please check your username.</div>';
         }
     } catch (error) {
         leaguesList.innerHTML = '<div class="error-message">Failed to load leagues. Please try again.</div>';

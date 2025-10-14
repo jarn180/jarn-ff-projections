@@ -34,12 +34,12 @@ class SleeperAPIClient:
             print(f"Error fetching user: {e}")
             return None
 
-    def get_user_leagues(self, user_id: str, season: str = "2024", sport: str = "nfl") -> List[Dict[str, Any]]:
+    def get_user_leagues(self, user_id: str, season: str = "2025", sport: str = "nfl") -> List[Dict[str, Any]]:
         """Get all leagues for a user in a given season.
 
         Args:
             user_id: Sleeper user ID
-            season: Season year (default: 2024)
+            season: Season year (default: 2025)
             sport: Sport type (default: nfl)
 
         Returns:
