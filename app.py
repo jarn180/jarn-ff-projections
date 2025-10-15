@@ -9,13 +9,17 @@ from src.api.odds_api import OddsAPIClient, parse_player_props, detect_position
 from src.api.sleeper_api import SleeperAPIClient
 from src.projections.calculator import ProjectionCalculator
 from src.optimizer.start_sit import StartSitOptimizer
+from src.notifications.sms_service import TextbeltSMSService, SMSSubscriberManager
 from config.scoring_formats import get_available_formats
 from datetime import datetime
 import traceback
+import re
 
 app = Flask(__name__)
 sleeper_client = SleeperAPIClient()
 optimizer = StartSitOptimizer()
+sms_service = TextbeltSMSService()
+subscriber_manager = SMSSubscriberManager()
 
 
 def calculate_nfl_week(commence_time_str: str) -> str:
@@ -275,6 +279,158 @@ def optimize_lineup():
         return jsonify({
             'success': True,
             'optimization': result
+        })
+
+    except Exception as e:
+        traceback.print_exc()
+        return jsonify({
+            'success': False,
+            'error': str(e)
+        }), 500
+
+
+# SMS Notification Routes
+
+@app.route('/api/sms/subscribe', methods=['POST'])
+def sms_subscribe():
+    """Subscribe a phone number to SMS notifications."""
+    try:
+        data = request.get_json()
+        phone = data.get('phone')
+        region = data.get('region', 'us')
+
+        if not phone:
+            return jsonify({
+                'success': False,
+                'error': 'Phone number is required'
+            }), 400
+
+        # Validate phone number format (basic validation)
+        phone_clean = re.sub(r'\D', '', phone)
+        if len(phone_clean) < 10:
+            return jsonify({
+                'success': False,
+                'error': 'Invalid phone number format'
+            }), 400
+
+        # Add subscriber
+        added = subscriber_manager.add_subscriber(phone_clean, region)
+
+        if not added:
+            return jsonify({
+                'success': False,
+                'error': 'Phone number already subscribed'
+            }), 400
+
+        # Send confirmation SMS
+        message = "Welcome to Fantasy Football Projections! You'll receive updates when new projections are added. Reply STOP to unsubscribe."
+        result = sms_service.send_sms(phone_clean, message, region)
+
+        if result.get('success'):
+            return jsonify({
+                'success': True,
+                'message': 'Successfully subscribed! Check your phone for confirmation.',
+                'subscriber_count': subscriber_manager.get_subscriber_count()
+            })
+        else:
+            # Remove subscriber if SMS failed
+            subscriber_manager.remove_subscriber(phone_clean)
+            return jsonify({
+                'success': False,
+                'error': f"Failed to send confirmation SMS: {result.get('error', 'Unknown error')}"
+            }), 500
+
+    except Exception as e:
+        traceback.print_exc()
+        return jsonify({
+            'success': False,
+            'error': str(e)
+        }), 500
+
+
+@app.route('/api/sms/unsubscribe', methods=['POST'])
+def sms_unsubscribe():
+    """Unsubscribe a phone number from SMS notifications."""
+    try:
+        data = request.get_json()
+        phone = data.get('phone')
+
+        if not phone:
+            return jsonify({
+                'success': False,
+                'error': 'Phone number is required'
+            }), 400
+
+        # Clean phone number
+        phone_clean = re.sub(r'\D', '', phone)
+
+        # Remove subscriber
+        removed = subscriber_manager.remove_subscriber(phone_clean)
+
+        if removed:
+            return jsonify({
+                'success': True,
+                'message': 'Successfully unsubscribed from SMS notifications',
+                'subscriber_count': subscriber_manager.get_subscriber_count()
+            })
+        else:
+            return jsonify({
+                'success': False,
+                'error': 'Phone number not found in subscribers'
+            }), 404
+
+    except Exception as e:
+        traceback.print_exc()
+        return jsonify({
+            'success': False,
+            'error': str(e)
+        }), 500
+
+
+@app.route('/api/sms/status', methods=['GET'])
+def sms_status():
+    """Get SMS notification system status."""
+    try:
+        subscriber_count = subscriber_manager.get_subscriber_count()
+        quota = sms_service.check_quota()
+
+        return jsonify({
+            'success': True,
+            'subscriber_count': subscriber_count,
+            'quota_remaining': quota,
+            'is_free_tier': sms_service.is_free_tier
+        })
+
+    except Exception as e:
+        traceback.print_exc()
+        return jsonify({
+            'success': False,
+            'error': str(e)
+        }), 500
+
+
+@app.route('/api/sms/test', methods=['POST'])
+def sms_test():
+    """Test SMS sending (admin only - requires authentication in production)."""
+    try:
+        data = request.get_json()
+        phone = data.get('phone')
+
+        if not phone:
+            return jsonify({
+                'success': False,
+                'error': 'Phone number is required'
+            }), 400
+
+        phone_clean = re.sub(r'\D', '', phone)
+        message = "Test message from Fantasy Football Projections SMS system"
+
+        result = sms_service.send_sms(phone_clean, message)
+
+        return jsonify({
+            'success': result.get('success', False),
+            'message': 'Test SMS sent' if result.get('success') else 'Failed to send test SMS',
+            'details': result
         })
 
     except Exception as e:

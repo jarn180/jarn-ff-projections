@@ -8,6 +8,7 @@ import json
 from datetime import datetime
 from src.api.odds_api import OddsAPIClient, parse_player_props, detect_position
 from src.projections.calculator import ProjectionCalculator
+from src.notifications.sms_service import TextbeltSMSService, SMSSubscriberManager
 from config.scoring_formats import get_available_formats
 
 
@@ -152,10 +153,85 @@ def update_projections():
     print(f"📁 Saved to: {cache_file}")
     print(f"🕐 Last updated: {cache_data['last_updated_display']}")
 
+    return {
+        'total_players': len(all_players),
+        'total_projections': len(all_projections)
+    }
+
+
+def send_sms_notifications(stats: dict):
+    """Send SMS notifications to subscribers about projection updates.
+
+    Args:
+        stats: Dictionary containing update statistics
+    """
+    try:
+        print("\n📱 Sending SMS notifications...")
+
+        # Initialize services
+        sms_service = TextbeltSMSService()
+        subscriber_manager = SMSSubscriberManager()
+
+        # Get active subscribers
+        subscribers = subscriber_manager.get_active_subscribers()
+
+        if not subscribers:
+            print("ℹ No SMS subscribers found")
+            return
+
+        print(f"📊 Found {len(subscribers)} active subscriber(s)")
+
+        # Check quota if using paid tier
+        if not sms_service.is_free_tier:
+            quota = sms_service.check_quota()
+            if quota is not None and quota < len(subscribers):
+                print(f"⚠️  Warning: Only {quota} messages remaining, but {len(subscribers)} subscribers")
+
+        # Format message
+        total_players = stats.get('total_players', 0)
+        message = sms_service.format_projection_update_message(total_players)
+
+        print(f"📝 Message: {message}")
+
+        # Send to all subscribers
+        success_count = 0
+        failed_count = 0
+
+        for subscriber in subscribers:
+            phone = subscriber.get('phone')
+            region = subscriber.get('region', 'us')
+
+            if not phone:
+                continue
+
+            result = sms_service.send_sms(phone, message, region)
+
+            if result.get('success'):
+                success_count += 1
+            else:
+                failed_count += 1
+
+        print(f"\n✅ SMS notifications sent: {success_count} successful, {failed_count} failed")
+
+    except Exception as e:
+        print(f"❌ Error sending SMS notifications: {e}")
+        import traceback
+        traceback.print_exc()
+
 
 if __name__ == "__main__":
     try:
-        update_projections()
+        stats = update_projections()
+
+        # Ask if user wants to send SMS notifications
+        print("\n" + "="*60)
+        send_sms = input("Send SMS notifications to subscribers? (y/n): ").strip().lower()
+
+        if send_sms == 'y':
+            send_sms_notifications(stats)
+        else:
+            print("ℹ Skipping SMS notifications")
+
     except Exception as e:
         print(f"❌ Error: {e}")
         import traceback
