@@ -102,6 +102,48 @@ def get_projections():
         }), 500
 
 
+@app.route('/api/projections/status', methods=['GET'])
+def get_projections_status():
+    """API endpoint to check projection update status.
+
+    Returns metadata about the projections cache for notification system.
+    """
+    try:
+        import json
+        import os
+
+        cache_file = 'data/projections_cache.json'
+
+        if not os.path.exists(cache_file):
+            return jsonify({
+                'success': False,
+                'error': 'No cached data found'
+            }), 404
+
+        with open(cache_file, 'r') as f:
+            cache_data = json.load(f)
+
+        # Get file modification time as backup timestamp
+        file_mtime = os.path.getmtime(cache_file)
+
+        return jsonify({
+            'success': True,
+            'last_updated_timestamp': cache_data.get('last_updated_timestamp', file_mtime),
+            'last_updated_display': cache_data.get('last_updated_display', 'Unknown'),
+            'total_players': cache_data.get('total_players', 0),
+            'projection_count': len(cache_data.get('projections', [])),
+            'formats': cache_data.get('formats', [])
+        })
+
+    except Exception as e:
+        print(f"Error reading cache status: {e}")
+        traceback.print_exc()
+        return jsonify({
+            'success': False,
+            'error': f'Error loading cache status: {str(e)}'
+        }), 500
+
+
 @app.route('/api/formats', methods=['GET'])
 def get_formats():
     """Get available scoring formats."""

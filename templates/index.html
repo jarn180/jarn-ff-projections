@@ -18,8 +18,11 @@
         <header>
             <h1>Fantasy Football Projections</h1>
             <p class="subtitle">Vegas Props-Based Projections for NFL Players</p>
-            <div style="margin-top: 20px;">
+            <div style="margin-top: 20px; display: flex; gap: 12px; flex-wrap: wrap;">
                 <a href="/optimizer" class="btn-secondary" style="text-decoration: none;">Start/Sit Optimizer →</a>
+                <button id="notificationSettingsBtn" class="btn-notification" style="display: none;">
+                    🔔 Enable Notifications
+                </button>
             </div>
         </header>
 
@@ -77,6 +80,7 @@
         <p>Data provided by The Odds API | For entertainment purposes only</p>
     </footer>
 
+    <script src="{{ url_for('static', filename='js/notifications.js') }}"></script>
     <script src="{{ url_for('static', filename='js/app.js') }}"></script>
 </body>
 </html>

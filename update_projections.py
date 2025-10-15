@@ -134,13 +134,15 @@ def update_projections():
     # Sort by total points
     all_projections.sort(key=lambda x: x['total_points'], reverse=True)
 
-    # Create cache data
+    # Create cache data with timestamp for notification system
+    now = datetime.now()
     cache_data = {
         'projections': all_projections,
         'total_players': len(all_players),
         'formats': formats,
-        'last_updated': datetime.now().isoformat(),
-        'last_updated_display': datetime.now().strftime('%B %d, %Y at %I:%M %p')
+        'last_updated': now.isoformat(),
+        'last_updated_display': now.strftime('%B %d, %Y at %I:%M %p'),
+        'last_updated_timestamp': now.timestamp()  # Unix timestamp for comparison
     }
 
     # Save to cache file

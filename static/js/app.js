@@ -22,6 +22,7 @@ searchInput.addEventListener('input', handleSearch);
 // Auto-load data on page load
 document.addEventListener('DOMContentLoaded', () => {
     fetchProjections();
+    initializeNotifications();
 });
 
 // Position tab click handlers
@@ -305,3 +306,69 @@ function showPositionTabs() {
 // Make functions globally accessible
 window.showPlayerDetails = showPlayerDetails;
 window.closeModal = closeModal;
+
+// ============================================
+// NOTIFICATION SYSTEM INTEGRATION
+// ============================================
+
+function initializeNotifications() {
+    // Show notification button if browser supports notifications
+    const notificationBtn = document.getElementById('notificationSettingsBtn');
+
+    if ('Notification' in window) {
+        notificationBtn.style.display = 'inline-block';
+
+        // Update button text based on permission
+        updateNotificationButton();
+
+        // Handle button click
+        notificationBtn.addEventListener('click', async () => {
+            if (Notification.permission === 'granted') {
+                // Already granted, show test notification
+                window.notificationManager.showToast('Notifications are enabled!', 'success');
+            } else if (Notification.permission === 'denied') {
+                // Permission denied, show instructions
+                window.notificationManager.showToast(
+                    'Notifications are blocked. Please enable them in your browser settings.',
+                    'warning'
+                );
+            } else {
+                // Request permission
+                const granted = await window.notificationManager.requestPermission();
+                updateNotificationButton();
+
+                if (granted) {
+                    window.notificationManager.showToast('Notifications enabled!', 'success');
+                    window.notificationManager.showBrowserNotification(
+                        'Notifications Enabled',
+                        'You\'ll be notified when new projections are added!'
+                    );
+                } else {
+                    window.notificationManager.showToast(
+                        'Notification permission denied',
+                        'warning'
+                    );
+                }
+            }
+        });
+    }
+
+    // Start periodic update checks (every 5 minutes)
+    window.notificationManager.startPeriodicCheck(5);
+}
+
+function updateNotificationButton() {
+    const notificationBtn = document.getElementById('notificationSettingsBtn');
+
+    if (!notificationBtn) return;
+
+    if (Notification.permission === 'granted') {
+        notificationBtn.innerHTML = '✓ Notifications Enabled';
+        notificationBtn.classList.add('btn-success');
+    } else if (Notification.permission === 'denied') {
+        notificationBtn.innerHTML = '✕ Notifications Blocked';
+        notificationBtn.classList.add('btn-danger');
+    } else {
+        notificationBtn.innerHTML = '🔔 Enable Notifications';
+    }
+}

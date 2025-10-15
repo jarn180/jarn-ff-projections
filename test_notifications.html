@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notification System Demo</title>
+    <link rel="stylesheet" href="static/css/style.css">
+    <style>
+        .demo-container {
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 20px;
+        }
+        .demo-buttons {
+            display: flex;
+            gap: 12px;
+            flex-wrap: wrap;
+            margin-top: 20px;
+        }
+        .demo-button {
+            padding: 12px 24px;
+            border-radius: 8px;
+            border: none;
+            font-weight: 600;
+            cursor: pointer;
+            background: var(--primary-color);
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div class="floating-shapes">
+        <div class="shape shape-1"></div>
+        <div class="shape shape-2"></div>
+        <div class="shape shape-3"></div>
+    </div>
+
+    <div class="demo-container">
+        <header>
+            <h1>Notification System Demo</h1>
+            <p class="subtitle">Test all notification types</p>
+        </header>
+
+        <div class="notification-settings">
+            <h3>Test Notifications</h3>
+
+            <div class="demo-buttons">
+                <button class="demo-button" onclick="testToastSuccess()">
+                    ✓ Success Toast
+                </button>
+                <button class="demo-button" onclick="testToastInfo()">
+                    ℹ Info Toast
+                </button>
+                <button class="demo-button" onclick="testToastWarning()">
+                    ⚠ Warning Toast
+                </button>
+                <button class="demo-button" onclick="testToastError()">
+                    ✕ Error Toast
+                </button>
+                <button class="demo-button" onclick="testBadge()">
+                    🔴 Show Badge
+                </button>
+                <button class="demo-button" onclick="testBrowserNotification()">
+                    🔔 Browser Notification
+                </button>
+                <button class="demo-button" onclick="testNewProjections()">
+                    📊 Simulate New Projections
+                </button>
+            </div>
+        </div>
+
+        <div style="margin-top: 40px; padding: 20px; background: var(--surface-elevated); border-radius: 12px;">
+            <h3>Instructions:</h3>
+            <ol style="color: var(--text-secondary); line-height: 1.8;">
+                <li>Click any button above to test different notification types</li>
+                <li>For browser notifications, you'll need to grant permission first</li>
+                <li>Toast notifications appear in the top-right corner</li>
+                <li>Badges show a red counter in the top-right</li>
+                <li>The "Simulate New Projections" button mimics what users see when you update data</li>
+            </ol>
+        </div>
+
+        <div style="margin-top: 20px; padding: 20px; background: var(--surface); border-radius: 12px; border-left: 4px solid var(--primary-color);">
+            <h4 style="color: var(--primary-color);">Notification Permission Status:</h4>
+            <p id="permissionStatus" style="color: var(--text-secondary); margin-top: 10px;">
+                Loading...
+            </p>
+        </div>
+    </div>
+
+    <script src="static/js/notifications.js"></script>
+    <script>
+        function testToastSuccess() {
+            window.notificationManager.showToast('5 new player projections added!', 'success');
+        }
+
+        function testToastInfo() {
+            window.notificationManager.showToast('Checking for updates...', 'info');
+        }
+
+        function testToastWarning() {
+            window.notificationManager.showToast('Notifications are blocked. Enable them in browser settings.', 'warning');
+        }
+
+        function testToastError() {
+            window.notificationManager.showToast('Failed to load projections', 'error');
+        }
+
+        function testBadge() {
+            window.notificationManager.showBadge(5);
+        }
+
+        async function testBrowserNotification() {
+            const granted = await window.notificationManager.requestPermission();
+            if (granted) {
+                window.notificationManager.showBrowserNotification(
+                    'Projections Updated',
+                    '5 new player projections have been added!'
+                );
+            } else {
+                testToastWarning();
+            }
+            updatePermissionStatus();
+        }
+
+        function testNewProjections() {
+            // Simulate what happens when new projections are detected
+            window.notificationManager.showToast('5 new player projections added!', 'success');
+            window.notificationManager.showBadge(5);
+
+            if (Notification.permission === 'granted') {
+                window.notificationManager.showBrowserNotification(
+                    'Projections Updated',
+                    '5 new player projections have been added!'
+                );
+            }
+        }
+
+        function updatePermissionStatus() {
+            const status = document.getElementById('permissionStatus');
+            const permission = Notification.permission;
+
+            let statusText = '';
+            let statusColor = '';
+
+            if (permission === 'granted') {
+                statusText = '✓ Notifications Enabled - You will receive browser notifications';
+                statusColor = 'var(--secondary-color)';
+            } else if (permission === 'denied') {
+                statusText = '✕ Notifications Blocked - Enable them in your browser settings';
+                statusColor = 'var(--danger-color)';
+            } else {
+                statusText = '⚠ Notifications Not Enabled - Click "Browser Notification" to enable';
+                statusColor = 'var(--warning-color)';
+            }
+
+            status.textContent = statusText;
+            status.style.color = statusColor;
+        }
+
+        // Update status on load
+        document.addEventListener('DOMContentLoaded', updatePermissionStatus);
+    </script>
+</body>
+</html>
