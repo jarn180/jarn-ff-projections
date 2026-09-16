@@ -1,5 +1,4 @@
-import { motion } from 'framer-motion'
-import { Search, TrendingUp } from 'lucide-react'
+import { CircleSlash, Search, TrendingUp } from 'lucide-react'
 import { useState } from 'react'
 import { api } from '../../lib/api.js'
 import Badge from '../Badge.jsx'
@@ -45,18 +44,7 @@ export default function WaiverWire({ leagueId, defaultFormat = 'PPR' }) {
   }
 
   return (
-    <motion.section
-      initial={{ opacity: 0, y: 8 }}
-      animate={{ opacity: 1, y: 0 }}
-      exit={{ opacity: 0 }}
-      className="rounded-lg border border-[var(--color-border)] bg-[var(--color-canvas)] p-5"
-    >
-      <h2 className="mb-3 flex items-center gap-2 text-sm font-semibold text-[var(--color-ink)]">
-        <span className="flex h-5 w-5 items-center justify-center rounded-full bg-[var(--color-accent-soft)] text-[11px] font-bold text-[var(--color-accent)]">
-          4
-        </span>
-        Waiver wire targets
-      </h2>
+    <div>
       <p className="mb-4 text-xs text-[var(--color-ink-faint)]">
         Every player in the league nobody has rostered, sorted by projected points.
       </p>
@@ -106,14 +94,21 @@ export default function WaiverWire({ leagueId, defaultFormat = 'PPR' }) {
                     {target.injury_status ? ` · ${target.injury_status}` : ''}
                   </p>
                 </div>
-                <span className="shrink-0 text-sm font-semibold tabular-nums text-[var(--color-accent)]">
-                  {target.projection.toFixed(1)} <span className="text-xs font-normal text-[var(--color-ink-faint)]">pts</span>
-                </span>
+                {target.projection <= 0 ? (
+                  <span className="flex shrink-0 items-center gap-1 rounded bg-[var(--color-border)] px-1.5 py-0.5 text-[11px] font-medium text-[var(--color-ink-faint)]">
+                    <CircleSlash size={11} />
+                    No line yet
+                  </span>
+                ) : (
+                  <span className="shrink-0 text-sm font-semibold tabular-nums text-[var(--color-accent)]">
+                    {target.projection.toFixed(1)} <span className="text-xs font-normal text-[var(--color-ink-faint)]">pts</span>
+                  </span>
+                )}
               </li>
             ))}
           </ul>
         )}
       </div>
-    </motion.section>
+    </div>
   )
 }

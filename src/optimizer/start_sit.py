@@ -74,6 +74,7 @@ class StartSitOptimizer:
     }
 
     FLEX_POSITIONS = ['RB', 'WR', 'TE']
+    SUPERFLEX_POSITIONS = ['QB', 'RB', 'WR', 'TE']
 
     def __init__(self):
         """Initialize optimizer."""
@@ -335,13 +336,16 @@ class StartSitOptimizer:
         # Sort by projection (highest first)
         player_projections.sort(key=lambda x: x['projection'], reverse=True)
 
-        # Build optimal lineup
+        # Build optimal lineup. Dict insertion order doubles as display order
+        # in the frontend, so it follows a standard roster sheet: QB, RB, WR,
+        # TE, FLEX, SUPER_FLEX, K, DEF.
         starters = {
             'QB': [],
             'RB': [],
             'WR': [],
             'TE': [],
             'FLEX': [],
+            'SUPER_FLEX': [],
             'K': [],
             'DEF': []
         }
@@ -365,6 +369,15 @@ class StartSitOptimizer:
         for i, player in enumerate(flex_eligible):
             if i < flex_count:
                 starters['FLEX'].append(player)
+                used_players.add(player['player_id'])
+
+        # Fill SUPER_FLEX (QB/RB/WR/TE) for superflex/2-QB leagues
+        superflex_count = roster_config.get('SUPER_FLEX', 0)
+        superflex_eligible = [p for p in player_projections if p['position'] in self.SUPERFLEX_POSITIONS and p['player_id'] not in used_players]
+
+        for i, player in enumerate(superflex_eligible):
+            if i < superflex_count:
+                starters['SUPER_FLEX'].append(player)
                 used_players.add(player['player_id'])
 
         # Remaining players go to bench
@@ -445,6 +458,21 @@ class StartSitOptimizer:
                             'starter_player': flex_starter['name'],
                             'starter_projection': flex_starter['projection'],
                             'position': 'FLEX',
+                            'projected_gain': round(gain, 2)
+                        })
+
+            # Check SUPER_FLEX if eligible (superflex/2-QB leagues)
+            if position in self.SUPERFLEX_POSITIONS and 'SUPER_FLEX' in starters and starters['SUPER_FLEX']:
+                for sf_starter in starters['SUPER_FLEX']:
+                    if bench_proj > sf_starter['projection']:
+                        gain = bench_proj - sf_starter['projection']
+                        recommendations.append({
+                            'action': 'swap',
+                            'bench_player': bench_player['name'],
+                            'bench_projection': bench_proj,
+                            'starter_player': sf_starter['name'],
+                            'starter_projection': sf_starter['projection'],
+                            'position': 'SUPER_FLEX',
                             'projected_gain': round(gain, 2)
                         })
 

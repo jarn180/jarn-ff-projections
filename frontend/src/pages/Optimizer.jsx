@@ -7,6 +7,7 @@ import LineupResults from '../components/optimizer/LineupResults.jsx'
 import WaiverWire from '../components/optimizer/WaiverWire.jsx'
 import PageHeader from '../components/PageHeader.jsx'
 import Select from '../components/Select.jsx'
+import SegmentedTabs from '../components/SegmentedTabs.jsx'
 import Spinner from '../components/Spinner.jsx'
 import StatPill from '../components/StatPill.jsx'
 import { ErrorState } from '../components/StatusMessage.jsx'
@@ -17,6 +18,11 @@ const FORMAT_OPTIONS = [
   { value: 'PPR', label: 'PPR' },
   { value: 'HALF_PPR', label: 'Half PPR' },
   { value: 'STANDARD', label: 'Standard' },
+]
+
+const TAB_OPTIONS = [
+  { value: 'lineup', label: 'Lineup' },
+  { value: 'waivers', label: 'Waiver Wire' },
 ]
 
 const SEASONS = ['2026', '2025']
@@ -35,6 +41,7 @@ export default function Optimizer() {
   const [optimizing, setOptimizing] = useState(false)
   const [optimizeError, setOptimizeError] = useState('')
   const [optimization, setOptimization] = useState(null)
+  const [activeTab, setActiveTab] = useState('lineup')
 
   async function handleConnect(username) {
     setConnecting(true)
@@ -69,6 +76,7 @@ export default function Optimizer() {
     setOptimization(null)
     setOptimizeError('')
     setRecord('')
+    setActiveTab('lineup')
     const rec = parseFloat(league.scoring_settings?.rec || 0)
     setScoringFormat(rec === 1 ? 'PPR' : rec === 0.5 ? 'HALF_PPR' : 'STANDARD')
 
@@ -124,12 +132,15 @@ export default function Optimizer() {
               exit={{ opacity: 0 }}
               className="rounded-lg border border-[var(--color-border)] bg-[var(--color-canvas)] p-5"
             >
-              <h2 className="mb-3 flex items-center gap-2 text-sm font-semibold text-[var(--color-ink)]">
-                <span className="flex h-5 w-5 items-center justify-center rounded-full bg-[var(--color-accent-soft)] text-[11px] font-bold text-[var(--color-accent)]">
-                  3
-                </span>
-                Optimize your lineup
-              </h2>
+              <div className="mb-4 flex flex-wrap items-center justify-between gap-3">
+                <h2 className="flex items-center gap-2 text-sm font-semibold text-[var(--color-ink)]">
+                  <span className="flex h-5 w-5 items-center justify-center rounded-full bg-[var(--color-accent-soft)] text-[11px] font-bold text-[var(--color-accent)]">
+                    3
+                  </span>
+                  {activeTab === 'lineup' ? 'Optimize your lineup' : 'Find waiver wire targets'}
+                </h2>
+                <SegmentedTabs layoutId="optimizer-tab" options={TAB_OPTIONS} value={activeTab} onChange={setActiveTab} />
+              </div>
 
               <div className="mb-4 flex flex-wrap gap-2">
                 <StatPill label="League" value={selectedLeague.name} />
@@ -137,49 +148,51 @@ export default function Optimizer() {
                 {record && <StatPill label="Record" value={record} />}
               </div>
 
-              <div className="flex flex-col gap-3 sm:flex-row sm:items-end sm:justify-between">
-                <Select
-                  label="Scoring format"
-                  value={scoringFormat}
-                  onChange={setScoringFormat}
-                  options={FORMAT_OPTIONS}
-                  className="w-full sm:w-40"
-                />
-                <button
-                  type="button"
-                  onClick={handleOptimize}
-                  disabled={optimizing}
-                  className="flex items-center justify-center gap-2 rounded-md bg-[var(--color-accent)] px-4 py-2 text-sm font-medium text-white transition-opacity disabled:opacity-50"
-                >
-                  {optimizing ? <Spinner size={15} className="text-white" /> : <Wand2 size={15} />}
-                  {optimizing ? 'Optimizing…' : 'Optimize lineup'}
-                </button>
-              </div>
+              {activeTab === 'lineup' ? (
+                <>
+                  <div className="flex flex-col gap-3 sm:flex-row sm:items-end sm:justify-between">
+                    <Select
+                      label="Scoring format"
+                      value={scoringFormat}
+                      onChange={setScoringFormat}
+                      options={FORMAT_OPTIONS}
+                      className="w-full sm:w-40"
+                    />
+                    <button
+                      type="button"
+                      onClick={handleOptimize}
+                      disabled={optimizing}
+                      className="flex items-center justify-center gap-2 rounded-md bg-[var(--color-accent)] px-4 py-2 text-sm font-medium text-white transition-opacity disabled:opacity-50"
+                    >
+                      {optimizing ? <Spinner size={15} className="text-white" /> : <Wand2 size={15} />}
+                      {optimizing ? 'Optimizing…' : 'Optimize lineup'}
+                    </button>
+                  </div>
 
-              {optimizeError && (
-                <div className="mt-4">
-                  <ErrorState message={optimizeError} />
-                </div>
-              )}
-
-              <div className="mt-5">
-                {optimization ? (
-                  <LineupResults optimization={optimization} />
-                ) : (
-                  !optimizing && (
-                    <div className="flex flex-col items-center gap-2 py-10 text-[var(--color-ink-faint)]">
-                      <Search size={20} />
-                      <p className="text-sm">Run the optimizer to see your best lineup.</p>
+                  {optimizeError && (
+                    <div className="mt-4">
+                      <ErrorState message={optimizeError} />
                     </div>
-                  )
-                )}
-              </div>
+                  )}
+
+                  <div className="mt-5">
+                    {optimization ? (
+                      <LineupResults optimization={optimization} />
+                    ) : (
+                      !optimizing && (
+                        <div className="flex flex-col items-center gap-2 py-10 text-[var(--color-ink-faint)]">
+                          <Search size={20} />
+                          <p className="text-sm">Run the optimizer to see your best lineup.</p>
+                        </div>
+                      )
+                    )}
+                  </div>
+                </>
+              ) : (
+                <WaiverWire leagueId={selectedLeague.league_id} defaultFormat={scoringFormat} />
+              )}
             </motion.section>
           )}
-        </AnimatePresence>
-
-        <AnimatePresence>
-          {selectedLeague && <WaiverWire leagueId={selectedLeague.league_id} defaultFormat={scoringFormat} />}
         </AnimatePresence>
       </div>
     </div>
