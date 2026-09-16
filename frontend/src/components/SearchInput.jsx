@@ -9,7 +9,7 @@ export default function SearchInput({ value, onChange, placeholder, className = 
         value={value}
         onChange={(event) => onChange(event.target.value)}
         placeholder={placeholder}
-        className="w-full rounded-md border border-[var(--color-border)] bg-[var(--color-canvas)] py-2 pl-9 pr-8 text-sm text-[var(--color-ink)] shadow-[var(--shadow-notion-sm)] outline-none transition-colors placeholder:text-[var(--color-ink-faint)] hover:border-[var(--color-border-strong)] focus:border-[var(--color-accent)]"
+        className="w-full rounded-md border border-[var(--color-border)] bg-[var(--color-canvas)] py-2 pl-9 pr-8 text-base text-[var(--color-ink)] shadow-[var(--shadow-notion-sm)] outline-none transition-colors placeholder:text-[var(--color-ink-faint)] hover:border-[var(--color-border-strong)] focus:border-[var(--color-accent)] sm:text-sm"
       />
       {value && (
         <button

@@ -72,10 +72,21 @@
   -webkit-tap-highlight-color: transparent;
 }
 
+html {
+  /* Safari auto-zooms a focused input below 16px; inputs are set to 16px+
+     on mobile to avoid that (see Select.jsx / SearchInput.jsx / ConnectCard.jsx),
+     this is a second line of defense against the browser rescaling text. */
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+}
+
 html,
 body,
 #root {
   height: 100%;
+  /* Kill the rubber-band overscroll bounce so scrolling feels like a native
+     app's, not a browser tab. */
+  overscroll-behavior-y: none;
 }
 
 body {
@@ -83,6 +94,15 @@ body {
   color: var(--color-ink);
   font-family: var(--font-sans);
   -webkit-font-smoothing: antialiased;
+}
+
+button,
+a,
+input,
+select {
+  /* Removes the ~300ms tap delay and disables double-tap-to-zoom on
+     controls, so taps feel immediate like a native app. */
+  touch-action: manipulation;
 }
 
 ::selection {

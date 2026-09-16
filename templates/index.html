@@ -2,10 +2,16 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
     <title>Fantasy Football Projections | Vegas Props</title>
     <meta name="description" content="Vegas props-based fantasy football projections for every NFL player (PPR, Half-PPR, Standard), plus a Start/Sit optimizer synced to your Sleeper league.">
+    <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
+    <meta name="theme-color" content="#191919" media="(prefers-color-scheme: dark)">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <meta name="mobile-web-app-capable" content="yes">
     <link rel="icon" type="image/svg+xml" href="{{ url_for('static', filename='app/favicon.svg') }}">
+    <link rel="apple-touch-icon" href="{{ url_for('static', filename='app/favicon.svg') }}">
     <link rel="stylesheet" href="{{ url_for('static', filename='app/main.css') }}">
 
     <!-- Open Graph -->

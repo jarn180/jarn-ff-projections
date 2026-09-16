@@ -8,7 +8,7 @@ export default function Select({ value, onChange, options, label, className = ''
         <select
           value={value}
           onChange={(event) => onChange(event.target.value)}
-          className="w-full cursor-pointer appearance-none rounded-md border border-[var(--color-border)] bg-[var(--color-canvas)] py-2 pl-3 pr-9 text-sm font-medium text-[var(--color-ink)] shadow-[var(--shadow-notion-sm)] outline-none transition-colors hover:border-[var(--color-border-strong)] focus:border-[var(--color-accent)]"
+          className="w-full cursor-pointer appearance-none rounded-md border border-[var(--color-border)] bg-[var(--color-canvas)] py-2 pl-3 pr-9 text-base font-medium text-[var(--color-ink)] shadow-[var(--shadow-notion-sm)] outline-none transition-colors hover:border-[var(--color-border-strong)] focus:border-[var(--color-accent)] sm:text-sm"
         >
           {options.map((option) => (
             <option key={option.value} value={option.value}>

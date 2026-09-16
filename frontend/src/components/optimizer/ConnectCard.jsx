@@ -31,7 +31,7 @@ export default function ConnectCard({ user, onConnect, connecting, error }) {
           value={username}
           onChange={(event) => setUsername(event.target.value)}
           placeholder="Sleeper username"
-          className="flex-1 rounded-md border border-[var(--color-border)] bg-[var(--color-canvas)] px-3 py-2 text-sm outline-none transition-colors placeholder:text-[var(--color-ink-faint)] focus:border-[var(--color-accent)]"
+          className="flex-1 rounded-md border border-[var(--color-border)] bg-[var(--color-canvas)] px-3 py-2 text-base outline-none transition-colors placeholder:text-[var(--color-ink-faint)] focus:border-[var(--color-accent)] sm:text-sm"
         />
         <button
           type="submit"
