@@ -50,32 +50,32 @@ class StartSitOptimizer:
         """
         now = datetime.now(timezone.utc)
 
-        # 2025 NFL Season Schedule (Thursday start dates for each week)
-        week_start_dates_2025 = [
-            datetime(2025, 9, 4, tzinfo=timezone.utc),   # Week 1
-            datetime(2025, 9, 11, tzinfo=timezone.utc),  # Week 2
-            datetime(2025, 9, 18, tzinfo=timezone.utc),  # Week 3
-            datetime(2025, 9, 25, tzinfo=timezone.utc),  # Week 4
-            datetime(2025, 10, 2, tzinfo=timezone.utc),  # Week 5
-            datetime(2025, 10, 9, tzinfo=timezone.utc),  # Week 6
-            datetime(2025, 10, 16, tzinfo=timezone.utc), # Week 7
-            datetime(2025, 10, 23, tzinfo=timezone.utc), # Week 8
-            datetime(2025, 10, 30, tzinfo=timezone.utc), # Week 9
-            datetime(2025, 11, 6, tzinfo=timezone.utc),  # Week 10
-            datetime(2025, 11, 13, tzinfo=timezone.utc), # Week 11
-            datetime(2025, 11, 20, tzinfo=timezone.utc), # Week 12
-            datetime(2025, 11, 27, tzinfo=timezone.utc), # Week 13
-            datetime(2025, 12, 4, tzinfo=timezone.utc),  # Week 14
-            datetime(2025, 12, 11, tzinfo=timezone.utc), # Week 15
-            datetime(2025, 12, 18, tzinfo=timezone.utc), # Week 16
-            datetime(2025, 12, 25, tzinfo=timezone.utc), # Week 17
-            datetime(2026, 1, 1, tzinfo=timezone.utc),   # Week 18
+        # 2026 NFL Season Schedule (start date of each week)
+        week_start_dates_2026 = [
+            datetime(2026, 9, 9, tzinfo=timezone.utc),   # Week 1 (Wed)
+            datetime(2026, 9, 17, tzinfo=timezone.utc),  # Week 2 (Thu)
+            datetime(2026, 9, 24, tzinfo=timezone.utc),  # Week 3 (Thu)
+            datetime(2026, 10, 1, tzinfo=timezone.utc),  # Week 4 (Thu)
+            datetime(2026, 10, 8, tzinfo=timezone.utc),  # Week 5 (Thu)
+            datetime(2026, 10, 15, tzinfo=timezone.utc), # Week 6 (Thu)
+            datetime(2026, 10, 22, tzinfo=timezone.utc), # Week 7 (Thu)
+            datetime(2026, 10, 29, tzinfo=timezone.utc), # Week 8 (Thu)
+            datetime(2026, 11, 5, tzinfo=timezone.utc),  # Week 9 (Thu)
+            datetime(2026, 11, 12, tzinfo=timezone.utc), # Week 10 (Thu)
+            datetime(2026, 11, 19, tzinfo=timezone.utc), # Week 11 (Thu)
+            datetime(2026, 11, 25, tzinfo=timezone.utc), # Week 12 (Wed, Thanksgiving)
+            datetime(2026, 12, 3, tzinfo=timezone.utc),  # Week 13 (Thu)
+            datetime(2026, 12, 10, tzinfo=timezone.utc), # Week 14 (Thu)
+            datetime(2026, 12, 17, tzinfo=timezone.utc), # Week 15 (Thu)
+            datetime(2026, 12, 24, tzinfo=timezone.utc), # Week 16 (Thu)
+            datetime(2026, 12, 31, tzinfo=timezone.utc), # Week 17 (Thu)
+            datetime(2027, 1, 9, tzinfo=timezone.utc),   # Week 18 (Sat)
         ]
 
         # Find which week we're currently in
-        for i, week_start in enumerate(week_start_dates_2025):
-            if i < len(week_start_dates_2025) - 1:
-                next_week_start = week_start_dates_2025[i + 1]
+        for i, week_start in enumerate(week_start_dates_2026):
+            if i < len(week_start_dates_2026) - 1:
+                next_week_start = week_start_dates_2026[i + 1]
                 if week_start <= now < next_week_start:
                     return f"Week {i + 1}"
             else:
@@ -84,7 +84,7 @@ class StartSitOptimizer:
                     return f"Week {i + 1}"
 
         # If before Week 1, return Week 1
-        if now < week_start_dates_2025[0]:
+        if now < week_start_dates_2026[0]:
             return "Week 1"
 
         return "Week 1"

@@ -150,7 +150,7 @@ def get_sleeper_user(username):
 def get_sleeper_leagues(user_id):
     """Get user's leagues."""
     try:
-        season = request.args.get('season', '2024')
+        season = request.args.get('season', '2026')
         leagues = sleeper_client.get_user_leagues(user_id, season)
 
         return jsonify({
