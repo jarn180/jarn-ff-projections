@@ -1,9 +1,61 @@
 """Start/Sit Optimizer for Fantasy Football lineup decisions."""
 
-from typing import Dict, List, Any, Tuple, Optional
+from typing import Dict, List, Any, Tuple, Optional, Set
 import json
 import os
+import re
 from datetime import datetime, timezone
+
+from config.team_abbreviations import team_full_name
+
+
+def normalize_name(name: str) -> str:
+    """Normalize a player name for matching across data sources.
+
+    Sleeper's full_name and The Odds API's outcome descriptions disagree on
+    punctuation for the same real player (e.g. "C.J. Stroud" vs "CJ Stroud"),
+    which breaks plain substring matching. Stripping periods fixes the known
+    cases without touching hyphens/apostrophes, which are used consistently.
+    """
+    return re.sub(r'\.', '', name or '').lower().strip()
+
+
+def estimate_dst_points(opponent_implied_total: Optional[float]) -> Optional[float]:
+    """Rough DST fantasy points from the opponent's implied point total.
+
+    Not a real defensive projection (no sack/INT/TD props exist to build one
+    from) - just the standard "points allowed" scoring bands from typical DST
+    scoring rules, using the Vegas-implied total as a stand-in for points
+    allowed. Better than nothing, not a substitute for real defensive stats.
+    """
+    if opponent_implied_total is None:
+        return None
+    if opponent_implied_total <= 6:
+        return 9.0
+    if opponent_implied_total <= 13:
+        return 6.0
+    if opponent_implied_total <= 17:
+        return 4.0
+    if opponent_implied_total <= 20:
+        return 2.0
+    if opponent_implied_total <= 27:
+        return 0.0
+    if opponent_implied_total <= 34:
+        return -1.0
+    return -3.0
+
+
+def estimate_kicker_points(own_implied_total: Optional[float]) -> Optional[float]:
+    """Rough kicker fantasy points from the kicker's own team's implied total.
+
+    More expected points for the offense roughly means more scoring drives,
+    which means more field goal / extra point chances for the kicker. This
+    is a coarse ratio (~0.35 kicker points per implied point), not a model of
+    red zone efficiency or field goal distance.
+    """
+    if own_implied_total is None:
+        return None
+    return round(own_implied_total * 0.35, 1)
 
 
 class StartSitOptimizer:
@@ -29,6 +81,40 @@ class StartSitOptimizer:
         self.current_week = self._get_current_week()
         self.next_week = self._get_next_week()
         self.sleeper_players = {}
+        self._projection_index = self._build_projection_index()
+        self._team_game_info = self._build_team_game_info()
+
+    def _build_projection_index(self) -> Dict[tuple, List[tuple]]:
+        """Bucket projections by (week, format, position) for fast lookups.
+
+        get_player_projection() gets called once per roster player during a
+        normal optimize, and once per free agent (hundreds of players) during
+        a waiver-wire scan - a full linear scan per call doesn't hold up at
+        that volume.
+        """
+        index: Dict[tuple, List[tuple]] = {}
+        for proj in self.projections_cache.get('projections', []):
+            key = (proj.get('week', ''), proj.get('format', ''), proj.get('position', ''))
+            index.setdefault(key, []).append((normalize_name(proj.get('player', '')), proj))
+        return index
+
+    def _build_team_game_info(self) -> Dict[str, Dict[str, Any]]:
+        """Map each team's full name to its game context for the current cache.
+
+        Every player projection already carries its game's teams and implied
+        totals, so this just collapses that down to one entry per team
+        (deduped since every player in a game repeats the same game info).
+        """
+        teams: Dict[str, Dict[str, Any]] = {}
+        for proj in self.projections_cache.get('projections', []):
+            home, away = proj.get('home_team'), proj.get('away_team')
+            home_total, away_total = proj.get('home_implied_total'), proj.get('away_implied_total')
+            week = proj.get('week', '')
+            if home and home not in teams:
+                teams[home] = {'own_total': home_total, 'opp_total': away_total, 'week': week}
+            if away and away not in teams:
+                teams[away] = {'own_total': away_total, 'opp_total': home_total, 'week': week}
+        return teams
 
     def _load_projections(self) -> Dict[str, Any]:
         """Load projections from cache file.
@@ -142,34 +228,49 @@ class StartSitOptimizer:
             - has_projection is False if player has no lines available
             - week is the week of the projection found
         """
-        player_name_lower = player_name.lower()
+        normalized = normalize_name(player_name)
 
         # Try next week first (most common case - looking ahead to upcoming games)
         # Then fall back to current week (for Thursday games during the week)
         weeks_to_check = [self.next_week, self.current_week]
 
         for week_to_check in weeks_to_check:
-            for proj in self.projections_cache.get('projections', []):
-                proj_name = proj.get('player', '').lower()  # Field is 'player', not 'player_name'
-                proj_position = proj.get('position', '')
-                proj_format = proj.get('format', '')
-                proj_week = proj.get('week', '')
-
-                # Must match position, format, week, and name
-                if (proj_position == position and
-                    proj_format == scoring_format and
-                    proj_week == week_to_check):
-
-                    # Check name matching
-                    if (proj_name == player_name_lower or
-                        player_name_lower in proj_name or
-                        proj_name in player_name_lower):
-
-                        total_points = proj.get('total_points', 0)
-                        return (total_points, True, proj_week)
+            candidates = self._projection_index.get((week_to_check, scoring_format, position), [])
+            for proj_name, proj in candidates:
+                if proj_name == normalized or normalized in proj_name or proj_name in normalized:
+                    return (proj.get('total_points', 0), True, week_to_check)
 
         # No projection found for this player in upcoming weeks
         return (0, False, '')
+
+    def get_dst_or_kicker_projection(self, team_abbr: str, position: str) -> Tuple[float, bool, str]:
+        """Estimate a DEF/K projection from the team's implied Vegas totals.
+
+        The Odds API doesn't carry props for defenses or kickers, so these
+        can't be built the same way as skill-position projections. This is a
+        coarse stand-in (see estimate_dst_points/estimate_kicker_points) so
+        DEF/K aren't just always blank - not a real defensive/kicking model.
+
+        Returns:
+            Tuple of (projected points, has_projection, week) - has_projection
+            is False when the team's game context isn't in the current cache
+            (e.g. a bye week).
+        """
+        game_info = self._team_game_info.get(team_full_name(team_abbr))
+        if not game_info:
+            return (0, False, '')
+
+        if position == 'DEF':
+            points = estimate_dst_points(game_info.get('opp_total'))
+        elif position == 'K':
+            points = estimate_kicker_points(game_info.get('own_total'))
+        else:
+            points = None
+
+        if points is None:
+            return (0, False, '')
+
+        return (points, True, game_info.get('week', ''))
 
     def optimize_lineup(
         self,
@@ -203,17 +304,18 @@ class StartSitOptimizer:
             position = player_data.get('position', '')
             injury_status = player_data.get('injury_status', '')
 
-            # Skip DEF and K for now (no projections)
             if position in ['DEF', 'K']:
+                team_abbr = player_data.get('team', '')
+                projection, has_projection, week = self.get_dst_or_kicker_projection(team_abbr, position)
                 player_projections.append({
                     'player_id': player_id,
                     'name': full_name,
                     'position': position,
-                    'projection': 0,
+                    'projection': projection,
                     'injury_status': injury_status,
-                    'has_projection': False,
-                    'no_lines': True,
-                    'week': ''
+                    'has_projection': has_projection,
+                    'no_lines': not has_projection,
+                    'week': week
                 })
                 continue
 
@@ -350,3 +452,68 @@ class StartSitOptimizer:
         recommendations.sort(key=lambda x: x['projected_gain'], reverse=True)
 
         return recommendations[:5]  # Return top 5 recommendations
+
+    def get_waiver_wire_targets(
+        self,
+        rostered_player_ids: Set[str],
+        sleeper_players_db: Dict[str, Any],
+        scoring_format: str = 'PPR',
+        position: str = 'ALL',
+        limit: int = 50,
+    ) -> List[Dict[str, Any]]:
+        """Find free agents (on nobody's roster) sorted by projected points.
+
+        Args:
+            rostered_player_ids: Every player_id rostered by anyone in the league
+                (union across all rosters, not just the user's)
+            sleeper_players_db: Full Sleeper player database
+            scoring_format: Scoring format to project in
+            position: Position filter ('ALL' or QB/RB/WR/TE/K/DEF), FLEX means RB/WR/TE
+            limit: Max number of results
+
+        Returns:
+            Free agents with a projection, sorted by projected points descending.
+            Players nobody has projected yet (no Vegas line, bye week, etc.) are
+            left out rather than padding the list with zeroes.
+        """
+        relevant_positions = {'QB', 'RB', 'WR', 'TE', 'K', 'DEF'}
+        if position == 'FLEX':
+            wanted_positions = {'RB', 'WR', 'TE'}
+        elif position and position != 'ALL':
+            wanted_positions = {position}
+        else:
+            wanted_positions = relevant_positions
+
+        targets = []
+        for player_id, player_data in sleeper_players_db.items():
+            if player_id in rostered_player_ids:
+                continue
+
+            pos = player_data.get('position')
+            if pos not in wanted_positions:
+                continue
+
+            full_name = player_data.get('full_name')
+            if not full_name:
+                continue
+
+            if pos in ('DEF', 'K'):
+                proj, has_proj, week = self.get_dst_or_kicker_projection(player_data.get('team', ''), pos)
+            else:
+                proj, has_proj, week = self.get_player_projection(full_name, pos, scoring_format)
+
+            if not has_proj:
+                continue
+
+            targets.append({
+                'player_id': player_id,
+                'name': full_name,
+                'position': pos,
+                'team': player_data.get('team', ''),
+                'injury_status': player_data.get('injury_status', ''),
+                'projection': proj,
+                'week': week,
+            })
+
+        targets.sort(key=lambda p: p['projection'], reverse=True)
+        return targets[:limit]

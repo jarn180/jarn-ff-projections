@@ -251,5 +251,44 @@ def optimize_lineup():
         }), 500
 
 
+@app.route('/api/sleeper/league/<league_id>/waiver-wire', methods=['GET'])
+def get_waiver_wire(league_id):
+    """Find free agents in a league, sorted by projected points."""
+    try:
+        scoring_format = request.args.get('scoring_format', 'PPR')
+        position = request.args.get('position', 'ALL')
+        limit = min(int(request.args.get('limit', 50)), 200)
+
+        rosters = sleeper_client.get_league_rosters(league_id)
+        if not rosters:
+            return jsonify({
+                'success': False,
+                'error': 'League not found or has no rosters'
+            }), 404
+
+        rostered_ids = set()
+        for roster in rosters:
+            rostered_ids.update(roster.get('players') or [])
+
+        players_db = sleeper_client.get_all_players()
+
+        targets = optimizer.get_waiver_wire_targets(
+            rostered_ids, players_db, scoring_format, position, limit
+        )
+
+        return jsonify({
+            'success': True,
+            'targets': targets,
+            'count': len(targets)
+        })
+
+    except Exception as e:
+        traceback.print_exc()
+        return jsonify({
+            'success': False,
+            'error': str(e)
+        }), 500
+
+
 if __name__ == '__main__':
     app.run(debug=True, host='0.0.0.0', port=5000)

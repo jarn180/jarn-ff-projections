@@ -25,4 +25,8 @@ export const api = {
         scoring_format: scoringFormat,
       }),
     }),
+  getWaiverWire: (leagueId, scoringFormat, position, limit = 50) =>
+    request(
+      `/api/sleeper/league/${leagueId}/waiver-wire?scoring_format=${scoringFormat}&position=${position}&limit=${limit}`
+    ),
 }

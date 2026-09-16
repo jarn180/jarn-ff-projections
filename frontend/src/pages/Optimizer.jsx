@@ -4,6 +4,7 @@ import { useState } from 'react'
 import ConnectCard from '../components/optimizer/ConnectCard.jsx'
 import LeagueGrid from '../components/optimizer/LeagueGrid.jsx'
 import LineupResults from '../components/optimizer/LineupResults.jsx'
+import WaiverWire from '../components/optimizer/WaiverWire.jsx'
 import PageHeader from '../components/PageHeader.jsx'
 import Select from '../components/Select.jsx'
 import Spinner from '../components/Spinner.jsx'
@@ -175,6 +176,10 @@ export default function Optimizer() {
               </div>
             </motion.section>
           )}
+        </AnimatePresence>
+
+        <AnimatePresence>
+          {selectedLeague && <WaiverWire leagueId={selectedLeague.league_id} defaultFormat={scoringFormat} />}
         </AnimatePresence>
       </div>
     </div>
