@@ -4,7 +4,7 @@ Fantasy Football Projections Web App
 Flask application for viewing Vegas-based projections
 """
 
-from flask import Flask, render_template, jsonify, request
+from flask import Flask, render_template, jsonify, request, abort
 from src.api.odds_api import OddsAPIClient, parse_player_props, detect_position
 from src.api.sleeper_api import SleeperAPIClient
 from src.projections.calculator import ProjectionCalculator
@@ -17,14 +17,18 @@ sleeper_client = SleeperAPIClient()
 optimizer = StartSitOptimizer()
 
 
-@app.route('/')
-@app.route('/optimizer')
-def index():
+@app.route('/', defaults={'path': ''})
+@app.route('/<path:path>')
+def index(path):
     """Serve the React single-page app shell.
 
-    Client-side routing (react-router) handles which view renders;
-    this route just needs to match every frontend path.
+    Client-side routing (react-router) handles which view renders, so
+    this needs to match every frontend path. A path under /api/ that no
+    other route claimed is a real 404, not a frontend route - without this
+    check it would otherwise get the HTML shell back with a 200.
     """
+    if path.startswith('api/'):
+        abort(404)
     return render_template('index.html')
 
 

@@ -18,3 +18,10 @@ export function scoringLabel(rec) {
   if (value === 0.5) return 'Half PPR'
   return 'Standard'
 }
+
+export function scoringFormatFor(rec) {
+  const value = parseFloat(rec ?? 0)
+  if (value === 1) return 'PPR'
+  if (value === 0.5) return 'HALF_PPR'
+  return 'STANDARD'
+}

@@ -1,11 +1,12 @@
 import { AnimatePresence, motion } from 'framer-motion'
-import { ArrowLeftRight, Menu, Trophy, X } from 'lucide-react'
+import { ArrowLeftRight, Menu, Trophy, UserPlus, X } from 'lucide-react'
 import { useEffect, useState } from 'react'
 import { NavLink, useLocation } from 'react-router-dom'
 
 const NAV_ITEMS = [
   { to: '/', label: 'Projections', icon: Trophy, end: true },
   { to: '/optimizer', label: 'Start/Sit Optimizer', icon: ArrowLeftRight, end: false },
+  { to: '/waiver-wire', label: 'Waiver Wire', icon: UserPlus, end: false },
 ]
 
 function NavItems({ onNavigate }) {
