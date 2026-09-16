@@ -1,4 +1,5 @@
 import { ChevronRight } from 'lucide-react'
+import { formatMatchup } from '../lib/matchup.js'
 import Badge from './Badge.jsx'
 
 function RankBadge({ rank }) {
@@ -49,7 +50,14 @@ export default function ProjectionsTable({ rows, mode, onSelectPlayer }) {
               </td>
               <td className="px-2 py-2.5 font-medium text-[var(--color-ink)]">{row.player}</td>
               <td className="px-2 py-2.5 text-[var(--color-ink-soft)]">{row.week || 'TBD'}</td>
-              <td className="px-2 py-2.5 text-xs text-[var(--color-ink-faint)]">{row.matchup || 'TBD'}</td>
+              <td className="px-2 py-2.5 text-xs text-[var(--color-ink-faint)]">
+                {formatMatchup({
+                  awayTeam: row.awayTeam,
+                  homeTeam: row.homeTeam,
+                  awayTotal: row.awayTotal,
+                  homeTotal: row.homeTotal,
+                })}
+              </td>
               {mode === 'ALL' ? (
                 <>
                   <td className="px-2 py-2.5 text-right font-semibold tabular-nums">{fmt(row.ppr)}</td>
@@ -87,7 +95,15 @@ export default function ProjectionsTable({ rows, mode, onSelectPlayer }) {
               <Badge position={row.position} />
               <div className="min-w-0 flex-1">
                 <p className="truncate text-sm font-medium text-[var(--color-ink)]">{row.player}</p>
-                <p className="truncate text-xs text-[var(--color-ink-faint)]">{shortMatchup(row.matchup)}</p>
+                <p className="truncate text-xs text-[var(--color-ink-faint)]">
+                  {formatMatchup({
+                    awayTeam: row.awayTeam,
+                    homeTeam: row.homeTeam,
+                    awayTotal: row.awayTotal,
+                    homeTotal: row.homeTotal,
+                    short: true,
+                  })}
+                </p>
               </div>
               <p className="shrink-0 text-sm font-semibold tabular-nums text-[var(--color-accent)]">
                 {fmt(mode === 'ALL' ? row.ppr : row.total)}
@@ -107,12 +123,4 @@ function fmt(value) {
 
 function fmt1(value) {
   return typeof value === 'number' ? value.toFixed(1) : '–'
-}
-
-function shortMatchup(matchup) {
-  if (!matchup) return 'TBD'
-  const teamName = (name) => name.trim().split(' ').pop()
-  const [away, home] = matchup.split(' @ ')
-  if (!away || !home) return matchup
-  return `${teamName(away)} @ ${teamName(home)}`
 }

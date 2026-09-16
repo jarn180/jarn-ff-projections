@@ -143,6 +143,67 @@ class OddsAPIClient:
         ]
 
 
+def compute_implied_totals(api_response: Dict) -> Dict[str, float]:
+    """Derive implied team point totals from the spreads + totals markets.
+
+    Vegas doesn't publish a team total directly, but it's implied by the
+    game total (over/under) and the point spread:
+        team_implied_total = game_total / 2 - team_spread / 2
+    (a favorite's spread is negative, so it nets a higher implied total)
+
+    Args:
+        api_response: Raw event odds response (same shape as parse_player_props)
+
+    Returns:
+        {"home": float, "away": float}, or {} if spreads/totals weren't
+        available for this event (e.g. not yet posted by any bookmaker).
+    """
+    home_team = api_response.get("home_team", "")
+    away_team = api_response.get("away_team", "")
+
+    total_lines = []
+    home_spreads = []
+    away_spreads = []
+
+    for bookmaker in api_response.get("bookmakers", []):
+        for market in bookmaker.get("markets", []):
+            key = market.get("key")
+            if key == "totals":
+                for outcome in market.get("outcomes", []):
+                    if outcome.get("point") is not None:
+                        total_lines.append(outcome["point"])
+            elif key == "spreads":
+                for outcome in market.get("outcomes", []):
+                    point = outcome.get("point")
+                    if point is None:
+                        continue
+                    if outcome.get("name") == home_team:
+                        home_spreads.append(point)
+                    elif outcome.get("name") == away_team:
+                        away_spreads.append(point)
+
+    if not total_lines or not (home_spreads or away_spreads):
+        return {}
+
+    avg_total = sum(total_lines) / len(total_lines)
+    result = {}
+
+    if home_spreads:
+        avg_home_spread = sum(home_spreads) / len(home_spreads)
+        result["home"] = round(avg_total / 2 - avg_home_spread / 2, 1)
+    if away_spreads:
+        avg_away_spread = sum(away_spreads) / len(away_spreads)
+        result["away"] = round(avg_total / 2 - avg_away_spread / 2, 1)
+
+    # If only one side had a spread line, derive the other from the total
+    if "home" in result and "away" not in result:
+        result["away"] = round(avg_total - result["home"], 1)
+    if "away" in result and "home" not in result:
+        result["home"] = round(avg_total - result["away"], 1)
+
+    return result
+
+
 def parse_player_props(api_response: Dict) -> Dict[str, Dict]:
     """Parse API response into structured player props.
 
@@ -161,6 +222,7 @@ def parse_player_props(api_response: Dict) -> Dict[str, Dict]:
     home_team = api_response.get("home_team", "")
     away_team = api_response.get("away_team", "")
     commence_time = api_response.get("commence_time", "")
+    implied_totals = compute_implied_totals(api_response)
 
     for bookmaker in api_response.get("bookmakers", []):
         for market in bookmaker.get("markets", []):
@@ -179,6 +241,8 @@ def parse_player_props(api_response: Dict) -> Dict[str, Dict]:
                             "home_team": home_team,
                             "away_team": away_team,
                             "commence_time": commence_time,
+                            "home_implied_total": implied_totals.get("home"),
+                            "away_implied_total": implied_totals.get("away"),
                         }
                     }
 

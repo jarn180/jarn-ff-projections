@@ -1,5 +1,6 @@
 import { AnimatePresence, motion } from 'framer-motion'
 import { X } from 'lucide-react'
+import { formatMatchup } from '../lib/matchup.js'
 import Badge from './Badge.jsx'
 
 const FORMAT_LABELS = {
@@ -38,7 +39,13 @@ export default function PlayerModal({ player, projections, onClose }) {
                   <h2 className="text-base font-semibold">{player}</h2>
                   {meta && (
                     <p className="text-xs text-[var(--color-ink-faint)]">
-                      {meta.week || 'TBD'} · {meta.matchup || 'Matchup TBD'}
+                      {meta.week || 'TBD'} ·{' '}
+                      {formatMatchup({
+                        awayTeam: meta.away_team,
+                        homeTeam: meta.home_team,
+                        awayTotal: meta.away_implied_total,
+                        homeTotal: meta.home_implied_total,
+                      })}
                     </p>
                   )}
                 </div>

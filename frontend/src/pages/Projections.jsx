@@ -78,6 +78,10 @@ export default function Projections() {
             position: proj.position,
             week: proj.week,
             matchup: proj.matchup,
+            homeTeam: proj.home_team,
+            awayTeam: proj.away_team,
+            homeTotal: proj.home_implied_total,
+            awayTotal: proj.away_implied_total,
           })
         }
         const entry = byPlayer.get(proj.player)
@@ -94,6 +98,10 @@ export default function Projections() {
         position: proj.position,
         week: proj.week,
         matchup: proj.matchup,
+        homeTeam: proj.home_team,
+        awayTeam: proj.away_team,
+        homeTotal: proj.home_implied_total,
+        awayTotal: proj.away_implied_total,
         total: proj.total_points,
         passing: proj.breakdown.passing,
         rushing: proj.breakdown.rushing,

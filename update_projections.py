@@ -68,12 +68,16 @@ def update_projections():
     print("🏈 Fetching player props from The Odds API...")
 
     # Default markets for projections
+    # spreads + totals aren't player props, but combining them into the same
+    # per-event request lets us derive implied team totals at no extra API cost
     markets = [
         'player_pass_yds',
         'player_pass_tds',
         'player_rush_yds',
         'player_receptions',
-        'player_reception_yds'
+        'player_reception_yds',
+        'spreads',
+        'totals',
     ]
 
     # Initialize API client
@@ -114,6 +118,8 @@ def update_projections():
         home_team = game_info.get("home_team", "")
         away_team = game_info.get("away_team", "")
         commence_time = game_info.get("commence_time", "")
+        home_implied_total = game_info.get("home_implied_total")
+        away_implied_total = game_info.get("away_implied_total")
 
         # Determine matchup
         matchup = f"{away_team} @ {home_team}" if home_team and away_team else "TBD"
@@ -128,6 +134,10 @@ def update_projections():
             projection['matchup'] = matchup
             projection['week'] = week
             projection['game_time'] = commence_time
+            projection['home_team'] = home_team
+            projection['away_team'] = away_team
+            projection['home_implied_total'] = home_implied_total
+            projection['away_implied_total'] = away_implied_total
 
             all_projections.append(projection)
 
