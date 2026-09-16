@@ -10,7 +10,6 @@ from src.api.sleeper_api import SleeperAPIClient
 from src.projections.calculator import ProjectionCalculator
 from src.optimizer.start_sit import StartSitOptimizer
 from config.scoring_formats import get_available_formats
-from datetime import datetime
 import traceback
 
 app = Flask(__name__)
@@ -18,48 +17,15 @@ sleeper_client = SleeperAPIClient()
 optimizer = StartSitOptimizer()
 
 
-def calculate_nfl_week(commence_time_str: str) -> str:
-    """Calculate NFL week from game start time.
-
-    Args:
-        commence_time_str: ISO format timestamp
-
-    Returns:
-        Week string (e.g., "Week 10")
-    """
-    if not commence_time_str:
-        return "TBD"
-
-    try:
-        game_time = datetime.fromisoformat(commence_time_str.replace('Z', '+00:00'))
-
-        # NFL season typically starts first Thursday after Labor Day (early September)
-        # This is a simplified calculation
-        year = game_time.year
-
-        # Approximate season start (adjust this for actual season)
-        # For 2024-2025 season, Week 1 starts around September 5, 2024
-        season_start = datetime(2024, 9, 5, tzinfo=game_time.tzinfo) if year == 2024 else datetime(year, 9, 7, tzinfo=game_time.tzinfo)
-
-        # Calculate week number
-        days_since_start = (game_time - season_start).days
-        week_num = max(1, min(18, (days_since_start // 7) + 1))
-
-        return f"Week {week_num}"
-    except Exception:
-        return "TBD"
-
-
 @app.route('/')
-def index():
-    """Main page."""
-    return render_template('index.html')
-
-
 @app.route('/optimizer')
-def optimizer_page():
-    """Optimizer page."""
-    return render_template('optimizer.html')
+def index():
+    """Serve the React single-page app shell.
+
+    Client-side routing (react-router) handles which view renders;
+    this route just needs to match every frontend path.
+    """
+    return render_template('index.html')
 
 
 @app.route('/api/projections', methods=['GET'])

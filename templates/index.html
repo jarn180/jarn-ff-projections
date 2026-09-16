@@ -4,79 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fantasy Football Projections | Vegas Props</title>
-    <link rel="icon" type="image/svg+xml" href="{{ url_for('static', filename='images/favicon.svg') }}">
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="icon" type="image/svg+xml" href="{{ url_for('static', filename='app/favicon.svg') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='app/main.css') }}">
 </head>
 <body>
-    <div class="floating-shapes">
-        <div class="shape shape-1"></div>
-        <div class="shape shape-2"></div>
-        <div class="shape shape-3"></div>
-    </div>
-
-    <div class="container">
-        <header>
-            <h1>Fantasy Football Projections</h1>
-            <p class="subtitle">Vegas Props-Based Projections for NFL Players</p>
-            <div style="margin-top: 20px;">
-                <a href="/optimizer" class="btn-secondary" style="text-decoration: none;">Start/Sit Optimizer →</a>
-            </div>
-        </header>
-
-        <div class="controls">
-            <div class="control-group">
-                <label for="formatSelect">Scoring Format:</label>
-                <select id="formatSelect">
-                    <option value="all">All Formats</option>
-                    <option value="PPR" selected>PPR</option>
-                    <option value="HALF_PPR">Half PPR</option>
-                    <option value="STANDARD">Standard</option>
-                </select>
-            </div>
-
-            <div class="control-group">
-                <label for="searchInput">Search Player:</label>
-                <input type="text" id="searchInput" placeholder="Enter player name...">
-            </div>
-        </div>
-
-        <div id="statsBar" class="stats-bar">
-            <div class="stat-item">
-                <span class="stat-label">Total Players:</span>
-                <span id="totalPlayers" class="stat-value">-</span>
-            </div>
-            <div class="stat-item">
-                <span class="stat-label">Last Updated:</span>
-                <span id="lastUpdated" class="stat-value">Loading...</span>
-            </div>
-        </div>
-
-        <div id="errorMessage" class="error-message" style="display: none;"></div>
-
-        <div id="loadingMessage" class="loading-message" style="display: none;">
-            <div class="spinner-large"></div>
-            <p>Fetching player props from The Odds API...</p>
-            <p class="loading-subtext">This may take a moment</p>
-        </div>
-
-        <div id="projectionsContainer"></div>
-
-        <div id="positionTabs" class="position-tabs" style="display: none;">
-            <button class="position-tab active" data-position="ALL">All Positions</button>
-            <button class="position-tab" data-position="QB">QB</button>
-            <button class="position-tab" data-position="RB">RB</button>
-            <button class="position-tab" data-position="WR">WR</button>
-            <button class="position-tab" data-position="TE">TE</button>
-            <button class="position-tab" data-position="FLEX">FLEX</button>
-        </div>
-
-        <div id="projectionsTable" class="projections-table"></div>
-    </div>
-
-    <footer>
-        <p>Data provided by The Odds API | For entertainment purposes only</p>
-    </footer>
-
-    <script src="{{ url_for('static', filename='js/app.js') }}"></script>
+    <div id="root"></div>
+    <script type="module" src="{{ url_for('static', filename='app/main.js') }}"></script>
 </body>
 </html>

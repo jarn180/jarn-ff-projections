@@ -39,3 +39,7 @@ output/
 
 # Keep cache file in git for deployment
 # data/projections_cache.json
+
+# Frontend (React/Vite) — build output is committed to static/app for deployment
+frontend/node_modules/
+frontend/dist/

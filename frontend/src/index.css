@@ -1,0 +1,105 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+
+  --color-canvas: #ffffff;
+  --color-canvas-soft: #fbfbfa;
+  --color-sidebar: #f7f7f5;
+  --color-border: rgba(55, 53, 47, 0.09);
+  --color-border-strong: rgba(55, 53, 47, 0.16);
+  --color-ink: #37352f;
+  --color-ink-soft: rgba(55, 53, 47, 0.65);
+  --color-ink-faint: rgba(55, 53, 47, 0.45);
+  --color-accent: #2383e2;
+  --color-accent-soft: rgba(35, 131, 226, 0.1);
+
+  --color-pos-qb-bg: #fdecea;
+  --color-pos-qb-text: #c0392b;
+  --color-pos-rb-bg: #e8f5e9;
+  --color-pos-rb-text: #2e7d32;
+  --color-pos-wr-bg: #e3f2fd;
+  --color-pos-wr-text: #1565c0;
+  --color-pos-te-bg: #f3e8fd;
+  --color-pos-te-text: #7b2cbf;
+  --color-pos-flex-bg: #fff4e0;
+  --color-pos-flex-text: #b8720a;
+  --color-pos-def-bg: #eceff1;
+  --color-pos-def-text: #455a64;
+  --color-pos-k-bg: #fce4ec;
+  --color-pos-k-text: #ad1457;
+
+  --shadow-notion-sm: 0 1px 2px rgba(15, 15, 15, 0.05), 0 1px 1px rgba(15, 15, 15, 0.04);
+  --shadow-notion-md: 0 4px 12px rgba(15, 15, 15, 0.08), 0 1px 2px rgba(15, 15, 15, 0.06);
+  --shadow-notion-lg: 0 12px 32px rgba(15, 15, 15, 0.12), 0 2px 6px rgba(15, 15, 15, 0.06);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-canvas: #191919;
+    --color-canvas-soft: #202020;
+    --color-sidebar: #202020;
+    --color-border: rgba(255, 255, 255, 0.09);
+    --color-border-strong: rgba(255, 255, 255, 0.16);
+    --color-ink: #e9e9e7;
+    --color-ink-soft: rgba(233, 233, 231, 0.65);
+    --color-ink-faint: rgba(233, 233, 231, 0.45);
+    --color-accent: #4da3ff;
+    --color-accent-soft: rgba(77, 163, 255, 0.14);
+
+    --color-pos-qb-bg: rgba(219, 68, 55, 0.16);
+    --color-pos-qb-text: #ff7a6e;
+    --color-pos-rb-bg: rgba(67, 160, 71, 0.16);
+    --color-pos-rb-text: #7bd67f;
+    --color-pos-wr-bg: rgba(66, 133, 244, 0.16);
+    --color-pos-wr-text: #7ab3ff;
+    --color-pos-te-bg: rgba(155, 81, 224, 0.16);
+    --color-pos-te-text: #cd9bf5;
+    --color-pos-flex-bg: rgba(230, 145, 5, 0.18);
+    --color-pos-flex-text: #f4b445;
+    --color-pos-def-bg: rgba(144, 164, 174, 0.18);
+    --color-pos-def-text: #b0bec5;
+    --color-pos-k-bg: rgba(216, 27, 96, 0.16);
+    --color-pos-k-text: #f280ac;
+
+    --shadow-notion-sm: 0 1px 2px rgba(0, 0, 0, 0.3);
+    --shadow-notion-md: 0 4px 12px rgba(0, 0, 0, 0.4);
+    --shadow-notion-lg: 0 12px 32px rgba(0, 0, 0, 0.5);
+  }
+}
+
+* {
+  -webkit-tap-highlight-color: transparent;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+}
+
+body {
+  background-color: var(--color-canvas);
+  color: var(--color-ink);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+}
+
+::selection {
+  background: var(--color-accent-soft);
+}
+
+/* Slim scrollbars, Notion-style */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+::-webkit-scrollbar-thumb {
+  background: var(--color-border-strong);
+  border-radius: 999px;
+  border: 2px solid transparent;
+  background-clip: padding-box;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
