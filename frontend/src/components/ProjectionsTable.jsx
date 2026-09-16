@@ -87,9 +87,7 @@ export default function ProjectionsTable({ rows, mode, onSelectPlayer }) {
               <Badge position={row.position} />
               <div className="min-w-0 flex-1">
                 <p className="truncate text-sm font-medium text-[var(--color-ink)]">{row.player}</p>
-                <p className="truncate text-xs text-[var(--color-ink-faint)]">
-                  {row.week || 'TBD'} · {row.matchup || 'TBD'}
-                </p>
+                <p className="truncate text-xs text-[var(--color-ink-faint)]">{shortMatchup(row.matchup)}</p>
               </div>
               <p className="shrink-0 text-sm font-semibold tabular-nums text-[var(--color-accent)]">
                 {fmt(mode === 'ALL' ? row.ppr : row.total)}
@@ -109,4 +107,12 @@ function fmt(value) {
 
 function fmt1(value) {
   return typeof value === 'number' ? value.toFixed(1) : '–'
+}
+
+function shortMatchup(matchup) {
+  if (!matchup) return 'TBD'
+  const teamName = (name) => name.trim().split(' ').pop()
+  const [away, home] = matchup.split(' @ ')
+  if (!away || !home) return matchup
+  return `${teamName(away)} @ ${teamName(home)}`
 }
