@@ -6,9 +6,14 @@ Run this manually to fetch fresh data from The Odds API and cache it
 
 import json
 from datetime import datetime
+from zoneinfo import ZoneInfo
 from src.api.odds_api import OddsAPIClient, parse_player_props, detect_position
 from src.projections.calculator import ProjectionCalculator
 from config.scoring_formats import get_available_formats
+
+# "Last updated" is shown to users, so it's pinned to Central time regardless
+# of the server's own clock/timezone (this runs in a UTC container).
+CENTRAL_TZ = ZoneInfo("America/Chicago")
 
 
 def calculate_nfl_week(commence_time_str: str) -> str:
@@ -145,12 +150,13 @@ def update_projections():
     all_projections.sort(key=lambda x: x['total_points'], reverse=True)
 
     # Create cache data
+    now_central = datetime.now(CENTRAL_TZ)
     cache_data = {
         'projections': all_projections,
         'total_players': len(all_players),
         'formats': formats,
-        'last_updated': datetime.now().isoformat(),
-        'last_updated_display': datetime.now().strftime('%B %d, %Y at %I:%M %p')
+        'last_updated': now_central.isoformat(),
+        'last_updated_display': now_central.strftime('%B %d, %Y at %I:%M %p %Z')
     }
 
     # Save to cache file
