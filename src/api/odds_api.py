@@ -4,11 +4,17 @@ Client for The Odds API to fetch player props
 
 import os
 import requests
+from datetime import datetime, timedelta, timezone
 from typing import Dict, List, Optional
 from dotenv import load_dotenv
 
 # Load environment variables
 load_dotenv()
+
+
+# Game-level markets. The bulk /odds endpoint returns these for every game in
+# one request, so they're fetched once instead of once per event.
+GAME_LINE_MARKETS = {"h2h", "spreads", "totals"}
 
 
 class OddsAPIClient:
@@ -25,6 +31,10 @@ class OddsAPIClient:
         self.api_key = api_key or os.getenv("ODDS_API_KEY")
         if not self.api_key:
             raise ValueError("API key is required. Set ODDS_API_KEY environment variable or pass api_key parameter.")
+        # Quota tracking, read from response headers
+        self.requests_made = 0
+        self.credits_used = 0
+        self.credits_remaining = None
 
     def _make_request(self, endpoint: str, params: Dict = None) -> Dict:
         """Make a request to The Odds API.
@@ -44,10 +54,14 @@ class OddsAPIClient:
             response = requests.get(url, params=params)
             response.raise_for_status()
 
-            # Check remaining requests
+            # Track quota usage (summarized once by the caller, not per request)
+            self.requests_made += 1
+            last_cost = response.headers.get("x-requests-last")
+            if last_cost:
+                self.credits_used += int(float(last_cost))
             remaining = response.headers.get("x-requests-remaining")
             if remaining:
-                print(f"API Requests Remaining: {remaining}")
+                self.credits_remaining = int(float(remaining))
 
             return response.json()
         except requests.exceptions.RequestException as e:
@@ -56,7 +70,8 @@ class OddsAPIClient:
 
     def get_player_props(self, sport: str = "americanfootball_nfl",
                         regions: str = "us",
-                        markets: Optional[List[str]] = None) -> List[Dict]:
+                        markets: Optional[List[str]] = None,
+                        max_days_ahead: Optional[int] = 6) -> List[Dict]:
         """Fetch player props for a given sport.
 
         Args:
@@ -64,32 +79,72 @@ class OddsAPIClient:
             regions: Regions to get odds from (default: us)
             markets: List of prop markets to fetch. If None, fetches all available.
                     Common markets: player_pass_tds, player_pass_yds, player_rush_yds,
-                    player_receptions, player_reception_yds, player_anytime_td
+                    player_receptions, player_reception_yds, player_anytime_td.
+                    Game lines (spreads/totals/h2h) are fetched in one bulk request.
+            max_days_ahead: Only fetch games within this many days of the next
+                    kickoff (one NFL week). None fetches every listed game.
 
         Returns:
             List of events with player props
         """
-        params = {
-            "regions": regions,
-            "oddsFormat": "decimal",
-        }
+        prop_markets = [m for m in markets or [] if m not in GAME_LINE_MARKETS] or None
+        line_markets = [m for m in markets or [] if m in GAME_LINE_MARKETS]
 
-        if markets:
-            params["markets"] = ",".join(markets)
+        # Listing events is free; only list games that haven't kicked off yet
+        # (props for started games are off the board but would still cost credits)
+        now = datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
+        events = self._make_request(f"sports/{sport}/events",
+                                    {"commenceTimeFrom": now})
+        events = self._upcoming_week(events, max_days_ahead)
 
-        endpoint = f"sports/{sport}/events"
-        events = self._make_request(endpoint, params)
+        # Game lines for every game in a single request (cost = markets x regions,
+        # once) instead of being bundled into each per-event request
+        lines_by_event = {}
+        if line_markets and events:
+            bulk = self._make_request(f"sports/{sport}/odds", {
+                "regions": regions,
+                "oddsFormat": "decimal",
+                "markets": ",".join(line_markets),
+                "eventIds": ",".join(e["id"] for e in events if e.get("id")),
+            })
+            lines_by_event = {e.get("id"): e for e in bulk}
 
-        # Now fetch props for each event
+        # Player props still have to be fetched per event
         all_props = []
         for event in events:
             event_id = event.get("id")
-            if event_id:
-                props = self.get_event_props(sport, event_id, regions, markets)
-                if props:
-                    all_props.append(props)
+            if not event_id:
+                continue
+            if markets and not prop_markets:
+                props = dict(event)  # game lines only, nothing per-event to fetch
+            else:
+                props = self.get_event_props(sport, event_id, regions, prop_markets)
+            if not props:
+                continue
+            # Merge the game lines in as extra bookmaker entries so downstream
+            # parsing sees the same shape as a combined request
+            lines = lines_by_event.get(event_id)
+            if lines:
+                props.setdefault("bookmakers", []).extend(lines.get("bookmakers", []))
+            all_props.append(props)
 
         return all_props
+
+    @staticmethod
+    def _upcoming_week(events: List[Dict], max_days_ahead: Optional[int]) -> List[Dict]:
+        """Keep only events within max_days_ahead of the earliest listed game,
+        so games a week or more out (props usually not posted yet) are skipped."""
+        if not max_days_ahead or not events:
+            return events
+
+        def start(e):
+            return datetime.fromisoformat(e["commence_time"].replace("Z", "+00:00"))
+
+        timed = [e for e in events if e.get("commence_time")]
+        if not timed:
+            return events
+        cutoff = min(start(e) for e in timed) + timedelta(days=max_days_ahead)
+        return [e for e in timed if start(e) < cutoff]
 
     def get_event_props(self, sport: str, event_id: str,
                        regions: str = "us",

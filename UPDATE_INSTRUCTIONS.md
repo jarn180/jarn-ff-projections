@@ -45,9 +45,11 @@ When deploying to Vercel, the cached data file will be included in your deployme
 
 ## API Token Usage
 
-- Each update uses approximately **20-30 API calls** (depends on number of games)
-- Free tier: **500 requests/month**
-- This means you can update **~20 times per month** safely
+- Each update costs roughly **5 credits per game this week + 2** (player props are
+  fetched per game; spreads/totals for all games come from one bulk request).
+  Only games that haven't kicked off and fall in the upcoming week are fetched.
+- A 14-game week ≈ **72 credits**. Free tier is **500 credits/month** (~6 updates).
+- The script prints credits used and remaining at the end of the fetch.
 
 ## Tips
 

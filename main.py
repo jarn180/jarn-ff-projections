@@ -166,6 +166,7 @@ Examples:
             return
 
         print(f"Found {len(events)} events with player props.")
+        print(f"API credits used: {client.credits_used}, remaining: {client.credits_remaining}")
 
         # Parse player props from all events
         all_players = {}

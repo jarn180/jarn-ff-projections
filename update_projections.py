@@ -73,8 +73,8 @@ def update_projections():
     print("🏈 Fetching player props from The Odds API...")
 
     # Default markets for projections
-    # spreads + totals aren't player props, but combining them into the same
-    # per-event request lets us derive implied team totals at no extra API cost
+    # spreads + totals aren't player props; the client fetches them for every
+    # game in one bulk request and merges them in to derive implied team totals
     markets = [
         'player_pass_yds',
         'player_pass_tds',
@@ -96,6 +96,8 @@ def update_projections():
         return
 
     print(f"✓ Found {len(events)} events")
+    print(f"💳 API: {client.requests_made} requests, {client.credits_used} credits used, "
+          f"{client.credits_remaining} remaining")
 
     # Parse player props from all events
     all_players = {}
